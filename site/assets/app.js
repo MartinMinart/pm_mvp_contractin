@@ -8,11 +8,11 @@
  */
 (function () {
   const DATA_URLS = {
-    overview: 'data/overview.json',
-    processMap: 'data/process_map.json',
-    bottlenecks: 'data/bottlenecks.json',
-    variants: 'data/variants.json',
-    variantPaths: 'data/variant_paths.json',
+    overview: './data/overview.json',
+    processMap: './data/process_map.json',
+    bottlenecks: './data/bottlenecks.json',
+    variants: './data/variants.json',
+    variantPaths: './data/variant_paths.json',
   };
 
   const MONTH_NAMES = {
