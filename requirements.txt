@@ -1,0 +1,22 @@
+# Core
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Process Mining
+pm4py>=2.7.0
+
+# Visualization (notebooks)
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.18.0
+
+# Validation
+pytest>=7.4.0
+
+# Jupyter (для ноутбука)
+jupyter>=1.0.0
+ipykernel>=6.25.0
+
+# Graphviz — системный бинарник (НЕ pip-пакет), нужен для pm4py.save_vis_dfg / save_vis_petri_net.
+# Windows: winget install --id Graphviz.Graphviz -e  (каталог bin\ добавить в PATH)
+# Обоснование зависимости — docs/decision-log.md, ADR-T3-01.

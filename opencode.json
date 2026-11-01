@@ -1,0 +1,28 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "shell": "powershell",
+  "mcp": {
+    "filesystem": {
+      "type": "local",
+      "command": [
+        "node",
+        "C:\\Users\\MI\\AppData\\Local\\npm-cache\\_npx\\a3241bba59c344f5\\node_modules\\@modelcontextprotocol\\server-filesystem\\dist\\index.js",
+        "."
+      ],
+      "enabled": true
+    },
+    "duckdb": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "mcp-server-motherduck",
+        "--db-path",
+        "analytics.duckdb",
+        "--read-write"
+      ],
+      "enabled": true
+    }
+  },
+  "plugins": ["@fro.bot/systematic@latest"],
+  "permission": { "external_directory": "ask" }
+}

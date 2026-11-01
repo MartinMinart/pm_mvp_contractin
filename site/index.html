@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Process Mining · Закупки и контрактация</title>
+  <meta name="description" content="Демо Process Mining для процесса «закупка → контрактация»: карта процесса, узкие места и варианты на синтетическом логе из 50 000 кейсов.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231a2332'/%3E%3Ccircle cx='9' cy='23' r='3.6' fill='%234a90d9'/%3E%3Ccircle cx='16' cy='9' r='3.6' fill='%2328a745'/%3E%3Ccircle cx='24' cy='20' r='3.6' fill='%23dc3545'/%3E%3Cpath d='M9 23 L16 9 M16 9 L24 20' stroke='%238892a4' stroke-width='1.8' fill='none'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.26.0/cytoscape.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape-dagre/2.5.0/cytoscape-dagre.min.js"></script>
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="22" height="22">
+            <circle cx="7" cy="24" r="3.4" fill="#28a745"></circle>
+            <circle cx="16" cy="8" r="3.4" fill="#4a90d9"></circle>
+            <circle cx="25" cy="20" r="3.4" fill="#dc3545"></circle>
+            <path d="M7 24 L16 8 M16 8 L25 20" stroke="#8892a4" stroke-width="1.6" fill="none"></path>
+          </svg>
+        </span>
+        <div class="brand-text">
+          <h1>Process Mining</h1>
+          <p class="subtitle" id="header-subtitle">Закупки и контрактация</p>
+        </div>
+      </div>
+      <nav class="tabs tabs--header" role="tablist" aria-label="Разделы отчёта">
+        <button type="button" class="tab is-active" role="tab" id="tab-btn-overview" aria-controls="tab-overview" aria-selected="true" data-tab="overview">Обзор</button>
+        <button type="button" class="tab" role="tab" id="tab-btn-process" aria-controls="tab-process" aria-selected="false" data-tab="process">Карта процесса</button>
+        <button type="button" class="tab" role="tab" id="tab-btn-bottlenecks" aria-controls="tab-bottlenecks" aria-selected="false" data-tab="bottlenecks">Узкие места</button>
+        <button type="button" class="tab" role="tab" id="tab-btn-variants" aria-controls="tab-variants" aria-selected="false" data-tab="variants">Варианты</button>
+      </nav>
+      <div class="header-controls">
+        <div class="segmented" role="group" aria-label="Режим отображения">
+          <button type="button" class="segmented-btn is-active" data-mode="executive" aria-pressed="true">Executive</button>
+          <button type="button" class="segmented-btn" data-mode="analyst" aria-pressed="false">Analyst</button>
+        </div>
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Переключить тему" title="Светлая / тёмная тема">
+          <span id="theme-icon" aria-hidden="true">☾</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="loading-overlay" class="loading-overlay"><div class="spinner"></div><span>Загрузка данных…</span></div>
+    <div id="status-banner" class="status-banner" hidden></div>
+
+    <section class="tab-panel screen is-active" id="tab-overview" role="tabpanel" aria-labelledby="tab-btn-overview">
+      <div class="filters-bar" id="overview-filters">
+        <div class="filter-group">
+          <label for="filter-category">Категория</label>
+          <select id="filter-category" data-filter="category" aria-label="Категория"><option value="">Все категории</option></select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-region">Регион</label>
+          <select id="filter-region" data-filter="region" aria-label="Регион"><option value="">Все регионы</option></select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-type">Тип закупки</label>
+          <select id="filter-type" data-filter="type" aria-label="Тип закупки"><option value="">Все типы</option></select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-month">Месяц</label>
+          <select id="filter-month" data-filter="month" aria-label="Месяц старта"><option value="">Все месяцы</option></select>
+        </div>
+        <div class="filter-chips" id="filter-chips" aria-live="polite"></div>
+        <div class="filter-actions">
+          <button type="button" class="btn btn-sm btn-danger" id="filters-reset" hidden>✕ Сбросить все</button>
+        </div>
+      </div>
+
+      <div class="mini-kpi-row" id="mini-kpi" aria-label="Дополнительные показатели"></div>
+
+      <div class="grid-layout grid-12 overview-grid">
+        <div class="grid-col col-4">
+          <section class="executive-summary" id="executive-summary" aria-label="Executive summary"></section>
+        </div>
+        <div class="grid-col col-8">
+          <div class="kpi-grid" id="kpi-grid" aria-label="Ключевые показатели"></div>
+        </div>
+
+        <div class="grid-col col-8">
+          <div class="chart-card">
+            <h3>Длительность по месяцам старта <span class="info-badge" id="monthly-badge">клик по точке — фильтр</span></h3>
+            <div class="plot plot--fill" id="monthly-chart" role="img" aria-label="График средней длительности кейсов по месяцам"></div>
+          </div>
+        </div>
+        <div class="grid-col col-4">
+          <div class="chart-card">
+            <h3>Структура потерь <span class="info-badge">по категориям</span></h3>
+            <div class="plot plot--fill" id="overview-donut" role="img" aria-label="Кольцевая диаграмма потерь по категориям"></div>
+          </div>
+        </div>
+
+        <div class="grid-col col-6">
+          <div class="table-card">
+            <h3>По категориям <span class="info-badge">кейсы · срок · потери</span></h3>
+            <div class="table-wrapper table-wrapper--fit"><table class="data-table data-table--compact" id="category-table"></table></div>
+          </div>
+        </div>
+        <div class="grid-col col-6">
+          <div class="chart-card">
+            <h3>Кейсы по типам закупки <span class="info-badge">стек по категориям</span></h3>
+            <div class="plot plot--fill" id="overview-stacked" role="img" aria-label="Столбчатая диаграмма кейсов по типам закупки"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="tab-panel screen" id="tab-process" role="tabpanel" aria-labelledby="tab-btn-process" hidden>
+      <div class="process-map-layout">
+        <div class="dfg-left-panel">
+          <div class="dfg-panel-title">Граф переходов</div>
+          <div class="dfg-toolbar">
+            <button type="button" class="btn btn-sm" id="dfg-zoom-in">+</button>
+            <button type="button" class="btn btn-sm" id="dfg-zoom-out">−</button>
+            <button type="button" class="btn btn-sm" id="dfg-fit">Fit</button>
+            <select id="dfg-layout" class="select select--sm">
+              <option value="breadthfirst">Иерархический</option>
+              <option value="cose">Силовой</option>
+              <option value="circle">Круговой</option>
+            </select>
+          </div>
+          <div id="dfg-container" class="dfg-container" role="img" aria-label="DFG граф процесса"></div>
+          <ul class="legend dfg-legend" id="dfg-legend" aria-label="Обозначения графа переходов">
+            <li><span class="legend-dot legend-dot--start"></span>старт</li>
+            <li><span class="legend-dot legend-dot--end"></span>конец</li>
+            <li><span class="legend-dot legend-dot--bottleneck"></span>узкое место</li>
+            <li><span class="legend-dot legend-dot--normal"></span>обычная</li>
+            <li><span class="legend-line"></span>возврат</li>
+            <li><span class="legend-edge legend-edge--fast"></span>&lt;1 дн</li>
+            <li><span class="legend-edge legend-edge--medium"></span>1–4 дн</li>
+            <li><span class="legend-edge legend-edge--slow"></span>&gt;4 дн</li>
+            <li class="dfg-legend-caption">Толщина — частота · Цвет — время (дн) · Число — переходы</li>
+          </ul>
+        </div>
+        <div class="resizer" id="dfg-resizer"></div>
+        <div class="right-panel">
+          <div class="filters-bar process-filters-bar">
+            <div class="chip-row" id="process-categories" role="group" aria-label="Фильтр по категории"></div>
+            <button type="button" class="chip" data-filter="import">Таможня</button>
+            <button type="button" class="chip" data-filter="no-import">Без таможни</button>
+            <div class="segmented segmented--on-light segmented--sm" role="group" aria-label="Сколько переходов показывать">
+              <button type="button" class="segmented-btn" data-edges="10" aria-pressed="false">Топ-10</button>
+              <button type="button" class="segmented-btn is-active" data-edges="all" aria-pressed="true">Все 28</button>
+            </div>
+          </div>
+
+          <div class="toolbar-row" style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+            <div class="toolbar-left" style="display: flex; align-items: center; gap: 8px;">
+              <button type="button" class="chip is-active" data-map-mode="dfg" aria-pressed="true">DFG</button>
+              <button type="button" class="chip" data-map-mode="single" aria-pressed="false">Один вариант</button>
+              <button type="button" class="chip" data-map-mode="range" aria-pressed="false">Диапазон</button>
+              <span class="toolbar-label">| ШАГИ с</span>
+              <input type="number" id="map-step-from" min="1" max="22" value="1" style="width: 50px;">
+              <span class="toolbar-label">по</span>
+              <input type="number" id="map-step-to" min="1" max="22" value="22" style="width: 50px;">
+              <div class="map-control" id="map-variant-single" hidden>
+                <label for="map-variant-select">Вариант</label>
+                <select id="map-variant-select" class="select select--sm"></select>
+              </div>
+              <div class="map-control" id="map-variant-range" hidden>
+                <label for="map-range-from">С топ-</label>
+                <input type="number" id="map-range-from" min="1" max="80" value="1" style="width: 46px;">
+                <label for="map-range-to">по топ-</label>
+                <input type="number" id="map-range-to" min="1" max="80" value="15" style="width: 46px;">
+              </div>
+            </div>
+            <span class="graph-caption" id="process-caption" style="margin-left: auto; font-size: 12px; color: var(--text-muted); white-space: nowrap;">Весь лог · 50 000 кейсов · 28 переходов · <span id="map-mode-caption">DFG, все переходы</span></span>
+          </div>
+
+          <div class="scatter-container">
+            <div class="scatter-header">
+              <div class="scatter-title">Карта процесса</div>
+            </div>
+            <div id="scatter-plot" class="scatter-plot" role="img" aria-label="Карта процесса: активности и переходы"></div>
+            <div id="process-chart" class="plot plot--map" style="display:none" aria-hidden="true"></div>
+            <ul class="legend" id="process-legend">
+              <li><span class="legend-dot legend-dot--start"></span>старт</li>
+              <li><span class="legend-dot legend-dot--end"></span>конец</li>
+              <li><span class="legend-dot legend-dot--bottleneck"></span>узкое место</li>
+              <li><span class="legend-dot legend-dot--normal"></span>обычная</li>
+              <li><span class="legend-line"></span>возврат</li>
+              <li>Толщина = частота, Цвет = время (дн)</li>
+            </ul>
+          </div>
+
+          <div class="table-container">
+            <div class="table-container-header">
+              <h3>Длительность переходов <span class="badge" id="edge-stats-badge">все переходы · 28</span></h3>
+              <div class="table-header-right">
+                <span>МЕТРИКА</span>
+                <select id="edge-stats-metric" class="select select--sm">
+                  <option value="avg_duration_days">Среднее</option>
+                  <option value="median_duration_days" selected>Медиана</option>
+                  <option value="p90_duration_days">P90</option>
+                </select>
+              </div>
+            </div>
+            <div class="table-wrapper table-wrapper--fit">
+              <table class="data-table data-table--compact" id="edge-stats-table"></table>
+            </div>
+            <div class="pagination" id="edge-stats-pager" hidden></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="tab-panel screen" id="tab-bottlenecks" role="tabpanel" aria-labelledby="tab-btn-bottlenecks" hidden>
+      <div class="toolbar toolbar--bottlenecks">
+        <p class="graph-caption" id="bottleneck-caption">Потери от простоя: 24 активности процесса</p>
+        <div class="card-head-actions">
+          <label class="toolbar-label" for="bottleneck-sort">Сортировка</label>
+          <select id="bottleneck-sort" class="select select--sm">
+            <option value="normalized">Нормированный скор</option>
+            <option value="raw">Сырой скор</option>
+            <option value="duration">Среднее ожидание</option>
+            <option value="cost">Стоимость потерь</option>
+          </select>
+          <div class="segmented segmented--on-light segmented--sm" role="group" aria-label="Сколько активностей показывать">
+            <button type="button" class="segmented-btn is-active" data-rows="10" aria-pressed="true">Топ-10</button>
+            <button type="button" class="segmented-btn" data-rows="all" aria-pressed="false">Все 24</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="top3-grid" id="top3-grid"></div>
+
+      <div class="grid-layout grid-12 bottlenecks-grid">
+        <div class="grid-col col-7">
+          <div class="chart-card">
+            <h3>Среднее ожидание по активностям <span class="info-badge">дни между событиями</span></h3>
+            <div class="plot plot--fill" id="bottleneck-chart" role="img" aria-label="Столбчатая диаграмма ожиданий по активностям"></div>
+          </div>
+        </div>
+        <div class="grid-col col-5">
+          <div class="chart-card">
+            <h3>Ожидание vs. потери <span class="info-badge">размер — переходы</span></h3>
+            <div class="plot plot--fill" id="bottleneck-scatter" role="img" aria-label="Диаграмма рассеяния: ожидание и потери"></div>
+          </div>
+        </div>
+        <div class="grid-col col-12">
+          <div class="table-card table-card--bottlenecks">
+            <div class="card-head">
+              <h3>Активности <span class="info-badge" id="bottleneck-badge">топ-10 по ожиданию</span></h3>
+            </div>
+            <div class="table-wrapper table-wrapper--fit" id="bottleneck-table-wrap">
+              <table class="data-table data-table--compact" id="bottleneck-table"></table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tab-panel screen" id="tab-variants" role="tabpanel" aria-labelledby="tab-btn-variants" hidden>
+      <div class="grid-layout grid-12 variants-grid">
+        <div class="grid-col col-8">
+          <div class="chart-card">
+            <h3>Pareto: доля кейсов по вариантам <span class="info-badge" id="variants-badge"></span></h3>
+            <div class="plot plot--fill" id="variants-pareto" role="img" aria-label="Парето-диаграмма вариантов"></div>
+          </div>
+        </div>
+        <div class="grid-col col-4">
+          <div class="chart-card">
+            <h3>Идеальный маршрут <span class="info-badge">топ-1 вариант</span></h3>
+            <div id="happy-path" class="empty-state"></div>
+          </div>
+        </div>
+        <div class="grid-col col-12">
+          <div class="table-card table-card--variants">
+            <h3>Топ-10 вариантов <span class="info-badge">клик по строке — полный путь</span></h3>
+            <div class="table-wrapper table-wrapper--fit" id="variants-table-wrap">
+              <table class="data-table data-table--compact variants-table" id="variants-table"></table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>Синтетические данные (SEED = 42), без ПДн. Сгенерировано <code>tools/generate_synthetic.py</code>, агрегировано <code>tools/csv_to_json.py</code>.</p>
+      <p class="footer-links" id="footer-links">
+        <a href="data/overview.json">overview.json</a>
+        <a href="data/process_map.json">process_map.json</a>
+        <a href="data/bottlenecks.json">bottlenecks.json</a>
+        <a href="data/variants.json">variants.json</a>
+      </p>
+    </div>
+  </footer>
+
+  <aside class="drilldown-panel" id="drilldown" aria-hidden="true" aria-label="Детали перехода">
+    <button type="button" class="close-btn" id="drilldown-close" aria-label="Закрыть панель">×</button>
+    <div id="drilldown-content"></div>
+  </aside>
+
+  <div class="sr-only" role="status" aria-live="polite" id="live-region"></div>
+</body>
+</html>
