@@ -1,0 +1,312 @@
+{
+  "bottlenecks": [
+    {
+      "activity": "Customs Clearance",
+      "avg_hours": 254.8589128486318,
+      "std_hours": 228.11139683672724,
+      "transitions": 18967,
+      "avg_days": 10.619121368692992,
+      "std_days": 9.504641534863635,
+      "bottleneck_score": 2.2855129673299555,
+      "share_of_cases": 0.37934,
+      "bottleneck_score_normalized": 0.8669864890269453,
+      "cost_of_delay_rub": 60304630761.75
+    },
+    {
+      "activity": "Legal Review Started",
+      "avg_hours": 98.65496312502205,
+      "std_hours": 90.84652576956474,
+      "transitions": 56678,
+      "avg_days": 4.110623463542585,
+      "std_days": 3.7852719070651974,
+      "bottleneck_score": 0.35234177791585425,
+      "share_of_cases": 1.13356,
+      "bottleneck_score_normalized": 0.39940054577429573,
+      "cost_of_delay_rub": 69883233526.79167
+    },
+    {
+      "activity": "Legal Review Completed",
+      "avg_hours": 98.19382580324847,
+      "std_hours": 89.74117923093519,
+      "transitions": 56396,
+      "avg_days": 4.091409408468686,
+      "std_days": 3.739215801288966,
+      "bottleneck_score": 0.3464278773625744,
+      "share_of_cases": 1.12792,
+      "bottleneck_score_normalized": 0.39074293143479494,
+      "cost_of_delay_rub": 68966767951.375
+    },
+    {
+      "activity": "Technical Review Completed",
+      "avg_hours": 98.62268,
+      "std_hours": 90.69931310062674,
+      "transitions": 50000,
+      "avg_days": 4.109278333333333,
+      "std_days": 3.7791380458594475,
+      "bottleneck_score": 0.3516557131684533,
+      "share_of_cases": 1.0,
+      "bottleneck_score_normalized": 0.3516557131684533,
+      "cost_of_delay_rub": 61727096190.541664
+    },
+    {
+      "activity": "Technical Review Started",
+      "avg_hours": 98.41456,
+      "std_hours": 89.97954026532761,
+      "transitions": 50000,
+      "avg_days": 4.100606666666667,
+      "std_days": 3.749147511055317,
+      "bottleneck_score": 0.34812884128738036,
+      "share_of_cases": 1.0,
+      "bottleneck_score_normalized": 0.34812884128738036,
+      "cost_of_delay_rub": 61384507504.375
+    },
+    {
+      "activity": "HSE Review Completed",
+      "avg_hours": 39.12173697373045,
+      "std_hours": 50.42648562847067,
+      "transitions": 48383,
+      "avg_days": 1.6300723739054352,
+      "std_days": 2.101103567852945,
+      "bottleneck_score": 0.07755569791800293,
+      "share_of_cases": 0.96766,
+      "bottleneck_score_normalized": 0.0750475466473347,
+      "cost_of_delay_rub": 23579348863.958332
+    },
+    {
+      "activity": "Dispatch to Mine Site",
+      "avg_hours": 39.06262082878037,
+      "std_hours": 50.52077863726399,
+      "transitions": 47588,
+      "avg_days": 1.627609201199182,
+      "std_days": 2.105032443219333,
+      "bottleneck_score": 0.07758330797792823,
+      "share_of_cases": 0.95176,
+      "bottleneck_score_normalized": 0.07384068920107298,
+      "cost_of_delay_rub": 23234269805.541668
+    },
+    {
+      "activity": "Inbound to Central Warehouse",
+      "avg_hours": 38.836597461544926,
+      "std_hours": 49.862237639166466,
+      "transitions": 47588,
+      "avg_days": 1.6181915608977053,
+      "std_days": 2.0775932349652693,
+      "bottleneck_score": 0.07612894606115904,
+      "share_of_cases": 0.95176,
+      "bottleneck_score_normalized": 0.07245648570316873,
+      "cost_of_delay_rub": 23091022846.791668
+    },
+    {
+      "activity": "HSE Review Started",
+      "avg_hours": 38.5793348826687,
+      "std_hours": 49.06945104844497,
+      "transitions": 48623,
+      "avg_days": 1.6074722867778624,
+      "std_days": 2.0445604603518737,
+      "bottleneck_score": 0.07442225328810534,
+      "share_of_cases": 0.97246,
+      "bottleneck_score_normalized": 0.07237266443255091,
+      "cost_of_delay_rub": 23369078039.541668
+    },
+    {
+      "activity": "Goods Shipped",
+      "avg_hours": 38.62564091787846,
+      "std_hours": 49.24940159581854,
+      "transitions": 47588,
+      "avg_days": 1.6094017049116023,
+      "std_days": 2.0520583998257726,
+      "bottleneck_score": 0.07478483440104254,
+      "share_of_cases": 0.95176,
+      "bottleneck_score_normalized": 0.07117721398953625,
+      "cost_of_delay_rub": 23009707314.458332
+    },
+    {
+      "activity": "Bids Received",
+      "avg_hours": 38.984585946635484,
+      "std_hours": 50.51694946256032,
+      "transitions": 37628,
+      "avg_days": 1.6243577477764786,
+      "std_days": 2.104872894273347,
+      "bottleneck_score": 0.07742245222094693,
+      "share_of_cases": 0.75256,
+      "bottleneck_score_normalized": 0.05826504064339582,
+      "cost_of_delay_rub": 18340505181.75
+    },
+    {
+      "activity": "Evaluation Completed",
+      "avg_hours": 38.85890572300444,
+      "std_hours": 49.79403822541681,
+      "transitions": 37358,
+      "avg_days": 1.6191210717918518,
+      "std_days": 2.0747515927257005,
+      "bottleneck_score": 0.07606848985319678,
+      "share_of_cases": 0.74716,
+      "bottleneck_score_normalized": 0.05683533287871451,
+      "cost_of_delay_rub": 18155482542.583332
+    },
+    {
+      "activity": "Evaluation Started",
+      "avg_hours": 38.64867169389006,
+      "std_hours": 49.1972618100735,
+      "transitions": 37529,
+      "avg_days": 1.6103613205787524,
+      "std_days": 2.0498859087530623,
+      "bottleneck_score": 0.0747502042503915,
+      "share_of_cases": 0.75058,
+      "bottleneck_score_normalized": 0.05610600830625885,
+      "cost_of_delay_rub": 18045561261.166668
+    },
+    {
+      "activity": "Negotiation Started",
+      "avg_hours": 38.67831879678593,
+      "std_hours": 49.75780299763434,
+      "transitions": 14561,
+      "avg_days": 1.611596616532747,
+      "std_days": 2.0732417915680976,
+      "bottleneck_score": 0.0756598828523304,
+      "share_of_cases": 0.29122,
+      "bottleneck_score_normalized": 0.022033671084255656,
+      "cost_of_delay_rub": 6985226640.75
+    },
+    {
+      "activity": "Draft Contract Created",
+      "avg_hours": 6.2415737244225875,
+      "std_hours": 8.67329872929261,
+      "transitions": 56935,
+      "avg_days": 0.26006557185094115,
+      "std_days": 0.3613874470538587,
+      "bottleneck_score": 0.0021282139670713014,
+      "share_of_cases": 1.1387,
+      "bottleneck_score_normalized": 0.002423397244304091,
+      "cost_of_delay_rub": 4430051935.25
+    },
+    {
+      "activity": "Requisition Created",
+      "avg_hours": 6.193759999999999,
+      "std_hours": 8.783744084705688,
+      "transitions": 50000,
+      "avg_days": 0.2580733333333333,
+      "std_days": 0.365989336862737,
+      "bottleneck_score": 0.002138803699629242,
+      "share_of_cases": 1.0,
+      "bottleneck_score_normalized": 0.002138803699629242,
+      "cost_of_delay_rub": 3874649689.2916665
+    },
+    {
+      "activity": "Invoice Received",
+      "avg_hours": 6.196688240732957,
+      "std_hours": 8.910489943133438,
+      "transitions": 47588,
+      "avg_days": 0.25819534336387323,
+      "std_days": 0.3712704142972266,
+      "bottleneck_score": 0.0021706915268247294,
+      "share_of_cases": 0.95176,
+      "bottleneck_score_normalized": 0.0020659773675707044,
+      "cost_of_delay_rub": 3677134160.875
+    },
+    {
+      "activity": "Signature Requested",
+      "avg_hours": 6.242375768655476,
+      "std_hours": 8.728183209102145,
+      "transitions": 48136,
+      "avg_days": 0.2600989903606448,
+      "std_days": 0.3636743003792561,
+      "bottleneck_score": 0.0021419564738645856,
+      "share_of_cases": 0.96272,
+      "bottleneck_score_normalized": 0.002062104336518914,
+      "cost_of_delay_rub": 3750292511.9583335
+    },
+    {
+      "activity": "Goods Received at Site",
+      "avg_hours": 6.154976044380936,
+      "std_hours": 8.708471605719597,
+      "transitions": 47588,
+      "avg_days": 0.256457335182539,
+      "std_days": 0.36285298357164986,
+      "bottleneck_score": 0.00210719722981186,
+      "share_of_cases": 0.95176,
+      "bottleneck_score_normalized": 0.0020055460354457357,
+      "cost_of_delay_rub": 3651105118.4166665
+    },
+    {
+      "activity": "PO Issued",
+      "avg_hours": 6.1603714129658425,
+      "std_hours": 8.46959464295465,
+      "transitions": 47602,
+      "avg_days": 0.2566821422069101,
+      "std_days": 0.35289977678977713,
+      "bottleneck_score": 0.0020511924146483958,
+      "share_of_cases": 0.95204,
+      "bottleneck_score_normalized": 0.0019528172264418587,
+      "cost_of_delay_rub": 3655605275.375
+    },
+    {
+      "activity": "Signed by Buyer",
+      "avg_hours": 6.104156662978351,
+      "std_hours": 8.366195211340662,
+      "transitions": 47899,
+      "avg_days": 0.2543398609574313,
+      "std_days": 0.34859146713919426,
+      "bottleneck_score": 0.0020076617492359155,
+      "share_of_cases": 0.95798,
+      "bottleneck_score_normalized": 0.0019232998025330225,
+      "cost_of_delay_rub": 3650348840.4583335
+    },
+    {
+      "activity": "Signed by Supplier",
+      "avg_hours": 6.08019866300635,
+      "std_hours": 8.374241449623192,
+      "transitions": 47719,
+      "avg_days": 0.2533416109585979,
+      "std_days": 0.34892672706763295,
+      "bottleneck_score": 0.0020017052471474795,
+      "share_of_cases": 0.95438,
+      "bottleneck_score_normalized": 0.0019103874537726114,
+      "cost_of_delay_rub": 3618198107.125
+    },
+    {
+      "activity": "RFQ Sent to Suppliers",
+      "avg_hours": 6.103061549909642,
+      "std_hours": 8.606134250828353,
+      "transitions": 37628,
+      "avg_days": 0.25429423124623507,
+      "std_days": 0.358588927117848,
+      "bottleneck_score": 0.0020648701494620134,
+      "share_of_cases": 0.75256,
+      "bottleneck_score_normalized": 0.0015539386796791328,
+      "cost_of_delay_rub": 2878536563.1666665
+    },
+    {
+      "activity": "Revised Draft Created",
+      "avg_hours": 6.249723985647254,
+      "std_hours": 8.550592891906115,
+      "transitions": 14492,
+      "avg_days": 0.26040516606863556,
+      "std_days": 0.35627470382942145,
+      "bottleneck_score": 0.0021008446859269252,
+      "share_of_cases": 0.28984,
+      "bottleneck_score_normalized": 0.0006089088237690599,
+      "cost_of_delay_rub": 1130115645.0416667
+    }
+  ],
+  "top3": [
+    {
+      "activity": "Customs Clearance",
+      "avg_days": 10.619121368692992,
+      "bottleneck_score": 2.2855129673299555,
+      "bottleneck_score_normalized": 0.8669864890269453
+    },
+    {
+      "activity": "Legal Review Started",
+      "avg_days": 4.110623463542585,
+      "bottleneck_score": 0.35234177791585425,
+      "bottleneck_score_normalized": 0.39940054577429573
+    },
+    {
+      "activity": "Legal Review Completed",
+      "avg_days": 4.091409408468686,
+      "bottleneck_score": 0.3464278773625744,
+      "bottleneck_score_normalized": 0.39074293143479494
+    }
+  ]
+}

@@ -1,0 +1,2407 @@
+{
+  "nodes": [
+    "Requisition Created",
+    "Technical Review Started",
+    "Technical Review Completed",
+    "RFQ Sent to Suppliers",
+    "Bids Received",
+    "Evaluation Started",
+    "Evaluation Completed",
+    "Draft Contract Created",
+    "Legal Review Started",
+    "Legal Review Completed",
+    "Negotiation Started",
+    "HSE Review Started",
+    "Revised Draft Created",
+    "HSE Review Completed",
+    "Signature Requested",
+    "Signed by Buyer",
+    "Signed by Supplier",
+    "PO Issued",
+    "Goods Shipped",
+    "Customs Clearance",
+    "Inbound to Central Warehouse",
+    "Dispatch to Mine Site",
+    "Goods Received at Site",
+    "Invoice Received",
+    "Payment Made"
+  ],
+  "nodes_metadata": {
+    "Requisition Created": {
+      "type": "start",
+      "cases": 50000,
+      "avg_days": 0.258,
+      "bottleneck_score_normalized": 0.002,
+      "avg_position": 0.0
+    },
+    "Technical Review Started": {
+      "type": "normal",
+      "cases": 50000,
+      "avg_days": 4.101,
+      "bottleneck_score_normalized": 0.348,
+      "avg_position": 1.0
+    },
+    "Technical Review Completed": {
+      "type": "normal",
+      "cases": 50000,
+      "avg_days": 4.109,
+      "bottleneck_score_normalized": 0.352,
+      "avg_position": 2.0
+    },
+    "RFQ Sent to Suppliers": {
+      "type": "normal",
+      "cases": 37628,
+      "avg_days": 0.254,
+      "bottleneck_score_normalized": 0.002,
+      "avg_position": 3.0
+    },
+    "Bids Received": {
+      "type": "normal",
+      "cases": 37628,
+      "avg_days": 1.624,
+      "bottleneck_score_normalized": 0.058,
+      "avg_position": 4.0
+    },
+    "Evaluation Started": {
+      "type": "normal",
+      "cases": 37628,
+      "avg_days": 1.61,
+      "bottleneck_score_normalized": 0.056,
+      "avg_position": 5.0
+    },
+    "Evaluation Completed": {
+      "type": "normal",
+      "cases": 37529,
+      "avg_days": 1.619,
+      "bottleneck_score_normalized": 0.057,
+      "avg_position": 6.0
+    },
+    "Draft Contract Created": {
+      "type": "normal",
+      "cases": 49730,
+      "avg_days": 0.26,
+      "bottleneck_score_normalized": 0.002,
+      "avg_position": 6.4
+    },
+    "Legal Review Started": {
+      "type": "bottleneck",
+      "cases": 49546,
+      "avg_days": 4.111,
+      "bottleneck_score_normalized": 0.399,
+      "avg_position": 7.39
+    },
+    "Legal Review Completed": {
+      "type": "bottleneck",
+      "cases": 49328,
+      "avg_days": 4.091,
+      "bottleneck_score_normalized": 0.391,
+      "avg_position": 8.39
+    },
+    "Negotiation Started": {
+      "type": "normal",
+      "cases": 14608,
+      "avg_days": 1.612,
+      "bottleneck_score_normalized": 0.022,
+      "avg_position": 9.46
+    },
+    "HSE Review Started": {
+      "type": "normal",
+      "cases": 48868,
+      "avg_days": 1.607,
+      "bottleneck_score_normalized": 0.072,
+      "avg_position": 10.04
+    },
+    "Revised Draft Created": {
+      "type": "normal",
+      "cases": 14561,
+      "avg_days": 0.26,
+      "bottleneck_score_normalized": 0.001,
+      "avg_position": 10.46
+    },
+    "HSE Review Completed": {
+      "type": "normal",
+      "cases": 48623,
+      "avg_days": 1.63,
+      "bottleneck_score_normalized": 0.075,
+      "avg_position": 11.04
+    },
+    "Signature Requested": {
+      "type": "normal",
+      "cases": 48383,
+      "avg_days": 0.26,
+      "bottleneck_score_normalized": 0.002,
+      "avg_position": 12.05
+    },
+    "Signed by Buyer": {
+      "type": "normal",
+      "cases": 48136,
+      "avg_days": 0.254,
+      "bottleneck_score_normalized": 0.002,
+      "avg_position": 13.05
+    },
+    "Signed by Supplier": {
+      "type": "normal",
+      "cases": 47899,
+      "avg_days": 0.253,
+      "bottleneck_score_normalized": 0.002,
+      "avg_position": 14.05
+    },
+    "PO Issued": {
+      "type": "normal",
+      "cases": 47719,
+      "avg_days": 0.257,
+      "bottleneck_score_normalized": 0.002,
+      "avg_position": 15.05
+    },
+    "Goods Shipped": {
+      "type": "normal",
+      "cases": 47602,
+      "avg_days": 1.609,
+      "bottleneck_score_normalized": 0.071,
+      "avg_position": 16.06
+    },
+    "Customs Clearance": {
+      "type": "bottleneck",
+      "cases": 18967,
+      "avg_days": 10.619,
+      "bottleneck_score_normalized": 0.867,
+      "avg_position": 17.06
+    },
+    "Inbound to Central Warehouse": {
+      "type": "normal",
+      "cases": 47588,
+      "avg_days": 1.618,
+      "bottleneck_score_normalized": 0.072,
+      "avg_position": 17.46
+    },
+    "Dispatch to Mine Site": {
+      "type": "normal",
+      "cases": 47588,
+      "avg_days": 1.628,
+      "bottleneck_score_normalized": 0.074,
+      "avg_position": 18.46
+    },
+    "Goods Received at Site": {
+      "type": "normal",
+      "cases": 47588,
+      "avg_days": 0.256,
+      "bottleneck_score_normalized": 0.002,
+      "avg_position": 19.46
+    },
+    "Invoice Received": {
+      "type": "normal",
+      "cases": 47588,
+      "avg_days": 0.258,
+      "bottleneck_score_normalized": 0.002,
+      "avg_position": 20.46
+    },
+    "Payment Made": {
+      "type": "end",
+      "cases": 47588,
+      "avg_days": null,
+      "bottleneck_score_normalized": null,
+      "avg_position": 21.46
+    }
+  },
+  "edges": [
+    {
+      "activity": "Draft Contract Created",
+      "next_activity": "Legal Review Started",
+      "frequency": 56935,
+      "avg_duration_days": 0.26,
+      "median_duration_days": 0.125,
+      "p90_duration_days": 0.583,
+      "unique_cases": 49546
+    },
+    {
+      "activity": "Legal Review Started",
+      "next_activity": "Legal Review Completed",
+      "frequency": 56678,
+      "avg_duration_days": 4.111,
+      "median_duration_days": 3.0,
+      "p90_duration_days": 8.417,
+      "unique_cases": 49328
+    },
+    {
+      "activity": "Requisition Created",
+      "next_activity": "Technical Review Started",
+      "frequency": 50000,
+      "avg_duration_days": 0.258,
+      "median_duration_days": 0.167,
+      "p90_duration_days": 0.583,
+      "unique_cases": 50000
+    },
+    {
+      "activity": "Technical Review Started",
+      "next_activity": "Technical Review Completed",
+      "frequency": 50000,
+      "avg_duration_days": 4.101,
+      "median_duration_days": 3.0,
+      "p90_duration_days": 8.375,
+      "unique_cases": 50000
+    },
+    {
+      "activity": "HSE Review Started",
+      "next_activity": "HSE Review Completed",
+      "frequency": 48623,
+      "avg_duration_days": 1.607,
+      "median_duration_days": 1.0,
+      "p90_duration_days": 3.542,
+      "unique_cases": 48623
+    },
+    {
+      "activity": "HSE Review Completed",
+      "next_activity": "Signature Requested",
+      "frequency": 48383,
+      "avg_duration_days": 1.63,
+      "median_duration_days": 1.0,
+      "p90_duration_days": 3.583,
+      "unique_cases": 48383
+    },
+    {
+      "activity": "Signature Requested",
+      "next_activity": "Signed by Buyer",
+      "frequency": 48136,
+      "avg_duration_days": 0.26,
+      "median_duration_days": 0.167,
+      "p90_duration_days": 0.583,
+      "unique_cases": 48136
+    },
+    {
+      "activity": "Signed by Buyer",
+      "next_activity": "Signed by Supplier",
+      "frequency": 47899,
+      "avg_duration_days": 0.254,
+      "median_duration_days": 0.125,
+      "p90_duration_days": 0.583,
+      "unique_cases": 47899
+    },
+    {
+      "activity": "Signed by Supplier",
+      "next_activity": "PO Issued",
+      "frequency": 47719,
+      "avg_duration_days": 0.253,
+      "median_duration_days": 0.125,
+      "p90_duration_days": 0.583,
+      "unique_cases": 47719
+    },
+    {
+      "activity": "PO Issued",
+      "next_activity": "Goods Shipped",
+      "frequency": 47602,
+      "avg_duration_days": 0.257,
+      "median_duration_days": 0.125,
+      "p90_duration_days": 0.583,
+      "unique_cases": 47602
+    },
+    {
+      "activity": "Goods Received at Site",
+      "next_activity": "Invoice Received",
+      "frequency": 47588,
+      "avg_duration_days": 0.256,
+      "median_duration_days": 0.125,
+      "p90_duration_days": 0.583,
+      "unique_cases": 47588
+    },
+    {
+      "activity": "Dispatch to Mine Site",
+      "next_activity": "Goods Received at Site",
+      "frequency": 47588,
+      "avg_duration_days": 1.628,
+      "median_duration_days": 1.0,
+      "p90_duration_days": 3.583,
+      "unique_cases": 47588
+    },
+    {
+      "activity": "Inbound to Central Warehouse",
+      "next_activity": "Dispatch to Mine Site",
+      "frequency": 47588,
+      "avg_duration_days": 1.618,
+      "median_duration_days": 0.958,
+      "p90_duration_days": 3.583,
+      "unique_cases": 47588
+    },
+    {
+      "activity": "Invoice Received",
+      "next_activity": "Payment Made",
+      "frequency": 47588,
+      "avg_duration_days": 0.258,
+      "median_duration_days": 0.167,
+      "p90_duration_days": 0.583,
+      "unique_cases": 47588
+    },
+    {
+      "activity": "RFQ Sent to Suppliers",
+      "next_activity": "Bids Received",
+      "frequency": 37628,
+      "avg_duration_days": 0.254,
+      "median_duration_days": 0.125,
+      "p90_duration_days": 0.583,
+      "unique_cases": 37628
+    },
+    {
+      "activity": "Technical Review Completed",
+      "next_activity": "RFQ Sent to Suppliers",
+      "frequency": 37628,
+      "avg_duration_days": 4.111,
+      "median_duration_days": 3.0,
+      "p90_duration_days": 8.417,
+      "unique_cases": 37628
+    },
+    {
+      "activity": "Bids Received",
+      "next_activity": "Evaluation Started",
+      "frequency": 37628,
+      "avg_duration_days": 1.624,
+      "median_duration_days": 0.958,
+      "p90_duration_days": 3.583,
+      "unique_cases": 37628
+    },
+    {
+      "activity": "Evaluation Started",
+      "next_activity": "Evaluation Completed",
+      "frequency": 37529,
+      "avg_duration_days": 1.61,
+      "median_duration_days": 0.958,
+      "p90_duration_days": 3.583,
+      "unique_cases": 37529
+    },
+    {
+      "activity": "Evaluation Completed",
+      "next_activity": "Draft Contract Created",
+      "frequency": 37358,
+      "avg_duration_days": 1.619,
+      "median_duration_days": 1.0,
+      "p90_duration_days": 3.542,
+      "unique_cases": 37358
+    },
+    {
+      "activity": "Legal Review Completed",
+      "next_activity": "HSE Review Started",
+      "frequency": 34376,
+      "avg_duration_days": 4.091,
+      "median_duration_days": 2.958,
+      "p90_duration_days": 8.333,
+      "unique_cases": 34376
+    },
+    {
+      "activity": "Goods Shipped",
+      "next_activity": "Inbound to Central Warehouse",
+      "frequency": 28621,
+      "avg_duration_days": 1.603,
+      "median_duration_days": 0.958,
+      "p90_duration_days": 3.583,
+      "unique_cases": 28621
+    },
+    {
+      "activity": "Customs Clearance",
+      "next_activity": "Inbound to Central Warehouse",
+      "frequency": 18967,
+      "avg_duration_days": 10.619,
+      "median_duration_days": 6.958,
+      "p90_duration_days": 30.0,
+      "unique_cases": 18967
+    },
+    {
+      "activity": "Goods Shipped",
+      "next_activity": "Customs Clearance",
+      "frequency": 18967,
+      "avg_duration_days": 1.618,
+      "median_duration_days": 0.958,
+      "p90_duration_days": 3.625,
+      "unique_cases": 18967
+    },
+    {
+      "activity": "Legal Review Completed",
+      "next_activity": "Negotiation Started",
+      "frequency": 14608,
+      "avg_duration_days": 4.118,
+      "median_duration_days": 3.0,
+      "p90_duration_days": 8.458,
+      "unique_cases": 14608
+    },
+    {
+      "activity": "Negotiation Started",
+      "next_activity": "Revised Draft Created",
+      "frequency": 14561,
+      "avg_duration_days": 1.612,
+      "median_duration_days": 0.958,
+      "p90_duration_days": 3.542,
+      "unique_cases": 14561
+    },
+    {
+      "activity": "Revised Draft Created",
+      "next_activity": "HSE Review Started",
+      "frequency": 14492,
+      "avg_duration_days": 0.26,
+      "median_duration_days": 0.125,
+      "p90_duration_days": 0.583,
+      "unique_cases": 14492
+    },
+    {
+      "activity": "Technical Review Completed",
+      "next_activity": "Draft Contract Created",
+      "frequency": 12372,
+      "avg_duration_days": 4.106,
+      "median_duration_days": 3.0,
+      "p90_duration_days": 8.417,
+      "unique_cases": 12372
+    },
+    {
+      "activity": "Legal Review Completed",
+      "next_activity": "Draft Contract Created",
+      "frequency": 7412,
+      "avg_duration_days": 4.043,
+      "median_duration_days": 2.958,
+      "p90_duration_days": 8.083,
+      "unique_cases": 7412
+    }
+  ],
+  "edges_by_category": {
+    "ЗИП (запчасти)": [
+      {
+        "activity": "Draft Contract Created",
+        "next_activity": "Legal Review Started",
+        "frequency": 11486,
+        "avg_duration_days": 0.259,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9976
+      },
+      {
+        "activity": "Legal Review Started",
+        "next_activity": "Legal Review Completed",
+        "frequency": 11445,
+        "avg_duration_days": 4.126,
+        "median_duration_days": 3.0,
+        "p90_duration_days": 8.417,
+        "unique_cases": 9945
+      },
+      {
+        "activity": "Requisition Created",
+        "next_activity": "Technical Review Started",
+        "frequency": 10056,
+        "avg_duration_days": 0.26,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 10056
+      },
+      {
+        "activity": "Technical Review Started",
+        "next_activity": "Technical Review Completed",
+        "frequency": 10056,
+        "avg_duration_days": 4.109,
+        "median_duration_days": 2.958,
+        "p90_duration_days": 8.333,
+        "unique_cases": 10056
+      },
+      {
+        "activity": "HSE Review Started",
+        "next_activity": "HSE Review Completed",
+        "frequency": 9772,
+        "avg_duration_days": 1.608,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.542,
+        "unique_cases": 9772
+      },
+      {
+        "activity": "HSE Review Completed",
+        "next_activity": "Signature Requested",
+        "frequency": 9726,
+        "avg_duration_days": 1.636,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.583,
+        "unique_cases": 9726
+      },
+      {
+        "activity": "Signature Requested",
+        "next_activity": "Signed by Buyer",
+        "frequency": 9676,
+        "avg_duration_days": 0.262,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9676
+      },
+      {
+        "activity": "Signed by Buyer",
+        "next_activity": "Signed by Supplier",
+        "frequency": 9624,
+        "avg_duration_days": 0.256,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9624
+      },
+      {
+        "activity": "Signed by Supplier",
+        "next_activity": "PO Issued",
+        "frequency": 9592,
+        "avg_duration_days": 0.26,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9592
+      },
+      {
+        "activity": "PO Issued",
+        "next_activity": "Goods Shipped",
+        "frequency": 9566,
+        "avg_duration_days": 0.261,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9566
+      },
+      {
+        "activity": "Goods Received at Site",
+        "next_activity": "Invoice Received",
+        "frequency": 9561,
+        "avg_duration_days": 0.257,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9561
+      },
+      {
+        "activity": "Dispatch to Mine Site",
+        "next_activity": "Goods Received at Site",
+        "frequency": 9561,
+        "avg_duration_days": 1.633,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.583,
+        "unique_cases": 9561
+      },
+      {
+        "activity": "Inbound to Central Warehouse",
+        "next_activity": "Dispatch to Mine Site",
+        "frequency": 9561,
+        "avg_duration_days": 1.632,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.667,
+        "unique_cases": 9561
+      },
+      {
+        "activity": "Invoice Received",
+        "next_activity": "Payment Made",
+        "frequency": 9561,
+        "avg_duration_days": 0.257,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9561
+      },
+      {
+        "activity": "RFQ Sent to Suppliers",
+        "next_activity": "Bids Received",
+        "frequency": 7537,
+        "avg_duration_days": 0.254,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 7537
+      },
+      {
+        "activity": "Technical Review Completed",
+        "next_activity": "RFQ Sent to Suppliers",
+        "frequency": 7537,
+        "avg_duration_days": 4.117,
+        "median_duration_days": 2.958,
+        "p90_duration_days": 8.475,
+        "unique_cases": 7537
+      },
+      {
+        "activity": "Bids Received",
+        "next_activity": "Evaluation Started",
+        "frequency": 7537,
+        "avg_duration_days": 1.585,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.583,
+        "unique_cases": 7537
+      },
+      {
+        "activity": "Evaluation Started",
+        "next_activity": "Evaluation Completed",
+        "frequency": 7517,
+        "avg_duration_days": 1.639,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.625,
+        "unique_cases": 7517
+      },
+      {
+        "activity": "Evaluation Completed",
+        "next_activity": "Draft Contract Created",
+        "frequency": 7483,
+        "avg_duration_days": 1.624,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.5,
+        "unique_cases": 7483
+      },
+      {
+        "activity": "Legal Review Completed",
+        "next_activity": "HSE Review Started",
+        "frequency": 6881,
+        "avg_duration_days": 4.155,
+        "median_duration_days": 3.042,
+        "p90_duration_days": 8.417,
+        "unique_cases": 6881
+      },
+      {
+        "activity": "Goods Shipped",
+        "next_activity": "Inbound to Central Warehouse",
+        "frequency": 5653,
+        "avg_duration_days": 1.597,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.5,
+        "unique_cases": 5653
+      },
+      {
+        "activity": "Customs Clearance",
+        "next_activity": "Inbound to Central Warehouse",
+        "frequency": 3908,
+        "avg_duration_days": 10.385,
+        "median_duration_days": 6.792,
+        "p90_duration_days": 30.0,
+        "unique_cases": 3908
+      },
+      {
+        "activity": "Goods Shipped",
+        "next_activity": "Customs Clearance",
+        "frequency": 3908,
+        "avg_duration_days": 1.619,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.542,
+        "unique_cases": 3908
+      },
+      {
+        "activity": "Legal Review Completed",
+        "next_activity": "Negotiation Started",
+        "frequency": 2979,
+        "avg_duration_days": 4.084,
+        "median_duration_days": 3.0,
+        "p90_duration_days": 8.208,
+        "unique_cases": 2979
+      },
+      {
+        "activity": "Negotiation Started",
+        "next_activity": "Revised Draft Created",
+        "frequency": 2963,
+        "avg_duration_days": 1.617,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.542,
+        "unique_cases": 2963
+      },
+      {
+        "activity": "Revised Draft Created",
+        "next_activity": "HSE Review Started",
+        "frequency": 2947,
+        "avg_duration_days": 0.262,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 2947
+      },
+      {
+        "activity": "Technical Review Completed",
+        "next_activity": "Draft Contract Created",
+        "frequency": 2519,
+        "avg_duration_days": 4.238,
+        "median_duration_days": 3.083,
+        "p90_duration_days": 8.667,
+        "unique_cases": 2519
+      },
+      {
+        "activity": "Legal Review Completed",
+        "next_activity": "Draft Contract Created",
+        "frequency": 1516,
+        "avg_duration_days": 4.065,
+        "median_duration_days": 2.958,
+        "p90_duration_days": 8.292,
+        "unique_cases": 1516
+      }
+    ],
+    "Обслуживание оборудования": [
+      {
+        "activity": "Draft Contract Created",
+        "next_activity": "Legal Review Started",
+        "frequency": 11346,
+        "avg_duration_days": 0.258,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9885
+      },
+      {
+        "activity": "Legal Review Started",
+        "next_activity": "Legal Review Completed",
+        "frequency": 11298,
+        "avg_duration_days": 4.098,
+        "median_duration_days": 2.958,
+        "p90_duration_days": 8.375,
+        "unique_cases": 9840
+      },
+      {
+        "activity": "Requisition Created",
+        "next_activity": "Technical Review Started",
+        "frequency": 9972,
+        "avg_duration_days": 0.255,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9972
+      },
+      {
+        "activity": "Technical Review Started",
+        "next_activity": "Technical Review Completed",
+        "frequency": 9972,
+        "avg_duration_days": 4.11,
+        "median_duration_days": 3.0,
+        "p90_duration_days": 8.333,
+        "unique_cases": 9972
+      },
+      {
+        "activity": "HSE Review Started",
+        "next_activity": "HSE Review Completed",
+        "frequency": 9716,
+        "avg_duration_days": 1.657,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.625,
+        "unique_cases": 9716
+      },
+      {
+        "activity": "HSE Review Completed",
+        "next_activity": "Signature Requested",
+        "frequency": 9661,
+        "avg_duration_days": 1.627,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.542,
+        "unique_cases": 9661
+      },
+      {
+        "activity": "Signature Requested",
+        "next_activity": "Signed by Buyer",
+        "frequency": 9614,
+        "avg_duration_days": 0.259,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9614
+      },
+      {
+        "activity": "Signed by Buyer",
+        "next_activity": "Signed by Supplier",
+        "frequency": 9583,
+        "avg_duration_days": 0.255,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9583
+      },
+      {
+        "activity": "Signed by Supplier",
+        "next_activity": "PO Issued",
+        "frequency": 9546,
+        "avg_duration_days": 0.26,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9546
+      },
+      {
+        "activity": "Inbound to Central Warehouse",
+        "next_activity": "Dispatch to Mine Site",
+        "frequency": 9527,
+        "avg_duration_days": 1.616,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.583,
+        "unique_cases": 9527
+      },
+      {
+        "activity": "Goods Received at Site",
+        "next_activity": "Invoice Received",
+        "frequency": 9527,
+        "avg_duration_days": 0.257,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9527
+      },
+      {
+        "activity": "Dispatch to Mine Site",
+        "next_activity": "Goods Received at Site",
+        "frequency": 9527,
+        "avg_duration_days": 1.627,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.583,
+        "unique_cases": 9527
+      },
+      {
+        "activity": "PO Issued",
+        "next_activity": "Goods Shipped",
+        "frequency": 9527,
+        "avg_duration_days": 0.253,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9527
+      },
+      {
+        "activity": "Invoice Received",
+        "next_activity": "Payment Made",
+        "frequency": 9527,
+        "avg_duration_days": 0.257,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9527
+      },
+      {
+        "activity": "RFQ Sent to Suppliers",
+        "next_activity": "Bids Received",
+        "frequency": 7476,
+        "avg_duration_days": 0.257,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 7476
+      },
+      {
+        "activity": "Technical Review Completed",
+        "next_activity": "RFQ Sent to Suppliers",
+        "frequency": 7476,
+        "avg_duration_days": 4.121,
+        "median_duration_days": 3.0,
+        "p90_duration_days": 8.312,
+        "unique_cases": 7476
+      },
+      {
+        "activity": "Bids Received",
+        "next_activity": "Evaluation Started",
+        "frequency": 7476,
+        "avg_duration_days": 1.615,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.542,
+        "unique_cases": 7476
+      },
+      {
+        "activity": "Evaluation Started",
+        "next_activity": "Evaluation Completed",
+        "frequency": 7461,
+        "avg_duration_days": 1.613,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.625,
+        "unique_cases": 7461
+      },
+      {
+        "activity": "Evaluation Completed",
+        "next_activity": "Draft Contract Created",
+        "frequency": 7429,
+        "avg_duration_days": 1.606,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.5,
+        "unique_cases": 7429
+      },
+      {
+        "activity": "Legal Review Completed",
+        "next_activity": "HSE Review Started",
+        "frequency": 6847,
+        "avg_duration_days": 4.1,
+        "median_duration_days": 2.958,
+        "p90_duration_days": 8.292,
+        "unique_cases": 6847
+      },
+      {
+        "activity": "Goods Shipped",
+        "next_activity": "Inbound to Central Warehouse",
+        "frequency": 5709,
+        "avg_duration_days": 1.594,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.5,
+        "unique_cases": 5709
+      },
+      {
+        "activity": "Customs Clearance",
+        "next_activity": "Inbound to Central Warehouse",
+        "frequency": 3818,
+        "avg_duration_days": 10.939,
+        "median_duration_days": 7.333,
+        "p90_duration_days": 30.0,
+        "unique_cases": 3818
+      },
+      {
+        "activity": "Goods Shipped",
+        "next_activity": "Customs Clearance",
+        "frequency": 3818,
+        "avg_duration_days": 1.622,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.667,
+        "unique_cases": 3818
+      },
+      {
+        "activity": "Legal Review Completed",
+        "next_activity": "Negotiation Started",
+        "frequency": 2930,
+        "avg_duration_days": 4.115,
+        "median_duration_days": 3.042,
+        "p90_duration_days": 8.462,
+        "unique_cases": 2930
+      },
+      {
+        "activity": "Negotiation Started",
+        "next_activity": "Revised Draft Created",
+        "frequency": 2923,
+        "avg_duration_days": 1.606,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.417,
+        "unique_cases": 2923
+      },
+      {
+        "activity": "Revised Draft Created",
+        "next_activity": "HSE Review Started",
+        "frequency": 2914,
+        "avg_duration_days": 0.258,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 2914
+      },
+      {
+        "activity": "Technical Review Completed",
+        "next_activity": "Draft Contract Created",
+        "frequency": 2496,
+        "avg_duration_days": 3.993,
+        "median_duration_days": 2.958,
+        "p90_duration_days": 8.375,
+        "unique_cases": 2496
+      },
+      {
+        "activity": "Legal Review Completed",
+        "next_activity": "Draft Contract Created",
+        "frequency": 1467,
+        "avg_duration_days": 4.179,
+        "median_duration_days": 2.958,
+        "p90_duration_days": 8.625,
+        "unique_cases": 1467
+      }
+    ],
+    "Подрядные работы": [
+      {
+        "activity": "Draft Contract Created",
+        "next_activity": "Legal Review Started",
+        "frequency": 11465,
+        "avg_duration_days": 0.259,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9952
+      },
+      {
+        "activity": "Legal Review Started",
+        "next_activity": "Legal Review Completed",
+        "frequency": 11404,
+        "avg_duration_days": 4.109,
+        "median_duration_days": 3.0,
+        "p90_duration_days": 8.292,
+        "unique_cases": 9902
+      },
+      {
+        "activity": "Requisition Created",
+        "next_activity": "Technical Review Started",
+        "frequency": 10050,
+        "avg_duration_days": 0.26,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 10050
+      },
+      {
+        "activity": "Technical Review Started",
+        "next_activity": "Technical Review Completed",
+        "frequency": 10050,
+        "avg_duration_days": 4.039,
+        "median_duration_days": 2.958,
+        "p90_duration_days": 8.292,
+        "unique_cases": 10050
+      },
+      {
+        "activity": "HSE Review Started",
+        "next_activity": "HSE Review Completed",
+        "frequency": 9779,
+        "avg_duration_days": 1.585,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.467,
+        "unique_cases": 9779
+      },
+      {
+        "activity": "HSE Review Completed",
+        "next_activity": "Signature Requested",
+        "frequency": 9734,
+        "avg_duration_days": 1.623,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.583,
+        "unique_cases": 9734
+      },
+      {
+        "activity": "Signature Requested",
+        "next_activity": "Signed by Buyer",
+        "frequency": 9674,
+        "avg_duration_days": 0.264,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9674
+      },
+      {
+        "activity": "Signed by Buyer",
+        "next_activity": "Signed by Supplier",
+        "frequency": 9629,
+        "avg_duration_days": 0.252,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9629
+      },
+      {
+        "activity": "Signed by Supplier",
+        "next_activity": "PO Issued",
+        "frequency": 9593,
+        "avg_duration_days": 0.25,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9593
+      },
+      {
+        "activity": "PO Issued",
+        "next_activity": "Goods Shipped",
+        "frequency": 9568,
+        "avg_duration_days": 0.255,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9568
+      },
+      {
+        "activity": "Goods Received at Site",
+        "next_activity": "Invoice Received",
+        "frequency": 9565,
+        "avg_duration_days": 0.252,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9565
+      },
+      {
+        "activity": "Dispatch to Mine Site",
+        "next_activity": "Goods Received at Site",
+        "frequency": 9565,
+        "avg_duration_days": 1.61,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.5,
+        "unique_cases": 9565
+      },
+      {
+        "activity": "Inbound to Central Warehouse",
+        "next_activity": "Dispatch to Mine Site",
+        "frequency": 9565,
+        "avg_duration_days": 1.595,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.5,
+        "unique_cases": 9565
+      },
+      {
+        "activity": "Invoice Received",
+        "next_activity": "Payment Made",
+        "frequency": 9565,
+        "avg_duration_days": 0.253,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9565
+      },
+      {
+        "activity": "RFQ Sent to Suppliers",
+        "next_activity": "Bids Received",
+        "frequency": 7624,
+        "avg_duration_days": 0.251,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.542,
+        "unique_cases": 7624
+      },
+      {
+        "activity": "Technical Review Completed",
+        "next_activity": "RFQ Sent to Suppliers",
+        "frequency": 7624,
+        "avg_duration_days": 4.113,
+        "median_duration_days": 2.958,
+        "p90_duration_days": 8.417,
+        "unique_cases": 7624
+      },
+      {
+        "activity": "Bids Received",
+        "next_activity": "Evaluation Started",
+        "frequency": 7624,
+        "avg_duration_days": 1.608,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.542,
+        "unique_cases": 7624
+      },
+      {
+        "activity": "Evaluation Started",
+        "next_activity": "Evaluation Completed",
+        "frequency": 7602,
+        "avg_duration_days": 1.598,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.5,
+        "unique_cases": 7602
+      },
+      {
+        "activity": "Evaluation Completed",
+        "next_activity": "Draft Contract Created",
+        "frequency": 7563,
+        "avg_duration_days": 1.624,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.583,
+        "unique_cases": 7563
+      },
+      {
+        "activity": "Legal Review Completed",
+        "next_activity": "HSE Review Started",
+        "frequency": 6869,
+        "avg_duration_days": 4.083,
+        "median_duration_days": 2.958,
+        "p90_duration_days": 8.25,
+        "unique_cases": 6869
+      },
+      {
+        "activity": "Goods Shipped",
+        "next_activity": "Inbound to Central Warehouse",
+        "frequency": 5775,
+        "avg_duration_days": 1.611,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.667,
+        "unique_cases": 5775
+      },
+      {
+        "activity": "Customs Clearance",
+        "next_activity": "Inbound to Central Warehouse",
+        "frequency": 3790,
+        "avg_duration_days": 10.519,
+        "median_duration_days": 6.875,
+        "p90_duration_days": 30.0,
+        "unique_cases": 3790
+      },
+      {
+        "activity": "Goods Shipped",
+        "next_activity": "Customs Clearance",
+        "frequency": 3790,
+        "avg_duration_days": 1.61,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.583,
+        "unique_cases": 3790
+      },
+      {
+        "activity": "Legal Review Completed",
+        "next_activity": "Negotiation Started",
+        "frequency": 2972,
+        "avg_duration_days": 4.251,
+        "median_duration_days": 3.042,
+        "p90_duration_days": 8.829,
+        "unique_cases": 2972
+      },
+      {
+        "activity": "Negotiation Started",
+        "next_activity": "Revised Draft Created",
+        "frequency": 2963,
+        "avg_duration_days": 1.645,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.583,
+        "unique_cases": 2963
+      },
+      {
+        "activity": "Revised Draft Created",
+        "next_activity": "HSE Review Started",
+        "frequency": 2950,
+        "avg_duration_days": 0.274,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.625,
+        "unique_cases": 2950
+      },
+      {
+        "activity": "Technical Review Completed",
+        "next_activity": "Draft Contract Created",
+        "frequency": 2426,
+        "avg_duration_days": 4.112,
+        "median_duration_days": 3.0,
+        "p90_duration_days": 8.333,
+        "unique_cases": 2426
+      },
+      {
+        "activity": "Legal Review Completed",
+        "next_activity": "Draft Contract Created",
+        "frequency": 1517,
+        "avg_duration_days": 4.092,
+        "median_duration_days": 3.042,
+        "p90_duration_days": 8.033,
+        "unique_cases": 1517
+      }
+    ],
+    "Спецтехника": [
+      {
+        "activity": "Draft Contract Created",
+        "next_activity": "Legal Review Started",
+        "frequency": 11378,
+        "avg_duration_days": 0.263,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9889
+      },
+      {
+        "activity": "Legal Review Started",
+        "next_activity": "Legal Review Completed",
+        "frequency": 11319,
+        "avg_duration_days": 4.132,
+        "median_duration_days": 3.0,
+        "p90_duration_days": 8.417,
+        "unique_cases": 9837
+      },
+      {
+        "activity": "Requisition Created",
+        "next_activity": "Technical Review Started",
+        "frequency": 9977,
+        "avg_duration_days": 0.258,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9977
+      },
+      {
+        "activity": "Technical Review Started",
+        "next_activity": "Technical Review Completed",
+        "frequency": 9977,
+        "avg_duration_days": 4.118,
+        "median_duration_days": 3.0,
+        "p90_duration_days": 8.458,
+        "unique_cases": 9977
+      },
+      {
+        "activity": "HSE Review Started",
+        "next_activity": "HSE Review Completed",
+        "frequency": 9708,
+        "avg_duration_days": 1.587,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.5,
+        "unique_cases": 9708
+      },
+      {
+        "activity": "HSE Review Completed",
+        "next_activity": "Signature Requested",
+        "frequency": 9662,
+        "avg_duration_days": 1.625,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.625,
+        "unique_cases": 9662
+      },
+      {
+        "activity": "Signature Requested",
+        "next_activity": "Signed by Buyer",
+        "frequency": 9621,
+        "avg_duration_days": 0.255,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9621
+      },
+      {
+        "activity": "Signed by Buyer",
+        "next_activity": "Signed by Supplier",
+        "frequency": 9567,
+        "avg_duration_days": 0.253,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9567
+      },
+      {
+        "activity": "Signed by Supplier",
+        "next_activity": "PO Issued",
+        "frequency": 9530,
+        "avg_duration_days": 0.245,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.542,
+        "unique_cases": 9530
+      },
+      {
+        "activity": "PO Issued",
+        "next_activity": "Goods Shipped",
+        "frequency": 9508,
+        "avg_duration_days": 0.257,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9508
+      },
+      {
+        "activity": "Goods Received at Site",
+        "next_activity": "Invoice Received",
+        "frequency": 9506,
+        "avg_duration_days": 0.254,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9506
+      },
+      {
+        "activity": "Dispatch to Mine Site",
+        "next_activity": "Goods Received at Site",
+        "frequency": 9506,
+        "avg_duration_days": 1.631,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.625,
+        "unique_cases": 9506
+      },
+      {
+        "activity": "Inbound to Central Warehouse",
+        "next_activity": "Dispatch to Mine Site",
+        "frequency": 9506,
+        "avg_duration_days": 1.609,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.583,
+        "unique_cases": 9506
+      },
+      {
+        "activity": "Invoice Received",
+        "next_activity": "Payment Made",
+        "frequency": 9506,
+        "avg_duration_days": 0.263,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9506
+      },
+      {
+        "activity": "RFQ Sent to Suppliers",
+        "next_activity": "Bids Received",
+        "frequency": 7497,
+        "avg_duration_days": 0.252,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 7497
+      },
+      {
+        "activity": "Technical Review Completed",
+        "next_activity": "RFQ Sent to Suppliers",
+        "frequency": 7497,
+        "avg_duration_days": 4.134,
+        "median_duration_days": 3.042,
+        "p90_duration_days": 8.417,
+        "unique_cases": 7497
+      },
+      {
+        "activity": "Bids Received",
+        "next_activity": "Evaluation Started",
+        "frequency": 7497,
+        "avg_duration_days": 1.662,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.667,
+        "unique_cases": 7497
+      },
+      {
+        "activity": "Evaluation Started",
+        "next_activity": "Evaluation Completed",
+        "frequency": 7480,
+        "avg_duration_days": 1.584,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.5,
+        "unique_cases": 7480
+      },
+      {
+        "activity": "Evaluation Completed",
+        "next_activity": "Draft Contract Created",
+        "frequency": 7450,
+        "avg_duration_days": 1.607,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.542,
+        "unique_cases": 7450
+      },
+      {
+        "activity": "Legal Review Completed",
+        "next_activity": "HSE Review Started",
+        "frequency": 6971,
+        "avg_duration_days": 4.048,
+        "median_duration_days": 2.958,
+        "p90_duration_days": 8.208,
+        "unique_cases": 6971
+      },
+      {
+        "activity": "Goods Shipped",
+        "next_activity": "Inbound to Central Warehouse",
+        "frequency": 5733,
+        "avg_duration_days": 1.639,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.583,
+        "unique_cases": 5733
+      },
+      {
+        "activity": "Customs Clearance",
+        "next_activity": "Inbound to Central Warehouse",
+        "frequency": 3773,
+        "avg_duration_days": 10.503,
+        "median_duration_days": 6.917,
+        "p90_duration_days": 30.0,
+        "unique_cases": 3773
+      },
+      {
+        "activity": "Goods Shipped",
+        "next_activity": "Customs Clearance",
+        "frequency": 3773,
+        "avg_duration_days": 1.631,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.625,
+        "unique_cases": 3773
+      },
+      {
+        "activity": "Legal Review Completed",
+        "next_activity": "Negotiation Started",
+        "frequency": 2806,
+        "avg_duration_days": 4.041,
+        "median_duration_days": 2.958,
+        "p90_duration_days": 8.417,
+        "unique_cases": 2806
+      },
+      {
+        "activity": "Negotiation Started",
+        "next_activity": "Revised Draft Created",
+        "frequency": 2800,
+        "avg_duration_days": 1.613,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.542,
+        "unique_cases": 2800
+      },
+      {
+        "activity": "Revised Draft Created",
+        "next_activity": "HSE Review Started",
+        "frequency": 2784,
+        "avg_duration_days": 0.251,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 2784
+      },
+      {
+        "activity": "Technical Review Completed",
+        "next_activity": "Draft Contract Created",
+        "frequency": 2480,
+        "avg_duration_days": 4.083,
+        "median_duration_days": 2.958,
+        "p90_duration_days": 8.25,
+        "unique_cases": 2480
+      },
+      {
+        "activity": "Legal Review Completed",
+        "next_activity": "Draft Contract Created",
+        "frequency": 1490,
+        "avg_duration_days": 3.933,
+        "median_duration_days": 2.958,
+        "p90_duration_days": 7.75,
+        "unique_cases": 1490
+      }
+    ],
+    "Химические реагенты": [
+      {
+        "activity": "Draft Contract Created",
+        "next_activity": "Legal Review Started",
+        "frequency": 11260,
+        "avg_duration_days": 0.261,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9844
+      },
+      {
+        "activity": "Legal Review Started",
+        "next_activity": "Legal Review Completed",
+        "frequency": 11212,
+        "avg_duration_days": 4.087,
+        "median_duration_days": 3.0,
+        "p90_duration_days": 8.458,
+        "unique_cases": 9804
+      },
+      {
+        "activity": "Requisition Created",
+        "next_activity": "Technical Review Started",
+        "frequency": 9945,
+        "avg_duration_days": 0.257,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9945
+      },
+      {
+        "activity": "Technical Review Started",
+        "next_activity": "Technical Review Completed",
+        "frequency": 9945,
+        "avg_duration_days": 4.128,
+        "median_duration_days": 3.042,
+        "p90_duration_days": 8.417,
+        "unique_cases": 9945
+      },
+      {
+        "activity": "HSE Review Started",
+        "next_activity": "HSE Review Completed",
+        "frequency": 9648,
+        "avg_duration_days": 1.6,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.542,
+        "unique_cases": 9648
+      },
+      {
+        "activity": "HSE Review Completed",
+        "next_activity": "Signature Requested",
+        "frequency": 9600,
+        "avg_duration_days": 1.64,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.583,
+        "unique_cases": 9600
+      },
+      {
+        "activity": "Signature Requested",
+        "next_activity": "Signed by Buyer",
+        "frequency": 9551,
+        "avg_duration_days": 0.26,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9551
+      },
+      {
+        "activity": "Signed by Buyer",
+        "next_activity": "Signed by Supplier",
+        "frequency": 9496,
+        "avg_duration_days": 0.256,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9496
+      },
+      {
+        "activity": "Signed by Supplier",
+        "next_activity": "PO Issued",
+        "frequency": 9458,
+        "avg_duration_days": 0.251,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.542,
+        "unique_cases": 9458
+      },
+      {
+        "activity": "PO Issued",
+        "next_activity": "Goods Shipped",
+        "frequency": 9433,
+        "avg_duration_days": 0.258,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9433
+      },
+      {
+        "activity": "Goods Received at Site",
+        "next_activity": "Invoice Received",
+        "frequency": 9429,
+        "avg_duration_days": 0.262,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9429
+      },
+      {
+        "activity": "Dispatch to Mine Site",
+        "next_activity": "Goods Received at Site",
+        "frequency": 9429,
+        "avg_duration_days": 1.637,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.625,
+        "unique_cases": 9429
+      },
+      {
+        "activity": "Inbound to Central Warehouse",
+        "next_activity": "Dispatch to Mine Site",
+        "frequency": 9429,
+        "avg_duration_days": 1.638,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.625,
+        "unique_cases": 9429
+      },
+      {
+        "activity": "Invoice Received",
+        "next_activity": "Payment Made",
+        "frequency": 9429,
+        "avg_duration_days": 0.262,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 9429
+      },
+      {
+        "activity": "RFQ Sent to Suppliers",
+        "next_activity": "Bids Received",
+        "frequency": 7494,
+        "avg_duration_days": 0.256,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 7494
+      },
+      {
+        "activity": "Technical Review Completed",
+        "next_activity": "RFQ Sent to Suppliers",
+        "frequency": 7494,
+        "avg_duration_days": 4.068,
+        "median_duration_days": 2.958,
+        "p90_duration_days": 8.404,
+        "unique_cases": 7494
+      },
+      {
+        "activity": "Bids Received",
+        "next_activity": "Evaluation Started",
+        "frequency": 7494,
+        "avg_duration_days": 1.652,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.583,
+        "unique_cases": 7494
+      },
+      {
+        "activity": "Evaluation Started",
+        "next_activity": "Evaluation Completed",
+        "frequency": 7469,
+        "avg_duration_days": 1.618,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.542,
+        "unique_cases": 7469
+      },
+      {
+        "activity": "Evaluation Completed",
+        "next_activity": "Draft Contract Created",
+        "frequency": 7433,
+        "avg_duration_days": 1.635,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.583,
+        "unique_cases": 7433
+      },
+      {
+        "activity": "Legal Review Completed",
+        "next_activity": "HSE Review Started",
+        "frequency": 6808,
+        "avg_duration_days": 4.068,
+        "median_duration_days": 2.958,
+        "p90_duration_days": 8.417,
+        "unique_cases": 6808
+      },
+      {
+        "activity": "Goods Shipped",
+        "next_activity": "Inbound to Central Warehouse",
+        "frequency": 5751,
+        "avg_duration_days": 1.575,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.5,
+        "unique_cases": 5751
+      },
+      {
+        "activity": "Customs Clearance",
+        "next_activity": "Inbound to Central Warehouse",
+        "frequency": 3678,
+        "avg_duration_days": 10.758,
+        "median_duration_days": 7.167,
+        "p90_duration_days": 30.0,
+        "unique_cases": 3678
+      },
+      {
+        "activity": "Goods Shipped",
+        "next_activity": "Customs Clearance",
+        "frequency": 3678,
+        "avg_duration_days": 1.61,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.625,
+        "unique_cases": 3678
+      },
+      {
+        "activity": "Legal Review Completed",
+        "next_activity": "Negotiation Started",
+        "frequency": 2921,
+        "avg_duration_days": 4.094,
+        "median_duration_days": 3.0,
+        "p90_duration_days": 8.375,
+        "unique_cases": 2921
+      },
+      {
+        "activity": "Negotiation Started",
+        "next_activity": "Revised Draft Created",
+        "frequency": 2912,
+        "avg_duration_days": 1.576,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.583,
+        "unique_cases": 2912
+      },
+      {
+        "activity": "Revised Draft Created",
+        "next_activity": "HSE Review Started",
+        "frequency": 2897,
+        "avg_duration_days": 0.257,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.625,
+        "unique_cases": 2897
+      },
+      {
+        "activity": "Technical Review Completed",
+        "next_activity": "Draft Contract Created",
+        "frequency": 2451,
+        "avg_duration_days": 4.101,
+        "median_duration_days": 2.958,
+        "p90_duration_days": 8.542,
+        "unique_cases": 2451
+      },
+      {
+        "activity": "Legal Review Completed",
+        "next_activity": "Draft Contract Created",
+        "frequency": 1422,
+        "avg_duration_days": 3.94,
+        "median_duration_days": 2.875,
+        "p90_duration_days": 7.788,
+        "unique_cases": 1422
+      }
+    ]
+  },
+  "frequency_by_category": {
+    "ЗИП (запчасти)": {
+      "Bids Received": 7537,
+      "Customs Clearance": 3908,
+      "Dispatch to Mine Site": 9561,
+      "Draft Contract Created": 10002,
+      "Evaluation Completed": 7517,
+      "Evaluation Started": 7537,
+      "Goods Received at Site": 9561,
+      "Goods Shipped": 9566,
+      "HSE Review Completed": 9772,
+      "HSE Review Started": 9828,
+      "Inbound to Central Warehouse": 9561,
+      "Invoice Received": 9561,
+      "Legal Review Completed": 9945,
+      "Legal Review Started": 9976,
+      "Negotiation Started": 2979,
+      "PO Issued": 9592,
+      "Payment Made": 9561,
+      "RFQ Sent to Suppliers": 7537,
+      "Requisition Created": 10056,
+      "Revised Draft Created": 2963,
+      "Signature Requested": 9726,
+      "Signed by Buyer": 9676,
+      "Signed by Supplier": 9624,
+      "Technical Review Completed": 10056,
+      "Technical Review Started": 10056
+    },
+    "Обслуживание оборудования": {
+      "Bids Received": 7476,
+      "Customs Clearance": 3818,
+      "Dispatch to Mine Site": 9527,
+      "Draft Contract Created": 9925,
+      "Evaluation Completed": 7461,
+      "Evaluation Started": 7476,
+      "Goods Received at Site": 9527,
+      "Goods Shipped": 9527,
+      "HSE Review Completed": 9716,
+      "HSE Review Started": 9761,
+      "Inbound to Central Warehouse": 9527,
+      "Invoice Received": 9527,
+      "Legal Review Completed": 9840,
+      "Legal Review Started": 9885,
+      "Negotiation Started": 2930,
+      "PO Issued": 9546,
+      "Payment Made": 9527,
+      "RFQ Sent to Suppliers": 7476,
+      "Requisition Created": 9972,
+      "Revised Draft Created": 2923,
+      "Signature Requested": 9661,
+      "Signed by Buyer": 9614,
+      "Signed by Supplier": 9583,
+      "Technical Review Completed": 9972,
+      "Technical Review Started": 9972
+    },
+    "Подрядные работы": {
+      "Bids Received": 7624,
+      "Customs Clearance": 3790,
+      "Dispatch to Mine Site": 9565,
+      "Draft Contract Created": 9989,
+      "Evaluation Completed": 7602,
+      "Evaluation Started": 7624,
+      "Goods Received at Site": 9565,
+      "Goods Shipped": 9568,
+      "HSE Review Completed": 9779,
+      "HSE Review Started": 9819,
+      "Inbound to Central Warehouse": 9565,
+      "Invoice Received": 9565,
+      "Legal Review Completed": 9902,
+      "Legal Review Started": 9952,
+      "Negotiation Started": 2972,
+      "PO Issued": 9593,
+      "Payment Made": 9565,
+      "RFQ Sent to Suppliers": 7624,
+      "Requisition Created": 10050,
+      "Revised Draft Created": 2963,
+      "Signature Requested": 9734,
+      "Signed by Buyer": 9674,
+      "Signed by Supplier": 9629,
+      "Technical Review Completed": 10050,
+      "Technical Review Started": 10050
+    },
+    "Спецтехника": {
+      "Bids Received": 7497,
+      "Customs Clearance": 3773,
+      "Dispatch to Mine Site": 9506,
+      "Draft Contract Created": 9930,
+      "Evaluation Completed": 7480,
+      "Evaluation Started": 7497,
+      "Goods Received at Site": 9506,
+      "Goods Shipped": 9508,
+      "HSE Review Completed": 9708,
+      "HSE Review Started": 9755,
+      "Inbound to Central Warehouse": 9506,
+      "Invoice Received": 9506,
+      "Legal Review Completed": 9837,
+      "Legal Review Started": 9889,
+      "Negotiation Started": 2806,
+      "PO Issued": 9530,
+      "Payment Made": 9506,
+      "RFQ Sent to Suppliers": 7497,
+      "Requisition Created": 9977,
+      "Revised Draft Created": 2800,
+      "Signature Requested": 9662,
+      "Signed by Buyer": 9621,
+      "Signed by Supplier": 9567,
+      "Technical Review Completed": 9977,
+      "Technical Review Started": 9977
+    },
+    "Химические реагенты": {
+      "Bids Received": 7494,
+      "Customs Clearance": 3678,
+      "Dispatch to Mine Site": 9429,
+      "Draft Contract Created": 9884,
+      "Evaluation Completed": 7469,
+      "Evaluation Started": 7494,
+      "Goods Received at Site": 9429,
+      "Goods Shipped": 9433,
+      "HSE Review Completed": 9648,
+      "HSE Review Started": 9705,
+      "Inbound to Central Warehouse": 9429,
+      "Invoice Received": 9429,
+      "Legal Review Completed": 9804,
+      "Legal Review Started": 9844,
+      "Negotiation Started": 2921,
+      "PO Issued": 9458,
+      "Payment Made": 9429,
+      "RFQ Sent to Suppliers": 7494,
+      "Requisition Created": 9945,
+      "Revised Draft Created": 2912,
+      "Signature Requested": 9600,
+      "Signed by Buyer": 9551,
+      "Signed by Supplier": 9496,
+      "Technical Review Completed": 9945,
+      "Technical Review Started": 9945
+    }
+  },
+  "edges_by_import": {
+    "import": [
+      {
+        "activity": "Draft Contract Created",
+        "next_activity": "Legal Review Started",
+        "frequency": 22679,
+        "avg_duration_days": 0.258,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 19756
+      },
+      {
+        "activity": "Legal Review Started",
+        "next_activity": "Legal Review Completed",
+        "frequency": 22588,
+        "avg_duration_days": 4.115,
+        "median_duration_days": 3.0,
+        "p90_duration_days": 8.375,
+        "unique_cases": 19681
+      },
+      {
+        "activity": "Requisition Created",
+        "next_activity": "Technical Review Started",
+        "frequency": 19936,
+        "avg_duration_days": 0.26,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 19936
+      },
+      {
+        "activity": "Technical Review Started",
+        "next_activity": "Technical Review Completed",
+        "frequency": 19936,
+        "avg_duration_days": 4.103,
+        "median_duration_days": 3.0,
+        "p90_duration_days": 8.417,
+        "unique_cases": 19936
+      },
+      {
+        "activity": "HSE Review Started",
+        "next_activity": "HSE Review Completed",
+        "frequency": 19409,
+        "avg_duration_days": 1.608,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.5,
+        "unique_cases": 19409
+      },
+      {
+        "activity": "HSE Review Completed",
+        "next_activity": "Signature Requested",
+        "frequency": 19316,
+        "avg_duration_days": 1.625,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.583,
+        "unique_cases": 19316
+      },
+      {
+        "activity": "Signature Requested",
+        "next_activity": "Signed by Buyer",
+        "frequency": 19214,
+        "avg_duration_days": 0.26,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 19214
+      },
+      {
+        "activity": "Signed by Buyer",
+        "next_activity": "Signed by Supplier",
+        "frequency": 19127,
+        "avg_duration_days": 0.252,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 19127
+      },
+      {
+        "activity": "Signed by Supplier",
+        "next_activity": "PO Issued",
+        "frequency": 19054,
+        "avg_duration_days": 0.254,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 19054
+      },
+      {
+        "activity": "PO Issued",
+        "next_activity": "Goods Shipped",
+        "frequency": 18981,
+        "avg_duration_days": 0.255,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 18981
+      },
+      {
+        "activity": "Goods Shipped",
+        "next_activity": "Customs Clearance",
+        "frequency": 18967,
+        "avg_duration_days": 1.618,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.625,
+        "unique_cases": 18967
+      },
+      {
+        "activity": "Goods Received at Site",
+        "next_activity": "Invoice Received",
+        "frequency": 18967,
+        "avg_duration_days": 0.252,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 18967
+      },
+      {
+        "activity": "Customs Clearance",
+        "next_activity": "Inbound to Central Warehouse",
+        "frequency": 18967,
+        "avg_duration_days": 10.619,
+        "median_duration_days": 6.958,
+        "p90_duration_days": 30.0,
+        "unique_cases": 18967
+      },
+      {
+        "activity": "Dispatch to Mine Site",
+        "next_activity": "Goods Received at Site",
+        "frequency": 18967,
+        "avg_duration_days": 1.62,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.583,
+        "unique_cases": 18967
+      },
+      {
+        "activity": "Inbound to Central Warehouse",
+        "next_activity": "Dispatch to Mine Site",
+        "frequency": 18967,
+        "avg_duration_days": 1.624,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.625,
+        "unique_cases": 18967
+      },
+      {
+        "activity": "Invoice Received",
+        "next_activity": "Payment Made",
+        "frequency": 18967,
+        "avg_duration_days": 0.259,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 18967
+      },
+      {
+        "activity": "RFQ Sent to Suppliers",
+        "next_activity": "Bids Received",
+        "frequency": 15008,
+        "avg_duration_days": 0.254,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 15008
+      },
+      {
+        "activity": "Bids Received",
+        "next_activity": "Evaluation Started",
+        "frequency": 15008,
+        "avg_duration_days": 1.618,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.542,
+        "unique_cases": 15008
+      },
+      {
+        "activity": "Technical Review Completed",
+        "next_activity": "RFQ Sent to Suppliers",
+        "frequency": 15008,
+        "avg_duration_days": 4.114,
+        "median_duration_days": 2.958,
+        "p90_duration_days": 8.458,
+        "unique_cases": 15008
+      },
+      {
+        "activity": "Evaluation Started",
+        "next_activity": "Evaluation Completed",
+        "frequency": 14968,
+        "avg_duration_days": 1.62,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.583,
+        "unique_cases": 14968
+      },
+      {
+        "activity": "Evaluation Completed",
+        "next_activity": "Draft Contract Created",
+        "frequency": 14906,
+        "avg_duration_days": 1.607,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.5,
+        "unique_cases": 14906
+      },
+      {
+        "activity": "Legal Review Completed",
+        "next_activity": "HSE Review Started",
+        "frequency": 13672,
+        "avg_duration_days": 4.107,
+        "median_duration_days": 3.0,
+        "p90_duration_days": 8.333,
+        "unique_cases": 13672
+      },
+      {
+        "activity": "Legal Review Completed",
+        "next_activity": "Negotiation Started",
+        "frequency": 5869,
+        "avg_duration_days": 4.1,
+        "median_duration_days": 2.958,
+        "p90_duration_days": 8.542,
+        "unique_cases": 5869
+      },
+      {
+        "activity": "Negotiation Started",
+        "next_activity": "Revised Draft Created",
+        "frequency": 5855,
+        "avg_duration_days": 1.602,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.5,
+        "unique_cases": 5855
+      },
+      {
+        "activity": "Revised Draft Created",
+        "next_activity": "HSE Review Started",
+        "frequency": 5824,
+        "avg_duration_days": 0.263,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 5824
+      },
+      {
+        "activity": "Technical Review Completed",
+        "next_activity": "Draft Contract Created",
+        "frequency": 4928,
+        "avg_duration_days": 4.185,
+        "median_duration_days": 3.083,
+        "p90_duration_days": 8.542,
+        "unique_cases": 4928
+      },
+      {
+        "activity": "Legal Review Completed",
+        "next_activity": "Draft Contract Created",
+        "frequency": 2934,
+        "avg_duration_days": 4.031,
+        "median_duration_days": 2.917,
+        "p90_duration_days": 8.083,
+        "unique_cases": 2934
+      }
+    ],
+    "no-import": [
+      {
+        "activity": "Draft Contract Created",
+        "next_activity": "Legal Review Started",
+        "frequency": 34256,
+        "avg_duration_days": 0.261,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 29790
+      },
+      {
+        "activity": "Legal Review Started",
+        "next_activity": "Legal Review Completed",
+        "frequency": 34090,
+        "avg_duration_days": 4.108,
+        "median_duration_days": 3.0,
+        "p90_duration_days": 8.417,
+        "unique_cases": 29647
+      },
+      {
+        "activity": "Requisition Created",
+        "next_activity": "Technical Review Started",
+        "frequency": 30064,
+        "avg_duration_days": 0.257,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 30064
+      },
+      {
+        "activity": "Technical Review Started",
+        "next_activity": "Technical Review Completed",
+        "frequency": 30064,
+        "avg_duration_days": 4.099,
+        "median_duration_days": 3.0,
+        "p90_duration_days": 8.375,
+        "unique_cases": 30064
+      },
+      {
+        "activity": "HSE Review Started",
+        "next_activity": "HSE Review Completed",
+        "frequency": 29214,
+        "avg_duration_days": 1.607,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.542,
+        "unique_cases": 29214
+      },
+      {
+        "activity": "HSE Review Completed",
+        "next_activity": "Signature Requested",
+        "frequency": 29067,
+        "avg_duration_days": 1.633,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.583,
+        "unique_cases": 29067
+      },
+      {
+        "activity": "Signature Requested",
+        "next_activity": "Signed by Buyer",
+        "frequency": 28922,
+        "avg_duration_days": 0.26,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 28922
+      },
+      {
+        "activity": "Signed by Buyer",
+        "next_activity": "Signed by Supplier",
+        "frequency": 28772,
+        "avg_duration_days": 0.256,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 28772
+      },
+      {
+        "activity": "Signed by Supplier",
+        "next_activity": "PO Issued",
+        "frequency": 28665,
+        "avg_duration_days": 0.253,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 28665
+      },
+      {
+        "activity": "Dispatch to Mine Site",
+        "next_activity": "Goods Received at Site",
+        "frequency": 28621,
+        "avg_duration_days": 1.632,
+        "median_duration_days": 1.0,
+        "p90_duration_days": 3.583,
+        "unique_cases": 28621
+      },
+      {
+        "activity": "Goods Received at Site",
+        "next_activity": "Invoice Received",
+        "frequency": 28621,
+        "avg_duration_days": 0.259,
+        "median_duration_days": 0.167,
+        "p90_duration_days": 0.583,
+        "unique_cases": 28621
+      },
+      {
+        "activity": "Goods Shipped",
+        "next_activity": "Inbound to Central Warehouse",
+        "frequency": 28621,
+        "avg_duration_days": 1.603,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.583,
+        "unique_cases": 28621
+      },
+      {
+        "activity": "PO Issued",
+        "next_activity": "Goods Shipped",
+        "frequency": 28621,
+        "avg_duration_days": 0.258,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 28621
+      },
+      {
+        "activity": "Inbound to Central Warehouse",
+        "next_activity": "Dispatch to Mine Site",
+        "frequency": 28621,
+        "avg_duration_days": 1.615,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.583,
+        "unique_cases": 28621
+      },
+      {
+        "activity": "Invoice Received",
+        "next_activity": "Payment Made",
+        "frequency": 28621,
+        "avg_duration_days": 0.258,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 28621
+      },
+      {
+        "activity": "RFQ Sent to Suppliers",
+        "next_activity": "Bids Received",
+        "frequency": 22620,
+        "avg_duration_days": 0.255,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 22620
+      },
+      {
+        "activity": "Bids Received",
+        "next_activity": "Evaluation Started",
+        "frequency": 22620,
+        "avg_duration_days": 1.628,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.625,
+        "unique_cases": 22620
+      },
+      {
+        "activity": "Technical Review Completed",
+        "next_activity": "RFQ Sent to Suppliers",
+        "frequency": 22620,
+        "avg_duration_days": 4.109,
+        "median_duration_days": 3.0,
+        "p90_duration_days": 8.375,
+        "unique_cases": 22620
+      },
+      {
+        "activity": "Evaluation Started",
+        "next_activity": "Evaluation Completed",
+        "frequency": 22561,
+        "avg_duration_days": 1.604,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.583,
+        "unique_cases": 22561
+      },
+      {
+        "activity": "Evaluation Completed",
+        "next_activity": "Draft Contract Created",
+        "frequency": 22452,
+        "avg_duration_days": 1.627,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.542,
+        "unique_cases": 22452
+      },
+      {
+        "activity": "Legal Review Completed",
+        "next_activity": "HSE Review Started",
+        "frequency": 20704,
+        "avg_duration_days": 4.08,
+        "median_duration_days": 2.958,
+        "p90_duration_days": 8.292,
+        "unique_cases": 20704
+      },
+      {
+        "activity": "Legal Review Completed",
+        "next_activity": "Negotiation Started",
+        "frequency": 8739,
+        "avg_duration_days": 4.13,
+        "median_duration_days": 3.042,
+        "p90_duration_days": 8.383,
+        "unique_cases": 8739
+      },
+      {
+        "activity": "Negotiation Started",
+        "next_activity": "Revised Draft Created",
+        "frequency": 8706,
+        "avg_duration_days": 1.618,
+        "median_duration_days": 0.958,
+        "p90_duration_days": 3.542,
+        "unique_cases": 8706
+      },
+      {
+        "activity": "Revised Draft Created",
+        "next_activity": "HSE Review Started",
+        "frequency": 8668,
+        "avg_duration_days": 0.259,
+        "median_duration_days": 0.125,
+        "p90_duration_days": 0.583,
+        "unique_cases": 8668
+      },
+      {
+        "activity": "Technical Review Completed",
+        "next_activity": "Draft Contract Created",
+        "frequency": 7444,
+        "avg_duration_days": 4.053,
+        "median_duration_days": 2.958,
+        "p90_duration_days": 8.333,
+        "unique_cases": 7444
+      },
+      {
+        "activity": "Legal Review Completed",
+        "next_activity": "Draft Contract Created",
+        "frequency": 4478,
+        "avg_duration_days": 4.051,
+        "median_duration_days": 2.979,
+        "p90_duration_days": 8.083,
+        "unique_cases": 4478
+      }
+    ]
+  },
+  "frequency_by_import": {
+    "import": {
+      "Bids Received": 15008,
+      "Customs Clearance": 18967,
+      "Dispatch to Mine Site": 18967,
+      "Draft Contract Created": 19834,
+      "Evaluation Completed": 14968,
+      "Evaluation Started": 15008,
+      "Goods Received at Site": 18967,
+      "Goods Shipped": 18981,
+      "HSE Review Completed": 19409,
+      "HSE Review Started": 19496,
+      "Inbound to Central Warehouse": 18967,
+      "Invoice Received": 18967,
+      "Legal Review Completed": 19681,
+      "Legal Review Started": 19756,
+      "Negotiation Started": 5869,
+      "PO Issued": 19054,
+      "Payment Made": 18967,
+      "RFQ Sent to Suppliers": 15008,
+      "Requisition Created": 19936,
+      "Revised Draft Created": 5855,
+      "Signature Requested": 19316,
+      "Signed by Buyer": 19214,
+      "Signed by Supplier": 19127,
+      "Technical Review Completed": 19936,
+      "Technical Review Started": 19936
+    },
+    "no-import": {
+      "Bids Received": 22620,
+      "Dispatch to Mine Site": 28621,
+      "Draft Contract Created": 29896,
+      "Evaluation Completed": 22561,
+      "Evaluation Started": 22620,
+      "Goods Received at Site": 28621,
+      "Goods Shipped": 28621,
+      "HSE Review Completed": 29214,
+      "HSE Review Started": 29372,
+      "Inbound to Central Warehouse": 28621,
+      "Invoice Received": 28621,
+      "Legal Review Completed": 29647,
+      "Legal Review Started": 29790,
+      "Negotiation Started": 8739,
+      "PO Issued": 28665,
+      "Payment Made": 28621,
+      "RFQ Sent to Suppliers": 22620,
+      "Requisition Created": 30064,
+      "Revised Draft Created": 8706,
+      "Signature Requested": 29067,
+      "Signed by Buyer": 28922,
+      "Signed by Supplier": 28772,
+      "Technical Review Completed": 30064,
+      "Technical Review Started": 30064
+    }
+  }
+}

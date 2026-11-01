@@ -1,0 +1,1861 @@
+{
+  "total_cases": 50000,
+  "total_variants": 80,
+  "variants": [
+    {
+      "rank": 1,
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → RFQ Sent to Suppliers → Bids Received → Evaluation Started → Evaluation Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 12811,
+      "share_percent": 25.62,
+      "avg_duration_days": 31.71,
+      "steps": [
+        {
+          "position": 0,
+          "activity": "Requisition Created",
+          "cases": 12811
+        },
+        {
+          "position": 1,
+          "activity": "Technical Review Started",
+          "cases": 12811
+        },
+        {
+          "position": 2,
+          "activity": "Technical Review Completed",
+          "cases": 12811
+        },
+        {
+          "position": 3,
+          "activity": "RFQ Sent to Suppliers",
+          "cases": 12811
+        },
+        {
+          "position": 4,
+          "activity": "Bids Received",
+          "cases": 12811
+        },
+        {
+          "position": 5,
+          "activity": "Evaluation Started",
+          "cases": 12811
+        },
+        {
+          "position": 6,
+          "activity": "Evaluation Completed",
+          "cases": 12811
+        },
+        {
+          "position": 7,
+          "activity": "Draft Contract Created",
+          "cases": 12811
+        },
+        {
+          "position": 8,
+          "activity": "Legal Review Started",
+          "cases": 12811
+        },
+        {
+          "position": 9,
+          "activity": "Legal Review Completed",
+          "cases": 12811
+        },
+        {
+          "position": 10,
+          "activity": "HSE Review Started",
+          "cases": 12811
+        },
+        {
+          "position": 11,
+          "activity": "HSE Review Completed",
+          "cases": 12811
+        },
+        {
+          "position": 12,
+          "activity": "Signature Requested",
+          "cases": 12811
+        },
+        {
+          "position": 13,
+          "activity": "Signed by Buyer",
+          "cases": 12811
+        },
+        {
+          "position": 14,
+          "activity": "Signed by Supplier",
+          "cases": 12811
+        },
+        {
+          "position": 15,
+          "activity": "PO Issued",
+          "cases": 12811
+        },
+        {
+          "position": 16,
+          "activity": "Goods Shipped",
+          "cases": 12811
+        },
+        {
+          "position": 17,
+          "activity": "Inbound to Central Warehouse",
+          "cases": 12811
+        },
+        {
+          "position": 18,
+          "activity": "Dispatch to Mine Site",
+          "cases": 12811
+        },
+        {
+          "position": 19,
+          "activity": "Goods Received at Site",
+          "cases": 12811
+        },
+        {
+          "position": 20,
+          "activity": "Invoice Received",
+          "cases": 12811
+        },
+        {
+          "position": 21,
+          "activity": "Payment Made",
+          "cases": 12811
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → RFQ Sent to Suppliers → Bids Received → Evaluation Started → Evaluation Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Customs Clearance → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 8563,
+      "share_percent": 17.13,
+      "avg_duration_days": 42.0,
+      "steps": [
+        {
+          "position": 0,
+          "activity": "Requisition Created",
+          "cases": 8563
+        },
+        {
+          "position": 1,
+          "activity": "Technical Review Started",
+          "cases": 8563
+        },
+        {
+          "position": 2,
+          "activity": "Technical Review Completed",
+          "cases": 8563
+        },
+        {
+          "position": 3,
+          "activity": "RFQ Sent to Suppliers",
+          "cases": 8563
+        },
+        {
+          "position": 4,
+          "activity": "Bids Received",
+          "cases": 8563
+        },
+        {
+          "position": 5,
+          "activity": "Evaluation Started",
+          "cases": 8563
+        },
+        {
+          "position": 6,
+          "activity": "Evaluation Completed",
+          "cases": 8563
+        },
+        {
+          "position": 7,
+          "activity": "Draft Contract Created",
+          "cases": 8563
+        },
+        {
+          "position": 8,
+          "activity": "Legal Review Started",
+          "cases": 8563
+        },
+        {
+          "position": 9,
+          "activity": "Legal Review Completed",
+          "cases": 8563
+        },
+        {
+          "position": 10,
+          "activity": "HSE Review Started",
+          "cases": 8563
+        },
+        {
+          "position": 11,
+          "activity": "HSE Review Completed",
+          "cases": 8563
+        },
+        {
+          "position": 12,
+          "activity": "Signature Requested",
+          "cases": 8563
+        },
+        {
+          "position": 13,
+          "activity": "Signed by Buyer",
+          "cases": 8563
+        },
+        {
+          "position": 14,
+          "activity": "Signed by Supplier",
+          "cases": 8563
+        },
+        {
+          "position": 15,
+          "activity": "PO Issued",
+          "cases": 8563
+        },
+        {
+          "position": 16,
+          "activity": "Goods Shipped",
+          "cases": 8563
+        },
+        {
+          "position": 17,
+          "activity": "Customs Clearance",
+          "cases": 8563
+        },
+        {
+          "position": 18,
+          "activity": "Inbound to Central Warehouse",
+          "cases": 8563
+        },
+        {
+          "position": 19,
+          "activity": "Dispatch to Mine Site",
+          "cases": 8563
+        },
+        {
+          "position": 20,
+          "activity": "Goods Received at Site",
+          "cases": 8563
+        },
+        {
+          "position": 21,
+          "activity": "Invoice Received",
+          "cases": 8563
+        },
+        {
+          "position": 22,
+          "activity": "Payment Made",
+          "cases": 8563
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → RFQ Sent to Suppliers → Bids Received → Evaluation Started → Evaluation Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → Negotiation Started → Revised Draft Created → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 5453,
+      "share_percent": 10.91,
+      "avg_duration_days": 33.55,
+      "steps": [
+        {
+          "position": 0,
+          "activity": "Requisition Created",
+          "cases": 5453
+        },
+        {
+          "position": 1,
+          "activity": "Technical Review Started",
+          "cases": 5453
+        },
+        {
+          "position": 2,
+          "activity": "Technical Review Completed",
+          "cases": 5453
+        },
+        {
+          "position": 3,
+          "activity": "RFQ Sent to Suppliers",
+          "cases": 5453
+        },
+        {
+          "position": 4,
+          "activity": "Bids Received",
+          "cases": 5453
+        },
+        {
+          "position": 5,
+          "activity": "Evaluation Started",
+          "cases": 5453
+        },
+        {
+          "position": 6,
+          "activity": "Evaluation Completed",
+          "cases": 5453
+        },
+        {
+          "position": 7,
+          "activity": "Draft Contract Created",
+          "cases": 5453
+        },
+        {
+          "position": 8,
+          "activity": "Legal Review Started",
+          "cases": 5453
+        },
+        {
+          "position": 9,
+          "activity": "Legal Review Completed",
+          "cases": 5453
+        },
+        {
+          "position": 10,
+          "activity": "Negotiation Started",
+          "cases": 5453
+        },
+        {
+          "position": 11,
+          "activity": "Revised Draft Created",
+          "cases": 5453
+        },
+        {
+          "position": 12,
+          "activity": "HSE Review Started",
+          "cases": 5453
+        },
+        {
+          "position": 13,
+          "activity": "HSE Review Completed",
+          "cases": 5453
+        },
+        {
+          "position": 14,
+          "activity": "Signature Requested",
+          "cases": 5453
+        },
+        {
+          "position": 15,
+          "activity": "Signed by Buyer",
+          "cases": 5453
+        },
+        {
+          "position": 16,
+          "activity": "Signed by Supplier",
+          "cases": 5453
+        },
+        {
+          "position": 17,
+          "activity": "PO Issued",
+          "cases": 5453
+        },
+        {
+          "position": 18,
+          "activity": "Goods Shipped",
+          "cases": 5453
+        },
+        {
+          "position": 19,
+          "activity": "Inbound to Central Warehouse",
+          "cases": 5453
+        },
+        {
+          "position": 20,
+          "activity": "Dispatch to Mine Site",
+          "cases": 5453
+        },
+        {
+          "position": 21,
+          "activity": "Goods Received at Site",
+          "cases": 5453
+        },
+        {
+          "position": 22,
+          "activity": "Invoice Received",
+          "cases": 5453
+        },
+        {
+          "position": 23,
+          "activity": "Payment Made",
+          "cases": 5453
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 4288,
+      "share_percent": 8.58,
+      "avg_duration_days": 26.36,
+      "steps": [
+        {
+          "position": 0,
+          "activity": "Requisition Created",
+          "cases": 4288
+        },
+        {
+          "position": 1,
+          "activity": "Technical Review Started",
+          "cases": 4288
+        },
+        {
+          "position": 2,
+          "activity": "Technical Review Completed",
+          "cases": 4288
+        },
+        {
+          "position": 3,
+          "activity": "Draft Contract Created",
+          "cases": 4288
+        },
+        {
+          "position": 4,
+          "activity": "Legal Review Started",
+          "cases": 4288
+        },
+        {
+          "position": 5,
+          "activity": "Legal Review Completed",
+          "cases": 4288
+        },
+        {
+          "position": 6,
+          "activity": "HSE Review Started",
+          "cases": 4288
+        },
+        {
+          "position": 7,
+          "activity": "HSE Review Completed",
+          "cases": 4288
+        },
+        {
+          "position": 8,
+          "activity": "Signature Requested",
+          "cases": 4288
+        },
+        {
+          "position": 9,
+          "activity": "Signed by Buyer",
+          "cases": 4288
+        },
+        {
+          "position": 10,
+          "activity": "Signed by Supplier",
+          "cases": 4288
+        },
+        {
+          "position": 11,
+          "activity": "PO Issued",
+          "cases": 4288
+        },
+        {
+          "position": 12,
+          "activity": "Goods Shipped",
+          "cases": 4288
+        },
+        {
+          "position": 13,
+          "activity": "Inbound to Central Warehouse",
+          "cases": 4288
+        },
+        {
+          "position": 14,
+          "activity": "Dispatch to Mine Site",
+          "cases": 4288
+        },
+        {
+          "position": 15,
+          "activity": "Goods Received at Site",
+          "cases": 4288
+        },
+        {
+          "position": 16,
+          "activity": "Invoice Received",
+          "cases": 4288
+        },
+        {
+          "position": 17,
+          "activity": "Payment Made",
+          "cases": 4288
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → RFQ Sent to Suppliers → Bids Received → Evaluation Started → Evaluation Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → Negotiation Started → Revised Draft Created → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Customs Clearance → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 3576,
+      "share_percent": 7.15,
+      "avg_duration_days": 44.26,
+      "steps": [
+        {
+          "position": 0,
+          "activity": "Requisition Created",
+          "cases": 3576
+        },
+        {
+          "position": 1,
+          "activity": "Technical Review Started",
+          "cases": 3576
+        },
+        {
+          "position": 2,
+          "activity": "Technical Review Completed",
+          "cases": 3576
+        },
+        {
+          "position": 3,
+          "activity": "RFQ Sent to Suppliers",
+          "cases": 3576
+        },
+        {
+          "position": 4,
+          "activity": "Bids Received",
+          "cases": 3576
+        },
+        {
+          "position": 5,
+          "activity": "Evaluation Started",
+          "cases": 3576
+        },
+        {
+          "position": 6,
+          "activity": "Evaluation Completed",
+          "cases": 3576
+        },
+        {
+          "position": 7,
+          "activity": "Draft Contract Created",
+          "cases": 3576
+        },
+        {
+          "position": 8,
+          "activity": "Legal Review Started",
+          "cases": 3576
+        },
+        {
+          "position": 9,
+          "activity": "Legal Review Completed",
+          "cases": 3576
+        },
+        {
+          "position": 10,
+          "activity": "Negotiation Started",
+          "cases": 3576
+        },
+        {
+          "position": 11,
+          "activity": "Revised Draft Created",
+          "cases": 3576
+        },
+        {
+          "position": 12,
+          "activity": "HSE Review Started",
+          "cases": 3576
+        },
+        {
+          "position": 13,
+          "activity": "HSE Review Completed",
+          "cases": 3576
+        },
+        {
+          "position": 14,
+          "activity": "Signature Requested",
+          "cases": 3576
+        },
+        {
+          "position": 15,
+          "activity": "Signed by Buyer",
+          "cases": 3576
+        },
+        {
+          "position": 16,
+          "activity": "Signed by Supplier",
+          "cases": 3576
+        },
+        {
+          "position": 17,
+          "activity": "PO Issued",
+          "cases": 3576
+        },
+        {
+          "position": 18,
+          "activity": "Goods Shipped",
+          "cases": 3576
+        },
+        {
+          "position": 19,
+          "activity": "Customs Clearance",
+          "cases": 3576
+        },
+        {
+          "position": 20,
+          "activity": "Inbound to Central Warehouse",
+          "cases": 3576
+        },
+        {
+          "position": 21,
+          "activity": "Dispatch to Mine Site",
+          "cases": 3576
+        },
+        {
+          "position": 22,
+          "activity": "Goods Received at Site",
+          "cases": 3576
+        },
+        {
+          "position": 23,
+          "activity": "Invoice Received",
+          "cases": 3576
+        },
+        {
+          "position": 24,
+          "activity": "Payment Made",
+          "cases": 3576
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Customs Clearance → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 2786,
+      "share_percent": 5.57,
+      "avg_duration_days": 37.37,
+      "steps": [
+        {
+          "position": 0,
+          "activity": "Requisition Created",
+          "cases": 2786
+        },
+        {
+          "position": 1,
+          "activity": "Technical Review Started",
+          "cases": 2786
+        },
+        {
+          "position": 2,
+          "activity": "Technical Review Completed",
+          "cases": 2786
+        },
+        {
+          "position": 3,
+          "activity": "Draft Contract Created",
+          "cases": 2786
+        },
+        {
+          "position": 4,
+          "activity": "Legal Review Started",
+          "cases": 2786
+        },
+        {
+          "position": 5,
+          "activity": "Legal Review Completed",
+          "cases": 2786
+        },
+        {
+          "position": 6,
+          "activity": "HSE Review Started",
+          "cases": 2786
+        },
+        {
+          "position": 7,
+          "activity": "HSE Review Completed",
+          "cases": 2786
+        },
+        {
+          "position": 8,
+          "activity": "Signature Requested",
+          "cases": 2786
+        },
+        {
+          "position": 9,
+          "activity": "Signed by Buyer",
+          "cases": 2786
+        },
+        {
+          "position": 10,
+          "activity": "Signed by Supplier",
+          "cases": 2786
+        },
+        {
+          "position": 11,
+          "activity": "PO Issued",
+          "cases": 2786
+        },
+        {
+          "position": 12,
+          "activity": "Goods Shipped",
+          "cases": 2786
+        },
+        {
+          "position": 13,
+          "activity": "Customs Clearance",
+          "cases": 2786
+        },
+        {
+          "position": 14,
+          "activity": "Inbound to Central Warehouse",
+          "cases": 2786
+        },
+        {
+          "position": 15,
+          "activity": "Dispatch to Mine Site",
+          "cases": 2786
+        },
+        {
+          "position": 16,
+          "activity": "Goods Received at Site",
+          "cases": 2786
+        },
+        {
+          "position": 17,
+          "activity": "Invoice Received",
+          "cases": 2786
+        },
+        {
+          "position": 18,
+          "activity": "Payment Made",
+          "cases": 2786
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → RFQ Sent to Suppliers → Bids Received → Evaluation Started → Evaluation Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 2324,
+      "share_percent": 4.65,
+      "avg_duration_days": 40.23,
+      "steps": [
+        {
+          "position": 0,
+          "activity": "Requisition Created",
+          "cases": 2324
+        },
+        {
+          "position": 1,
+          "activity": "Technical Review Started",
+          "cases": 2324
+        },
+        {
+          "position": 2,
+          "activity": "Technical Review Completed",
+          "cases": 2324
+        },
+        {
+          "position": 3,
+          "activity": "RFQ Sent to Suppliers",
+          "cases": 2324
+        },
+        {
+          "position": 4,
+          "activity": "Bids Received",
+          "cases": 2324
+        },
+        {
+          "position": 5,
+          "activity": "Evaluation Started",
+          "cases": 2324
+        },
+        {
+          "position": 6,
+          "activity": "Evaluation Completed",
+          "cases": 2324
+        },
+        {
+          "position": 7,
+          "activity": "Draft Contract Created",
+          "cases": 2324
+        },
+        {
+          "position": 8,
+          "activity": "Legal Review Started",
+          "cases": 2324
+        },
+        {
+          "position": 9,
+          "activity": "Legal Review Completed",
+          "cases": 2324
+        },
+        {
+          "position": 10,
+          "activity": "Draft Contract Created",
+          "cases": 2324
+        },
+        {
+          "position": 11,
+          "activity": "Legal Review Started",
+          "cases": 2324
+        },
+        {
+          "position": 12,
+          "activity": "Legal Review Completed",
+          "cases": 2324
+        },
+        {
+          "position": 13,
+          "activity": "HSE Review Started",
+          "cases": 2324
+        },
+        {
+          "position": 14,
+          "activity": "HSE Review Completed",
+          "cases": 2324
+        },
+        {
+          "position": 15,
+          "activity": "Signature Requested",
+          "cases": 2324
+        },
+        {
+          "position": 16,
+          "activity": "Signed by Buyer",
+          "cases": 2324
+        },
+        {
+          "position": 17,
+          "activity": "Signed by Supplier",
+          "cases": 2324
+        },
+        {
+          "position": 18,
+          "activity": "PO Issued",
+          "cases": 2324
+        },
+        {
+          "position": 19,
+          "activity": "Goods Shipped",
+          "cases": 2324
+        },
+        {
+          "position": 20,
+          "activity": "Inbound to Central Warehouse",
+          "cases": 2324
+        },
+        {
+          "position": 21,
+          "activity": "Dispatch to Mine Site",
+          "cases": 2324
+        },
+        {
+          "position": 22,
+          "activity": "Goods Received at Site",
+          "cases": 2324
+        },
+        {
+          "position": 23,
+          "activity": "Invoice Received",
+          "cases": 2324
+        },
+        {
+          "position": 24,
+          "activity": "Payment Made",
+          "cases": 2324
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → Negotiation Started → Revised Draft Created → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 1734,
+      "share_percent": 3.47,
+      "avg_duration_days": 28.68,
+      "steps": [
+        {
+          "position": 0,
+          "activity": "Requisition Created",
+          "cases": 1734
+        },
+        {
+          "position": 1,
+          "activity": "Technical Review Started",
+          "cases": 1734
+        },
+        {
+          "position": 2,
+          "activity": "Technical Review Completed",
+          "cases": 1734
+        },
+        {
+          "position": 3,
+          "activity": "Draft Contract Created",
+          "cases": 1734
+        },
+        {
+          "position": 4,
+          "activity": "Legal Review Started",
+          "cases": 1734
+        },
+        {
+          "position": 5,
+          "activity": "Legal Review Completed",
+          "cases": 1734
+        },
+        {
+          "position": 6,
+          "activity": "Negotiation Started",
+          "cases": 1734
+        },
+        {
+          "position": 7,
+          "activity": "Revised Draft Created",
+          "cases": 1734
+        },
+        {
+          "position": 8,
+          "activity": "HSE Review Started",
+          "cases": 1734
+        },
+        {
+          "position": 9,
+          "activity": "HSE Review Completed",
+          "cases": 1734
+        },
+        {
+          "position": 10,
+          "activity": "Signature Requested",
+          "cases": 1734
+        },
+        {
+          "position": 11,
+          "activity": "Signed by Buyer",
+          "cases": 1734
+        },
+        {
+          "position": 12,
+          "activity": "Signed by Supplier",
+          "cases": 1734
+        },
+        {
+          "position": 13,
+          "activity": "PO Issued",
+          "cases": 1734
+        },
+        {
+          "position": 14,
+          "activity": "Goods Shipped",
+          "cases": 1734
+        },
+        {
+          "position": 15,
+          "activity": "Inbound to Central Warehouse",
+          "cases": 1734
+        },
+        {
+          "position": 16,
+          "activity": "Dispatch to Mine Site",
+          "cases": 1734
+        },
+        {
+          "position": 17,
+          "activity": "Goods Received at Site",
+          "cases": 1734
+        },
+        {
+          "position": 18,
+          "activity": "Invoice Received",
+          "cases": 1734
+        },
+        {
+          "position": 19,
+          "activity": "Payment Made",
+          "cases": 1734
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → RFQ Sent to Suppliers → Bids Received → Evaluation Started → Evaluation Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Customs Clearance → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 1465,
+      "share_percent": 2.93,
+      "avg_duration_days": 51.66,
+      "steps": [
+        {
+          "position": 0,
+          "activity": "Requisition Created",
+          "cases": 1465
+        },
+        {
+          "position": 1,
+          "activity": "Technical Review Started",
+          "cases": 1465
+        },
+        {
+          "position": 2,
+          "activity": "Technical Review Completed",
+          "cases": 1465
+        },
+        {
+          "position": 3,
+          "activity": "RFQ Sent to Suppliers",
+          "cases": 1465
+        },
+        {
+          "position": 4,
+          "activity": "Bids Received",
+          "cases": 1465
+        },
+        {
+          "position": 5,
+          "activity": "Evaluation Started",
+          "cases": 1465
+        },
+        {
+          "position": 6,
+          "activity": "Evaluation Completed",
+          "cases": 1465
+        },
+        {
+          "position": 7,
+          "activity": "Draft Contract Created",
+          "cases": 1465
+        },
+        {
+          "position": 8,
+          "activity": "Legal Review Started",
+          "cases": 1465
+        },
+        {
+          "position": 9,
+          "activity": "Legal Review Completed",
+          "cases": 1465
+        },
+        {
+          "position": 10,
+          "activity": "Draft Contract Created",
+          "cases": 1465
+        },
+        {
+          "position": 11,
+          "activity": "Legal Review Started",
+          "cases": 1465
+        },
+        {
+          "position": 12,
+          "activity": "Legal Review Completed",
+          "cases": 1465
+        },
+        {
+          "position": 13,
+          "activity": "HSE Review Started",
+          "cases": 1465
+        },
+        {
+          "position": 14,
+          "activity": "HSE Review Completed",
+          "cases": 1465
+        },
+        {
+          "position": 15,
+          "activity": "Signature Requested",
+          "cases": 1465
+        },
+        {
+          "position": 16,
+          "activity": "Signed by Buyer",
+          "cases": 1465
+        },
+        {
+          "position": 17,
+          "activity": "Signed by Supplier",
+          "cases": 1465
+        },
+        {
+          "position": 18,
+          "activity": "PO Issued",
+          "cases": 1465
+        },
+        {
+          "position": 19,
+          "activity": "Goods Shipped",
+          "cases": 1465
+        },
+        {
+          "position": 20,
+          "activity": "Customs Clearance",
+          "cases": 1465
+        },
+        {
+          "position": 21,
+          "activity": "Inbound to Central Warehouse",
+          "cases": 1465
+        },
+        {
+          "position": 22,
+          "activity": "Dispatch to Mine Site",
+          "cases": 1465
+        },
+        {
+          "position": 23,
+          "activity": "Goods Received at Site",
+          "cases": 1465
+        },
+        {
+          "position": 24,
+          "activity": "Invoice Received",
+          "cases": 1465
+        },
+        {
+          "position": 25,
+          "activity": "Payment Made",
+          "cases": 1465
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → Negotiation Started → Revised Draft Created → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Customs Clearance → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 1198,
+      "share_percent": 2.4,
+      "avg_duration_days": 38.86,
+      "steps": [
+        {
+          "position": 0,
+          "activity": "Requisition Created",
+          "cases": 1198
+        },
+        {
+          "position": 1,
+          "activity": "Technical Review Started",
+          "cases": 1198
+        },
+        {
+          "position": 2,
+          "activity": "Technical Review Completed",
+          "cases": 1198
+        },
+        {
+          "position": 3,
+          "activity": "Draft Contract Created",
+          "cases": 1198
+        },
+        {
+          "position": 4,
+          "activity": "Legal Review Started",
+          "cases": 1198
+        },
+        {
+          "position": 5,
+          "activity": "Legal Review Completed",
+          "cases": 1198
+        },
+        {
+          "position": 6,
+          "activity": "Negotiation Started",
+          "cases": 1198
+        },
+        {
+          "position": 7,
+          "activity": "Revised Draft Created",
+          "cases": 1198
+        },
+        {
+          "position": 8,
+          "activity": "HSE Review Started",
+          "cases": 1198
+        },
+        {
+          "position": 9,
+          "activity": "HSE Review Completed",
+          "cases": 1198
+        },
+        {
+          "position": 10,
+          "activity": "Signature Requested",
+          "cases": 1198
+        },
+        {
+          "position": 11,
+          "activity": "Signed by Buyer",
+          "cases": 1198
+        },
+        {
+          "position": 12,
+          "activity": "Signed by Supplier",
+          "cases": 1198
+        },
+        {
+          "position": 13,
+          "activity": "PO Issued",
+          "cases": 1198
+        },
+        {
+          "position": 14,
+          "activity": "Goods Shipped",
+          "cases": 1198
+        },
+        {
+          "position": 15,
+          "activity": "Customs Clearance",
+          "cases": 1198
+        },
+        {
+          "position": 16,
+          "activity": "Inbound to Central Warehouse",
+          "cases": 1198
+        },
+        {
+          "position": 17,
+          "activity": "Dispatch to Mine Site",
+          "cases": 1198
+        },
+        {
+          "position": 18,
+          "activity": "Goods Received at Site",
+          "cases": 1198
+        },
+        {
+          "position": 19,
+          "activity": "Invoice Received",
+          "cases": 1198
+        },
+        {
+          "position": 20,
+          "activity": "Payment Made",
+          "cases": 1198
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → RFQ Sent to Suppliers → Bids Received → Evaluation Started → Evaluation Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → Negotiation Started → Revised Draft Created → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 963,
+      "share_percent": 1.93,
+      "avg_duration_days": 41.92,
+      "steps": [
+        {
+          "position": 0,
+          "activity": "Requisition Created",
+          "cases": 963
+        },
+        {
+          "position": 1,
+          "activity": "Technical Review Started",
+          "cases": 963
+        },
+        {
+          "position": 2,
+          "activity": "Technical Review Completed",
+          "cases": 963
+        },
+        {
+          "position": 3,
+          "activity": "RFQ Sent to Suppliers",
+          "cases": 963
+        },
+        {
+          "position": 4,
+          "activity": "Bids Received",
+          "cases": 963
+        },
+        {
+          "position": 5,
+          "activity": "Evaluation Started",
+          "cases": 963
+        },
+        {
+          "position": 6,
+          "activity": "Evaluation Completed",
+          "cases": 963
+        },
+        {
+          "position": 7,
+          "activity": "Draft Contract Created",
+          "cases": 963
+        },
+        {
+          "position": 8,
+          "activity": "Legal Review Started",
+          "cases": 963
+        },
+        {
+          "position": 9,
+          "activity": "Legal Review Completed",
+          "cases": 963
+        },
+        {
+          "position": 10,
+          "activity": "Draft Contract Created",
+          "cases": 963
+        },
+        {
+          "position": 11,
+          "activity": "Legal Review Started",
+          "cases": 963
+        },
+        {
+          "position": 12,
+          "activity": "Legal Review Completed",
+          "cases": 963
+        },
+        {
+          "position": 13,
+          "activity": "Negotiation Started",
+          "cases": 963
+        },
+        {
+          "position": 14,
+          "activity": "Revised Draft Created",
+          "cases": 963
+        },
+        {
+          "position": 15,
+          "activity": "HSE Review Started",
+          "cases": 963
+        },
+        {
+          "position": 16,
+          "activity": "HSE Review Completed",
+          "cases": 963
+        },
+        {
+          "position": 17,
+          "activity": "Signature Requested",
+          "cases": 963
+        },
+        {
+          "position": 18,
+          "activity": "Signed by Buyer",
+          "cases": 963
+        },
+        {
+          "position": 19,
+          "activity": "Signed by Supplier",
+          "cases": 963
+        },
+        {
+          "position": 20,
+          "activity": "PO Issued",
+          "cases": 963
+        },
+        {
+          "position": 21,
+          "activity": "Goods Shipped",
+          "cases": 963
+        },
+        {
+          "position": 22,
+          "activity": "Inbound to Central Warehouse",
+          "cases": 963
+        },
+        {
+          "position": 23,
+          "activity": "Dispatch to Mine Site",
+          "cases": 963
+        },
+        {
+          "position": 24,
+          "activity": "Goods Received at Site",
+          "cases": 963
+        },
+        {
+          "position": 25,
+          "activity": "Invoice Received",
+          "cases": 963
+        },
+        {
+          "position": 26,
+          "activity": "Payment Made",
+          "cases": 963
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 740,
+      "share_percent": 1.48,
+      "avg_duration_days": 34.73,
+      "steps": [
+        {
+          "position": 0,
+          "activity": "Requisition Created",
+          "cases": 740
+        },
+        {
+          "position": 1,
+          "activity": "Technical Review Started",
+          "cases": 740
+        },
+        {
+          "position": 2,
+          "activity": "Technical Review Completed",
+          "cases": 740
+        },
+        {
+          "position": 3,
+          "activity": "Draft Contract Created",
+          "cases": 740
+        },
+        {
+          "position": 4,
+          "activity": "Legal Review Started",
+          "cases": 740
+        },
+        {
+          "position": 5,
+          "activity": "Legal Review Completed",
+          "cases": 740
+        },
+        {
+          "position": 6,
+          "activity": "Draft Contract Created",
+          "cases": 740
+        },
+        {
+          "position": 7,
+          "activity": "Legal Review Started",
+          "cases": 740
+        },
+        {
+          "position": 8,
+          "activity": "Legal Review Completed",
+          "cases": 740
+        },
+        {
+          "position": 9,
+          "activity": "HSE Review Started",
+          "cases": 740
+        },
+        {
+          "position": 10,
+          "activity": "HSE Review Completed",
+          "cases": 740
+        },
+        {
+          "position": 11,
+          "activity": "Signature Requested",
+          "cases": 740
+        },
+        {
+          "position": 12,
+          "activity": "Signed by Buyer",
+          "cases": 740
+        },
+        {
+          "position": 13,
+          "activity": "Signed by Supplier",
+          "cases": 740
+        },
+        {
+          "position": 14,
+          "activity": "PO Issued",
+          "cases": 740
+        },
+        {
+          "position": 15,
+          "activity": "Goods Shipped",
+          "cases": 740
+        },
+        {
+          "position": 16,
+          "activity": "Inbound to Central Warehouse",
+          "cases": 740
+        },
+        {
+          "position": 17,
+          "activity": "Dispatch to Mine Site",
+          "cases": 740
+        },
+        {
+          "position": 18,
+          "activity": "Goods Received at Site",
+          "cases": 740
+        },
+        {
+          "position": 19,
+          "activity": "Invoice Received",
+          "cases": 740
+        },
+        {
+          "position": 20,
+          "activity": "Payment Made",
+          "cases": 740
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → RFQ Sent to Suppliers → Bids Received → Evaluation Started → Evaluation Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → Negotiation Started → Revised Draft Created → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Customs Clearance → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 669,
+      "share_percent": 1.34,
+      "avg_duration_days": 52.79,
+      "steps": [
+        {
+          "position": 0,
+          "activity": "Requisition Created",
+          "cases": 669
+        },
+        {
+          "position": 1,
+          "activity": "Technical Review Started",
+          "cases": 669
+        },
+        {
+          "position": 2,
+          "activity": "Technical Review Completed",
+          "cases": 669
+        },
+        {
+          "position": 3,
+          "activity": "RFQ Sent to Suppliers",
+          "cases": 669
+        },
+        {
+          "position": 4,
+          "activity": "Bids Received",
+          "cases": 669
+        },
+        {
+          "position": 5,
+          "activity": "Evaluation Started",
+          "cases": 669
+        },
+        {
+          "position": 6,
+          "activity": "Evaluation Completed",
+          "cases": 669
+        },
+        {
+          "position": 7,
+          "activity": "Draft Contract Created",
+          "cases": 669
+        },
+        {
+          "position": 8,
+          "activity": "Legal Review Started",
+          "cases": 669
+        },
+        {
+          "position": 9,
+          "activity": "Legal Review Completed",
+          "cases": 669
+        },
+        {
+          "position": 10,
+          "activity": "Draft Contract Created",
+          "cases": 669
+        },
+        {
+          "position": 11,
+          "activity": "Legal Review Started",
+          "cases": 669
+        },
+        {
+          "position": 12,
+          "activity": "Legal Review Completed",
+          "cases": 669
+        },
+        {
+          "position": 13,
+          "activity": "Negotiation Started",
+          "cases": 669
+        },
+        {
+          "position": 14,
+          "activity": "Revised Draft Created",
+          "cases": 669
+        },
+        {
+          "position": 15,
+          "activity": "HSE Review Started",
+          "cases": 669
+        },
+        {
+          "position": 16,
+          "activity": "HSE Review Completed",
+          "cases": 669
+        },
+        {
+          "position": 17,
+          "activity": "Signature Requested",
+          "cases": 669
+        },
+        {
+          "position": 18,
+          "activity": "Signed by Buyer",
+          "cases": 669
+        },
+        {
+          "position": 19,
+          "activity": "Signed by Supplier",
+          "cases": 669
+        },
+        {
+          "position": 20,
+          "activity": "PO Issued",
+          "cases": 669
+        },
+        {
+          "position": 21,
+          "activity": "Goods Shipped",
+          "cases": 669
+        },
+        {
+          "position": 22,
+          "activity": "Customs Clearance",
+          "cases": 669
+        },
+        {
+          "position": 23,
+          "activity": "Inbound to Central Warehouse",
+          "cases": 669
+        },
+        {
+          "position": 24,
+          "activity": "Dispatch to Mine Site",
+          "cases": 669
+        },
+        {
+          "position": 25,
+          "activity": "Goods Received at Site",
+          "cases": 669
+        },
+        {
+          "position": 26,
+          "activity": "Invoice Received",
+          "cases": 669
+        },
+        {
+          "position": 27,
+          "activity": "Payment Made",
+          "cases": 669
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Customs Clearance → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 479,
+      "share_percent": 0.96,
+      "avg_duration_days": 46.17,
+      "steps": [
+        {
+          "position": 0,
+          "activity": "Requisition Created",
+          "cases": 479
+        },
+        {
+          "position": 1,
+          "activity": "Technical Review Started",
+          "cases": 479
+        },
+        {
+          "position": 2,
+          "activity": "Technical Review Completed",
+          "cases": 479
+        },
+        {
+          "position": 3,
+          "activity": "Draft Contract Created",
+          "cases": 479
+        },
+        {
+          "position": 4,
+          "activity": "Legal Review Started",
+          "cases": 479
+        },
+        {
+          "position": 5,
+          "activity": "Legal Review Completed",
+          "cases": 479
+        },
+        {
+          "position": 6,
+          "activity": "Draft Contract Created",
+          "cases": 479
+        },
+        {
+          "position": 7,
+          "activity": "Legal Review Started",
+          "cases": 479
+        },
+        {
+          "position": 8,
+          "activity": "Legal Review Completed",
+          "cases": 479
+        },
+        {
+          "position": 9,
+          "activity": "HSE Review Started",
+          "cases": 479
+        },
+        {
+          "position": 10,
+          "activity": "HSE Review Completed",
+          "cases": 479
+        },
+        {
+          "position": 11,
+          "activity": "Signature Requested",
+          "cases": 479
+        },
+        {
+          "position": 12,
+          "activity": "Signed by Buyer",
+          "cases": 479
+        },
+        {
+          "position": 13,
+          "activity": "Signed by Supplier",
+          "cases": 479
+        },
+        {
+          "position": 14,
+          "activity": "PO Issued",
+          "cases": 479
+        },
+        {
+          "position": 15,
+          "activity": "Goods Shipped",
+          "cases": 479
+        },
+        {
+          "position": 16,
+          "activity": "Customs Clearance",
+          "cases": 479
+        },
+        {
+          "position": 17,
+          "activity": "Inbound to Central Warehouse",
+          "cases": 479
+        },
+        {
+          "position": 18,
+          "activity": "Dispatch to Mine Site",
+          "cases": 479
+        },
+        {
+          "position": 19,
+          "activity": "Goods Received at Site",
+          "cases": 479
+        },
+        {
+          "position": 20,
+          "activity": "Invoice Received",
+          "cases": 479
+        },
+        {
+          "position": 21,
+          "activity": "Payment Made",
+          "cases": 479
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → Negotiation Started → Revised Draft Created → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 308,
+      "share_percent": 0.62,
+      "avg_duration_days": 36.56,
+      "steps": [
+        {
+          "position": 0,
+          "activity": "Requisition Created",
+          "cases": 308
+        },
+        {
+          "position": 1,
+          "activity": "Technical Review Started",
+          "cases": 308
+        },
+        {
+          "position": 2,
+          "activity": "Technical Review Completed",
+          "cases": 308
+        },
+        {
+          "position": 3,
+          "activity": "Draft Contract Created",
+          "cases": 308
+        },
+        {
+          "position": 4,
+          "activity": "Legal Review Started",
+          "cases": 308
+        },
+        {
+          "position": 5,
+          "activity": "Legal Review Completed",
+          "cases": 308
+        },
+        {
+          "position": 6,
+          "activity": "Draft Contract Created",
+          "cases": 308
+        },
+        {
+          "position": 7,
+          "activity": "Legal Review Started",
+          "cases": 308
+        },
+        {
+          "position": 8,
+          "activity": "Legal Review Completed",
+          "cases": 308
+        },
+        {
+          "position": 9,
+          "activity": "Negotiation Started",
+          "cases": 308
+        },
+        {
+          "position": 10,
+          "activity": "Revised Draft Created",
+          "cases": 308
+        },
+        {
+          "position": 11,
+          "activity": "HSE Review Started",
+          "cases": 308
+        },
+        {
+          "position": 12,
+          "activity": "HSE Review Completed",
+          "cases": 308
+        },
+        {
+          "position": 13,
+          "activity": "Signature Requested",
+          "cases": 308
+        },
+        {
+          "position": 14,
+          "activity": "Signed by Buyer",
+          "cases": 308
+        },
+        {
+          "position": 15,
+          "activity": "Signed by Supplier",
+          "cases": 308
+        },
+        {
+          "position": 16,
+          "activity": "PO Issued",
+          "cases": 308
+        },
+        {
+          "position": 17,
+          "activity": "Goods Shipped",
+          "cases": 308
+        },
+        {
+          "position": 18,
+          "activity": "Inbound to Central Warehouse",
+          "cases": 308
+        },
+        {
+          "position": 19,
+          "activity": "Dispatch to Mine Site",
+          "cases": 308
+        },
+        {
+          "position": 20,
+          "activity": "Goods Received at Site",
+          "cases": 308
+        },
+        {
+          "position": 21,
+          "activity": "Invoice Received",
+          "cases": 308
+        },
+        {
+          "position": 22,
+          "activity": "Payment Made",
+          "cases": 308
+        }
+      ]
+    }
+  ]
+}

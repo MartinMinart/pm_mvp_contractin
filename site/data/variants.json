@@ -1,0 +1,68 @@
+{
+  "total_variants": 80,
+  "total_cases": 50000,
+  "top10_cases": 44198,
+  "top10_coverage_percent": 88.4,
+  "variants": [
+    {
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → RFQ Sent to Suppliers → Bids Received → Evaluation Started → Evaluation Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 12811,
+      "share_percent": 25.62,
+      "avg_duration_days": 31.71
+    },
+    {
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → RFQ Sent to Suppliers → Bids Received → Evaluation Started → Evaluation Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Customs Clearance → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 8563,
+      "share_percent": 17.13,
+      "avg_duration_days": 42.0
+    },
+    {
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → RFQ Sent to Suppliers → Bids Received → Evaluation Started → Evaluation Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → Negotiation Started → Revised Draft Created → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 5453,
+      "share_percent": 10.91,
+      "avg_duration_days": 33.55
+    },
+    {
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 4288,
+      "share_percent": 8.58,
+      "avg_duration_days": 26.36
+    },
+    {
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → RFQ Sent to Suppliers → Bids Received → Evaluation Started → Evaluation Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → Negotiation Started → Revised Draft Created → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Customs Clearance → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 3576,
+      "share_percent": 7.15,
+      "avg_duration_days": 44.26
+    },
+    {
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Customs Clearance → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 2786,
+      "share_percent": 5.57,
+      "avg_duration_days": 37.37
+    },
+    {
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → RFQ Sent to Suppliers → Bids Received → Evaluation Started → Evaluation Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 2324,
+      "share_percent": 4.65,
+      "avg_duration_days": 40.23
+    },
+    {
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → Negotiation Started → Revised Draft Created → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 1734,
+      "share_percent": 3.47,
+      "avg_duration_days": 28.68
+    },
+    {
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → RFQ Sent to Suppliers → Bids Received → Evaluation Started → Evaluation Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Customs Clearance → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 1465,
+      "share_percent": 2.93,
+      "avg_duration_days": 51.66
+    },
+    {
+      "variant": "Requisition Created → Technical Review Started → Technical Review Completed → Draft Contract Created → Legal Review Started → Legal Review Completed → Negotiation Started → Revised Draft Created → HSE Review Started → HSE Review Completed → Signature Requested → Signed by Buyer → Signed by Supplier → PO Issued → Goods Shipped → Customs Clearance → Inbound to Central Warehouse → Dispatch to Mine Site → Goods Received at Site → Invoice Received → Payment Made",
+      "frequency": 1198,
+      "share_percent": 2.4,
+      "avg_duration_days": 38.86
+    }
+  ]
+}

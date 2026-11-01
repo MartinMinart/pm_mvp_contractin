@@ -1,0 +1,1642 @@
+{
+  "generated_at": "2026-10-31T19:54:28Z",
+  "period_start": "2024-01",
+  "period_end": "2024-12",
+  "source_version": "synthetic-v1",
+  "total_cases": 50000,
+  "total_events": 1094474,
+  "total_cost": 534392476278.3333,
+  "cost_per_case": 10687849.525566665,
+  "avg_duration_days": 35.67540666666667,
+  "median_duration_days": 33.333333333333336,
+  "p90_duration_days": 54.291666666666664,
+  "top_category": "ЗИП (запчасти)",
+  "top_category_count": 10056,
+  "rejected_share": 4.824,
+  "returns_share": 14.824,
+  "import_share": 39.872,
+  "kpi_groups": {
+    "volume": [
+      {
+        "key": "total_cases",
+        "label": "Кейсов в логе",
+        "value": 50000.0,
+        "unit": "",
+        "format": "int",
+        "hint": "Одна закупка от заявки до оплаты"
+      },
+      {
+        "key": "total_suppliers",
+        "label": "Поставщиков",
+        "value": 100.0,
+        "unit": "",
+        "format": "int",
+        "hint": "Обезличенные supplier_XXX"
+      },
+      {
+        "key": "total_activities",
+        "label": "Активностей",
+        "value": 25.0,
+        "unit": "",
+        "format": "int",
+        "hint": "Справочник активностей процесса"
+      }
+    ],
+    "time": [
+      {
+        "key": "avg_duration_days",
+        "label": "Средняя длительность",
+        "value": 35.68,
+        "unit": "дн",
+        "format": "days",
+        "hint": "От «Requisition Created» до «Payment Made»"
+      },
+      {
+        "key": "median_duration_days",
+        "label": "Медиана длительности",
+        "value": 33.33,
+        "unit": "дн",
+        "format": "days",
+        "hint": "Устойчива к выбросам"
+      },
+      {
+        "key": "p90_duration_days",
+        "label": "P90 длительности",
+        "value": 54.29,
+        "unit": "дн",
+        "format": "days",
+        "hint": "90% кейсов укладываются в этот срок"
+      }
+    ],
+    "quality": [
+      {
+        "key": "rejected_share",
+        "label": "Отменённые кейсы",
+        "value": 4.82,
+        "unit": "%",
+        "format": "percent",
+        "hint": "Не дошли до оплаты"
+      },
+      {
+        "key": "returns_share",
+        "label": "Кейсы с возвратом",
+        "value": 14.82,
+        "unit": "%",
+        "format": "percent",
+        "hint": "Возврат договора на доработку после Legal Review"
+      },
+      {
+        "key": "import_share",
+        "label": "Импортные кейсы",
+        "value": 39.87,
+        "unit": "%",
+        "format": "percent",
+        "hint": "Проходят таможенное оформление"
+      }
+    ]
+  },
+  "monthly": [
+    {
+      "month": "2024-01",
+      "cases": 4106,
+      "avg_duration_days": 35.68,
+      "total_cost": 44167534739.458336,
+      "rejected_share": 5.09
+    },
+    {
+      "month": "2024-02",
+      "cases": 4033,
+      "avg_duration_days": 35.64,
+      "total_cost": 42912482559.958336,
+      "rejected_share": 5.13
+    },
+    {
+      "month": "2024-03",
+      "cases": 4203,
+      "avg_duration_days": 35.65,
+      "total_cost": 44902500458.875,
+      "rejected_share": 4.62
+    },
+    {
+      "month": "2024-04",
+      "cases": 4114,
+      "avg_duration_days": 35.8,
+      "total_cost": 44595187959.041664,
+      "rejected_share": 4.42
+    },
+    {
+      "month": "2024-05",
+      "cases": 4213,
+      "avg_duration_days": 35.6,
+      "total_cost": 45381004574.791664,
+      "rejected_share": 5.39
+    },
+    {
+      "month": "2024-06",
+      "cases": 4120,
+      "avg_duration_days": 35.52,
+      "total_cost": 43824454959.375,
+      "rejected_share": 5.05
+    },
+    {
+      "month": "2024-07",
+      "cases": 4358,
+      "avg_duration_days": 35.88,
+      "total_cost": 46498545120.541664,
+      "rejected_share": 4.52
+    },
+    {
+      "month": "2024-08",
+      "cases": 4263,
+      "avg_duration_days": 35.91,
+      "total_cost": 45737173448.958336,
+      "rejected_share": 4.41
+    },
+    {
+      "month": "2024-09",
+      "cases": 4113,
+      "avg_duration_days": 35.76,
+      "total_cost": 43565119044.666664,
+      "rejected_share": 4.81
+    },
+    {
+      "month": "2024-10",
+      "cases": 4194,
+      "avg_duration_days": 35.58,
+      "total_cost": 44780094656.5,
+      "rejected_share": 4.46
+    },
+    {
+      "month": "2024-11",
+      "cases": 4068,
+      "avg_duration_days": 35.58,
+      "total_cost": 43421021831.041664,
+      "rejected_share": 4.72
+    },
+    {
+      "month": "2024-12",
+      "cases": 4215,
+      "avg_duration_days": 35.51,
+      "total_cost": 44607356925.125,
+      "rejected_share": 5.29
+    }
+  ],
+  "monthly_by_category": [
+    {
+      "month": "2024-01",
+      "category": "ЗИП (запчасти)",
+      "cases": 831,
+      "avg_duration_days": 35.95
+    },
+    {
+      "month": "2024-01",
+      "category": "Обслуживание оборудования",
+      "cases": 836,
+      "avg_duration_days": 35.7
+    },
+    {
+      "month": "2024-01",
+      "category": "Подрядные работы",
+      "cases": 825,
+      "avg_duration_days": 36.01
+    },
+    {
+      "month": "2024-01",
+      "category": "Спецтехника",
+      "cases": 809,
+      "avg_duration_days": 35.63
+    },
+    {
+      "month": "2024-01",
+      "category": "Химические реагенты",
+      "cases": 805,
+      "avg_duration_days": 35.07
+    },
+    {
+      "month": "2024-02",
+      "category": "ЗИП (запчасти)",
+      "cases": 806,
+      "avg_duration_days": 34.76
+    },
+    {
+      "month": "2024-02",
+      "category": "Обслуживание оборудования",
+      "cases": 797,
+      "avg_duration_days": 35.86
+    },
+    {
+      "month": "2024-02",
+      "category": "Подрядные работы",
+      "cases": 837,
+      "avg_duration_days": 36.61
+    },
+    {
+      "month": "2024-02",
+      "category": "Спецтехника",
+      "cases": 790,
+      "avg_duration_days": 35.42
+    },
+    {
+      "month": "2024-02",
+      "category": "Химические реагенты",
+      "cases": 803,
+      "avg_duration_days": 35.52
+    },
+    {
+      "month": "2024-03",
+      "category": "ЗИП (запчасти)",
+      "cases": 808,
+      "avg_duration_days": 36.42
+    },
+    {
+      "month": "2024-03",
+      "category": "Обслуживание оборудования",
+      "cases": 806,
+      "avg_duration_days": 36.37
+    },
+    {
+      "month": "2024-03",
+      "category": "Подрядные работы",
+      "cases": 868,
+      "avg_duration_days": 35.02
+    },
+    {
+      "month": "2024-03",
+      "category": "Спецтехника",
+      "cases": 889,
+      "avg_duration_days": 35.41
+    },
+    {
+      "month": "2024-03",
+      "category": "Химические реагенты",
+      "cases": 832,
+      "avg_duration_days": 35.1
+    },
+    {
+      "month": "2024-04",
+      "category": "ЗИП (запчасти)",
+      "cases": 837,
+      "avg_duration_days": 35.5
+    },
+    {
+      "month": "2024-04",
+      "category": "Обслуживание оборудования",
+      "cases": 813,
+      "avg_duration_days": 36.19
+    },
+    {
+      "month": "2024-04",
+      "category": "Подрядные работы",
+      "cases": 830,
+      "avg_duration_days": 35.62
+    },
+    {
+      "month": "2024-04",
+      "category": "Спецтехника",
+      "cases": 810,
+      "avg_duration_days": 35.78
+    },
+    {
+      "month": "2024-04",
+      "category": "Химические реагенты",
+      "cases": 824,
+      "avg_duration_days": 35.89
+    },
+    {
+      "month": "2024-05",
+      "category": "ЗИП (запчасти)",
+      "cases": 837,
+      "avg_duration_days": 35.79
+    },
+    {
+      "month": "2024-05",
+      "category": "Обслуживание оборудования",
+      "cases": 817,
+      "avg_duration_days": 35.2
+    },
+    {
+      "month": "2024-05",
+      "category": "Подрядные работы",
+      "cases": 854,
+      "avg_duration_days": 35.31
+    },
+    {
+      "month": "2024-05",
+      "category": "Спецтехника",
+      "cases": 857,
+      "avg_duration_days": 35.61
+    },
+    {
+      "month": "2024-05",
+      "category": "Химические реагенты",
+      "cases": 848,
+      "avg_duration_days": 36.06
+    },
+    {
+      "month": "2024-06",
+      "category": "ЗИП (запчасти)",
+      "cases": 809,
+      "avg_duration_days": 35.9
+    },
+    {
+      "month": "2024-06",
+      "category": "Обслуживание оборудования",
+      "cases": 831,
+      "avg_duration_days": 35.64
+    },
+    {
+      "month": "2024-06",
+      "category": "Подрядные работы",
+      "cases": 833,
+      "avg_duration_days": 34.98
+    },
+    {
+      "month": "2024-06",
+      "category": "Спецтехника",
+      "cases": 847,
+      "avg_duration_days": 35.62
+    },
+    {
+      "month": "2024-06",
+      "category": "Химические реагенты",
+      "cases": 800,
+      "avg_duration_days": 35.48
+    },
+    {
+      "month": "2024-07",
+      "category": "ЗИП (запчасти)",
+      "cases": 884,
+      "avg_duration_days": 35.81
+    },
+    {
+      "month": "2024-07",
+      "category": "Обслуживание оборудования",
+      "cases": 849,
+      "avg_duration_days": 36.06
+    },
+    {
+      "month": "2024-07",
+      "category": "Подрядные работы",
+      "cases": 856,
+      "avg_duration_days": 35.58
+    },
+    {
+      "month": "2024-07",
+      "category": "Спецтехника",
+      "cases": 862,
+      "avg_duration_days": 36.04
+    },
+    {
+      "month": "2024-07",
+      "category": "Химические реагенты",
+      "cases": 907,
+      "avg_duration_days": 35.9
+    },
+    {
+      "month": "2024-08",
+      "category": "ЗИП (запчасти)",
+      "cases": 880,
+      "avg_duration_days": 36.42
+    },
+    {
+      "month": "2024-08",
+      "category": "Обслуживание оборудования",
+      "cases": 827,
+      "avg_duration_days": 35.83
+    },
+    {
+      "month": "2024-08",
+      "category": "Подрядные работы",
+      "cases": 859,
+      "avg_duration_days": 35.97
+    },
+    {
+      "month": "2024-08",
+      "category": "Спецтехника",
+      "cases": 834,
+      "avg_duration_days": 35.79
+    },
+    {
+      "month": "2024-08",
+      "category": "Химические реагенты",
+      "cases": 863,
+      "avg_duration_days": 35.51
+    },
+    {
+      "month": "2024-09",
+      "category": "ЗИП (запчасти)",
+      "cases": 824,
+      "avg_duration_days": 36.48
+    },
+    {
+      "month": "2024-09",
+      "category": "Обслуживание оборудования",
+      "cases": 884,
+      "avg_duration_days": 36.15
+    },
+    {
+      "month": "2024-09",
+      "category": "Подрядные работы",
+      "cases": 784,
+      "avg_duration_days": 35.38
+    },
+    {
+      "month": "2024-09",
+      "category": "Спецтехника",
+      "cases": 810,
+      "avg_duration_days": 35.74
+    },
+    {
+      "month": "2024-09",
+      "category": "Химические реагенты",
+      "cases": 811,
+      "avg_duration_days": 34.96
+    },
+    {
+      "month": "2024-10",
+      "category": "ЗИП (запчасти)",
+      "cases": 846,
+      "avg_duration_days": 35.39
+    },
+    {
+      "month": "2024-10",
+      "category": "Обслуживание оборудования",
+      "cases": 806,
+      "avg_duration_days": 35.7
+    },
+    {
+      "month": "2024-10",
+      "category": "Подрядные работы",
+      "cases": 864,
+      "avg_duration_days": 35.4
+    },
+    {
+      "month": "2024-10",
+      "category": "Спецтехника",
+      "cases": 856,
+      "avg_duration_days": 35.94
+    },
+    {
+      "month": "2024-10",
+      "category": "Химические реагенты",
+      "cases": 822,
+      "avg_duration_days": 35.47
+    },
+    {
+      "month": "2024-11",
+      "category": "ЗИП (запчасти)",
+      "cases": 853,
+      "avg_duration_days": 36.1
+    },
+    {
+      "month": "2024-11",
+      "category": "Обслуживание оборудования",
+      "cases": 838,
+      "avg_duration_days": 35.93
+    },
+    {
+      "month": "2024-11",
+      "category": "Подрядные работы",
+      "cases": 801,
+      "avg_duration_days": 35.21
+    },
+    {
+      "month": "2024-11",
+      "category": "Спецтехника",
+      "cases": 776,
+      "avg_duration_days": 35.45
+    },
+    {
+      "month": "2024-11",
+      "category": "Химические реагенты",
+      "cases": 800,
+      "avg_duration_days": 35.17
+    },
+    {
+      "month": "2024-12",
+      "category": "ЗИП (запчасти)",
+      "cases": 841,
+      "avg_duration_days": 35.42
+    },
+    {
+      "month": "2024-12",
+      "category": "Обслуживание оборудования",
+      "cases": 868,
+      "avg_duration_days": 35.79
+    },
+    {
+      "month": "2024-12",
+      "category": "Подрядные работы",
+      "cases": 839,
+      "avg_duration_days": 35.68
+    },
+    {
+      "month": "2024-12",
+      "category": "Спецтехника",
+      "cases": 837,
+      "avg_duration_days": 34.55
+    },
+    {
+      "month": "2024-12",
+      "category": "Химические реагенты",
+      "cases": 830,
+      "avg_duration_days": 36.11
+    }
+  ],
+  "monthly_by_region": [
+    {
+      "month": "2024-01",
+      "region": "Апатиты",
+      "cases": 1057,
+      "avg_duration_days": 35.17
+    },
+    {
+      "month": "2024-01",
+      "region": "Кировск",
+      "cases": 1030,
+      "avg_duration_days": 36.06
+    },
+    {
+      "month": "2024-01",
+      "region": "Ковдор",
+      "cases": 1019,
+      "avg_duration_days": 35.7
+    },
+    {
+      "month": "2024-01",
+      "region": "Мурманск",
+      "cases": 1000,
+      "avg_duration_days": 35.79
+    },
+    {
+      "month": "2024-02",
+      "region": "Апатиты",
+      "cases": 1039,
+      "avg_duration_days": 35.32
+    },
+    {
+      "month": "2024-02",
+      "region": "Кировск",
+      "cases": 1013,
+      "avg_duration_days": 35.56
+    },
+    {
+      "month": "2024-02",
+      "region": "Ковдор",
+      "cases": 991,
+      "avg_duration_days": 35.9
+    },
+    {
+      "month": "2024-02",
+      "region": "Мурманск",
+      "cases": 990,
+      "avg_duration_days": 35.81
+    },
+    {
+      "month": "2024-03",
+      "region": "Апатиты",
+      "cases": 1103,
+      "avg_duration_days": 35.2
+    },
+    {
+      "month": "2024-03",
+      "region": "Кировск",
+      "cases": 1067,
+      "avg_duration_days": 35.5
+    },
+    {
+      "month": "2024-03",
+      "region": "Ковдор",
+      "cases": 1012,
+      "avg_duration_days": 36.38
+    },
+    {
+      "month": "2024-03",
+      "region": "Мурманск",
+      "cases": 1021,
+      "avg_duration_days": 35.54
+    },
+    {
+      "month": "2024-04",
+      "region": "Апатиты",
+      "cases": 946,
+      "avg_duration_days": 35.09
+    },
+    {
+      "month": "2024-04",
+      "region": "Кировск",
+      "cases": 1111,
+      "avg_duration_days": 35.88
+    },
+    {
+      "month": "2024-04",
+      "region": "Ковдор",
+      "cases": 1002,
+      "avg_duration_days": 35.83
+    },
+    {
+      "month": "2024-04",
+      "region": "Мурманск",
+      "cases": 1055,
+      "avg_duration_days": 36.3
+    },
+    {
+      "month": "2024-05",
+      "region": "Апатиты",
+      "cases": 1066,
+      "avg_duration_days": 35.58
+    },
+    {
+      "month": "2024-05",
+      "region": "Кировск",
+      "cases": 1052,
+      "avg_duration_days": 35.72
+    },
+    {
+      "month": "2024-05",
+      "region": "Ковдор",
+      "cases": 1065,
+      "avg_duration_days": 35.11
+    },
+    {
+      "month": "2024-05",
+      "region": "Мурманск",
+      "cases": 1030,
+      "avg_duration_days": 35.99
+    },
+    {
+      "month": "2024-06",
+      "region": "Апатиты",
+      "cases": 1011,
+      "avg_duration_days": 35.39
+    },
+    {
+      "month": "2024-06",
+      "region": "Кировск",
+      "cases": 1080,
+      "avg_duration_days": 35.36
+    },
+    {
+      "month": "2024-06",
+      "region": "Ковдор",
+      "cases": 1018,
+      "avg_duration_days": 35.6
+    },
+    {
+      "month": "2024-06",
+      "region": "Мурманск",
+      "cases": 1011,
+      "avg_duration_days": 35.75
+    },
+    {
+      "month": "2024-07",
+      "region": "Апатиты",
+      "cases": 1159,
+      "avg_duration_days": 35.76
+    },
+    {
+      "month": "2024-07",
+      "region": "Кировск",
+      "cases": 1065,
+      "avg_duration_days": 36.05
+    },
+    {
+      "month": "2024-07",
+      "region": "Ковдор",
+      "cases": 1072,
+      "avg_duration_days": 36.1
+    },
+    {
+      "month": "2024-07",
+      "region": "Мурманск",
+      "cases": 1062,
+      "avg_duration_days": 35.61
+    },
+    {
+      "month": "2024-08",
+      "region": "Апатиты",
+      "cases": 1039,
+      "avg_duration_days": 35.9
+    },
+    {
+      "month": "2024-08",
+      "region": "Кировск",
+      "cases": 1049,
+      "avg_duration_days": 35.99
+    },
+    {
+      "month": "2024-08",
+      "region": "Ковдор",
+      "cases": 1124,
+      "avg_duration_days": 35.93
+    },
+    {
+      "month": "2024-08",
+      "region": "Мурманск",
+      "cases": 1051,
+      "avg_duration_days": 35.8
+    },
+    {
+      "month": "2024-09",
+      "region": "Апатиты",
+      "cases": 1018,
+      "avg_duration_days": 35.7
+    },
+    {
+      "month": "2024-09",
+      "region": "Кировск",
+      "cases": 1031,
+      "avg_duration_days": 35.34
+    },
+    {
+      "month": "2024-09",
+      "region": "Ковдор",
+      "cases": 1038,
+      "avg_duration_days": 35.69
+    },
+    {
+      "month": "2024-09",
+      "region": "Мурманск",
+      "cases": 1026,
+      "avg_duration_days": 36.29
+    },
+    {
+      "month": "2024-10",
+      "region": "Апатиты",
+      "cases": 1005,
+      "avg_duration_days": 36.05
+    },
+    {
+      "month": "2024-10",
+      "region": "Кировск",
+      "cases": 1070,
+      "avg_duration_days": 35.36
+    },
+    {
+      "month": "2024-10",
+      "region": "Ковдор",
+      "cases": 1088,
+      "avg_duration_days": 35.81
+    },
+    {
+      "month": "2024-10",
+      "region": "Мурманск",
+      "cases": 1031,
+      "avg_duration_days": 35.11
+    },
+    {
+      "month": "2024-11",
+      "region": "Апатиты",
+      "cases": 1000,
+      "avg_duration_days": 36.13
+    },
+    {
+      "month": "2024-11",
+      "region": "Кировск",
+      "cases": 1001,
+      "avg_duration_days": 35.32
+    },
+    {
+      "month": "2024-11",
+      "region": "Ковдор",
+      "cases": 1027,
+      "avg_duration_days": 35.41
+    },
+    {
+      "month": "2024-11",
+      "region": "Мурманск",
+      "cases": 1040,
+      "avg_duration_days": 35.47
+    },
+    {
+      "month": "2024-12",
+      "region": "Апатиты",
+      "cases": 1048,
+      "avg_duration_days": 35.67
+    },
+    {
+      "month": "2024-12",
+      "region": "Кировск",
+      "cases": 1085,
+      "avg_duration_days": 35.31
+    },
+    {
+      "month": "2024-12",
+      "region": "Ковдор",
+      "cases": 1057,
+      "avg_duration_days": 35.62
+    },
+    {
+      "month": "2024-12",
+      "region": "Мурманск",
+      "cases": 1025,
+      "avg_duration_days": 35.43
+    }
+  ],
+  "monthly_by_type": [
+    {
+      "month": "2024-01",
+      "procurement_type": "Единственный поставщик",
+      "cases": 1009,
+      "avg_duration_days": 32.06
+    },
+    {
+      "month": "2024-01",
+      "procurement_type": "Запрос котировок",
+      "cases": 1035,
+      "avg_duration_days": 37.28
+    },
+    {
+      "month": "2024-01",
+      "procurement_type": "Рамочный договор",
+      "cases": 1028,
+      "avg_duration_days": 36.98
+    },
+    {
+      "month": "2024-01",
+      "procurement_type": "Тендер",
+      "cases": 1034,
+      "avg_duration_days": 36.31
+    },
+    {
+      "month": "2024-02",
+      "procurement_type": "Единственный поставщик",
+      "cases": 1029,
+      "avg_duration_days": 31.28
+    },
+    {
+      "month": "2024-02",
+      "procurement_type": "Запрос котировок",
+      "cases": 1036,
+      "avg_duration_days": 37.46
+    },
+    {
+      "month": "2024-02",
+      "procurement_type": "Рамочный договор",
+      "cases": 971,
+      "avg_duration_days": 36.76
+    },
+    {
+      "month": "2024-02",
+      "procurement_type": "Тендер",
+      "cases": 997,
+      "avg_duration_days": 37.17
+    },
+    {
+      "month": "2024-03",
+      "procurement_type": "Единственный поставщик",
+      "cases": 1017,
+      "avg_duration_days": 31.99
+    },
+    {
+      "month": "2024-03",
+      "procurement_type": "Запрос котировок",
+      "cases": 1044,
+      "avg_duration_days": 36.72
+    },
+    {
+      "month": "2024-03",
+      "procurement_type": "Рамочный договор",
+      "cases": 1032,
+      "avg_duration_days": 37.33
+    },
+    {
+      "month": "2024-03",
+      "procurement_type": "Тендер",
+      "cases": 1110,
+      "avg_duration_days": 36.42
+    },
+    {
+      "month": "2024-04",
+      "procurement_type": "Единственный поставщик",
+      "cases": 1052,
+      "avg_duration_days": 32.04
+    },
+    {
+      "month": "2024-04",
+      "procurement_type": "Запрос котировок",
+      "cases": 982,
+      "avg_duration_days": 37.53
+    },
+    {
+      "month": "2024-04",
+      "procurement_type": "Рамочный договор",
+      "cases": 1006,
+      "avg_duration_days": 36.73
+    },
+    {
+      "month": "2024-04",
+      "procurement_type": "Тендер",
+      "cases": 1074,
+      "avg_duration_days": 37.01
+    },
+    {
+      "month": "2024-05",
+      "procurement_type": "Единственный поставщик",
+      "cases": 1041,
+      "avg_duration_days": 32.04
+    },
+    {
+      "month": "2024-05",
+      "procurement_type": "Запрос котировок",
+      "cases": 1071,
+      "avg_duration_days": 37.02
+    },
+    {
+      "month": "2024-05",
+      "procurement_type": "Рамочный договор",
+      "cases": 1017,
+      "avg_duration_days": 36.64
+    },
+    {
+      "month": "2024-05",
+      "procurement_type": "Тендер",
+      "cases": 1084,
+      "avg_duration_days": 36.61
+    },
+    {
+      "month": "2024-06",
+      "procurement_type": "Единственный поставщик",
+      "cases": 1017,
+      "avg_duration_days": 32.27
+    },
+    {
+      "month": "2024-06",
+      "procurement_type": "Запрос котировок",
+      "cases": 1020,
+      "avg_duration_days": 36.82
+    },
+    {
+      "month": "2024-06",
+      "procurement_type": "Рамочный договор",
+      "cases": 1054,
+      "avg_duration_days": 36.37
+    },
+    {
+      "month": "2024-06",
+      "procurement_type": "Тендер",
+      "cases": 1029,
+      "avg_duration_days": 36.58
+    },
+    {
+      "month": "2024-07",
+      "procurement_type": "Единственный поставщик",
+      "cases": 1048,
+      "avg_duration_days": 32.35
+    },
+    {
+      "month": "2024-07",
+      "procurement_type": "Запрос котировок",
+      "cases": 1107,
+      "avg_duration_days": 36.58
+    },
+    {
+      "month": "2024-07",
+      "procurement_type": "Рамочный договор",
+      "cases": 1102,
+      "avg_duration_days": 37.36
+    },
+    {
+      "month": "2024-07",
+      "procurement_type": "Тендер",
+      "cases": 1101,
+      "avg_duration_days": 37.05
+    },
+    {
+      "month": "2024-08",
+      "procurement_type": "Единственный поставщик",
+      "cases": 1060,
+      "avg_duration_days": 31.92
+    },
+    {
+      "month": "2024-08",
+      "procurement_type": "Запрос котировок",
+      "cases": 1057,
+      "avg_duration_days": 37.39
+    },
+    {
+      "month": "2024-08",
+      "procurement_type": "Рамочный договор",
+      "cases": 1063,
+      "avg_duration_days": 37.3
+    },
+    {
+      "month": "2024-08",
+      "procurement_type": "Тендер",
+      "cases": 1083,
+      "avg_duration_days": 36.99
+    },
+    {
+      "month": "2024-09",
+      "procurement_type": "Единственный поставщик",
+      "cases": 1047,
+      "avg_duration_days": 31.86
+    },
+    {
+      "month": "2024-09",
+      "procurement_type": "Запрос котировок",
+      "cases": 1031,
+      "avg_duration_days": 36.73
+    },
+    {
+      "month": "2024-09",
+      "procurement_type": "Рамочный договор",
+      "cases": 1021,
+      "avg_duration_days": 37.12
+    },
+    {
+      "month": "2024-09",
+      "procurement_type": "Тендер",
+      "cases": 1014,
+      "avg_duration_days": 37.41
+    },
+    {
+      "month": "2024-10",
+      "procurement_type": "Единственный поставщик",
+      "cases": 985,
+      "avg_duration_days": 31.71
+    },
+    {
+      "month": "2024-10",
+      "procurement_type": "Запрос котировок",
+      "cases": 1047,
+      "avg_duration_days": 36.13
+    },
+    {
+      "month": "2024-10",
+      "procurement_type": "Рамочный договор",
+      "cases": 1127,
+      "avg_duration_days": 37.02
+    },
+    {
+      "month": "2024-10",
+      "procurement_type": "Тендер",
+      "cases": 1035,
+      "avg_duration_days": 37.14
+    },
+    {
+      "month": "2024-11",
+      "procurement_type": "Единственный поставщик",
+      "cases": 1025,
+      "avg_duration_days": 31.99
+    },
+    {
+      "month": "2024-11",
+      "procurement_type": "Запрос котировок",
+      "cases": 1027,
+      "avg_duration_days": 37.58
+    },
+    {
+      "month": "2024-11",
+      "procurement_type": "Рамочный договор",
+      "cases": 1023,
+      "avg_duration_days": 36.02
+    },
+    {
+      "month": "2024-11",
+      "procurement_type": "Тендер",
+      "cases": 993,
+      "avg_duration_days": 36.76
+    },
+    {
+      "month": "2024-12",
+      "procurement_type": "Единственный поставщик",
+      "cases": 1042,
+      "avg_duration_days": 31.87
+    },
+    {
+      "month": "2024-12",
+      "procurement_type": "Запрос котировок",
+      "cases": 1060,
+      "avg_duration_days": 36.78
+    },
+    {
+      "month": "2024-12",
+      "procurement_type": "Рамочный договор",
+      "cases": 1052,
+      "avg_duration_days": 36.66
+    },
+    {
+      "month": "2024-12",
+      "procurement_type": "Тендер",
+      "cases": 1061,
+      "avg_duration_days": 36.68
+    }
+  ],
+  "best_month": {
+    "month": "2024-12",
+    "avg_duration_days": 35.51,
+    "cases": 4215
+  },
+  "worst_month": {
+    "month": "2024-08",
+    "avg_duration_days": 35.91,
+    "cases": 4263
+  },
+  "by_category": [
+    {
+      "category": "ЗИП (запчасти)",
+      "total_cases": 10056,
+      "total_cost": 108212891451.45833,
+      "avg_duration_days": 35.83185826040838
+    },
+    {
+      "category": "Обслуживание оборудования",
+      "total_cases": 9972,
+      "total_cost": 107292639391.95833,
+      "avg_duration_days": 35.87046647279048
+    },
+    {
+      "category": "Подрядные работы",
+      "total_cases": 10050,
+      "total_cost": 107506150725.375,
+      "avg_duration_days": 35.565547263681594
+    },
+    {
+      "category": "Спецтехника",
+      "total_cases": 9977,
+      "total_cost": 105689022092.04167,
+      "avg_duration_days": 35.58215562460325
+    },
+    {
+      "category": "Химические реагенты",
+      "total_cases": 9945,
+      "total_cost": 105691772617.5,
+      "avg_duration_days": 35.526189877660464
+    }
+  ],
+  "by_region": [
+    {
+      "region": "Апатиты",
+      "total_cases": 12491,
+      "total_cost": 133025327315.25,
+      "avg_duration_days": 35.581969017692735
+    },
+    {
+      "region": "Кировск",
+      "total_cases": 12654,
+      "total_cost": 135448756449.08333,
+      "avg_duration_days": 35.62267859965228
+    },
+    {
+      "region": "Ковдор",
+      "total_cases": 12513,
+      "total_cost": 134392096021.375,
+      "avg_duration_days": 35.75762540291431
+    },
+    {
+      "region": "Мурманск",
+      "total_cases": 12342,
+      "total_cost": 131526296492.625,
+      "avg_duration_days": 35.740675471290444
+    }
+  ],
+  "by_procurement_type": [
+    {
+      "procurement_type": "Единственный поставщик",
+      "total_cases": 12372,
+      "total_cost": 118162113630.54167,
+      "avg_duration_days": 31.94802106908072
+    },
+    {
+      "procurement_type": "Запрос котировок",
+      "total_cases": 12517,
+      "total_cost": 139094259703.29166,
+      "avg_duration_days": 36.9969141966925
+    },
+    {
+      "procurement_type": "Рамочный договор",
+      "total_cases": 12496,
+      "total_cost": 137720083435.54166,
+      "avg_duration_days": 36.86398981007256
+    },
+    {
+      "procurement_type": "Тендер",
+      "total_cases": 12615,
+      "total_cost": 139416019508.95834,
+      "avg_duration_days": 36.84238010305192
+    }
+  ],
+  "by_category_region": [
+    {
+      "category": "ЗИП (запчасти)",
+      "region": "Апатиты",
+      "total_cases": 2544,
+      "total_cost": 27338703098.708332,
+      "avg_duration_days": 35.67
+    },
+    {
+      "category": "ЗИП (запчасти)",
+      "region": "Кировск",
+      "total_cases": 2562,
+      "total_cost": 28054145123.416668,
+      "avg_duration_days": 36.04
+    },
+    {
+      "category": "ЗИП (запчасти)",
+      "region": "Ковдор",
+      "total_cases": 2503,
+      "total_cost": 26911560181.0,
+      "avg_duration_days": 35.68
+    },
+    {
+      "category": "ЗИП (запчасти)",
+      "region": "Мурманск",
+      "total_cases": 2447,
+      "total_cost": 25908483048.333332,
+      "avg_duration_days": 35.94
+    },
+    {
+      "category": "Обслуживание оборудования",
+      "region": "Апатиты",
+      "total_cases": 2427,
+      "total_cost": 25945716565.333332,
+      "avg_duration_days": 35.65
+    },
+    {
+      "category": "Обслуживание оборудования",
+      "region": "Кировск",
+      "total_cases": 2535,
+      "total_cost": 27160718317.625,
+      "avg_duration_days": 35.67
+    },
+    {
+      "category": "Обслуживание оборудования",
+      "region": "Ковдор",
+      "total_cases": 2528,
+      "total_cost": 27610542895.458332,
+      "avg_duration_days": 36.19
+    },
+    {
+      "category": "Обслуживание оборудования",
+      "region": "Мурманск",
+      "total_cases": 2482,
+      "total_cost": 26575661613.541668,
+      "avg_duration_days": 35.97
+    },
+    {
+      "category": "Подрядные работы",
+      "region": "Апатиты",
+      "total_cases": 2476,
+      "total_cost": 26058393934.208332,
+      "avg_duration_days": 35.49
+    },
+    {
+      "category": "Подрядные работы",
+      "region": "Кировск",
+      "total_cases": 2567,
+      "total_cost": 27375742535.958332,
+      "avg_duration_days": 35.5
+    },
+    {
+      "category": "Подрядные работы",
+      "region": "Ковдор",
+      "total_cases": 2519,
+      "total_cost": 27236960060.083332,
+      "avg_duration_days": 35.82
+    },
+    {
+      "category": "Подрядные работы",
+      "region": "Мурманск",
+      "total_cases": 2488,
+      "total_cost": 26835054195.125,
+      "avg_duration_days": 35.45
+    },
+    {
+      "category": "Спецтехника",
+      "region": "Апатиты",
+      "total_cases": 2467,
+      "total_cost": 25961980494.833332,
+      "avg_duration_days": 35.35
+    },
+    {
+      "category": "Спецтехника",
+      "region": "Кировск",
+      "total_cases": 2545,
+      "total_cost": 26838512385.083332,
+      "avg_duration_days": 35.58
+    },
+    {
+      "category": "Спецтехника",
+      "region": "Ковдор",
+      "total_cases": 2507,
+      "total_cost": 26658730698.125,
+      "avg_duration_days": 35.61
+    },
+    {
+      "category": "Спецтехника",
+      "region": "Мурманск",
+      "total_cases": 2458,
+      "total_cost": 26229798514.0,
+      "avg_duration_days": 35.79
+    },
+    {
+      "category": "Химические реагенты",
+      "region": "Апатиты",
+      "total_cases": 2577,
+      "total_cost": 27720533222.166668,
+      "avg_duration_days": 35.75
+    },
+    {
+      "category": "Химические реагенты",
+      "region": "Кировск",
+      "total_cases": 2445,
+      "total_cost": 26019638087.0,
+      "avg_duration_days": 35.32
+    },
+    {
+      "category": "Химические реагенты",
+      "region": "Ковдор",
+      "total_cases": 2456,
+      "total_cost": 25974302186.708332,
+      "avg_duration_days": 35.47
+    },
+    {
+      "category": "Химические реагенты",
+      "region": "Мурманск",
+      "total_cases": 2467,
+      "total_cost": 25977299121.625,
+      "avg_duration_days": 35.56
+    }
+  ],
+  "by_category_type": [
+    {
+      "category": "ЗИП (запчасти)",
+      "procurement_type": "Единственный поставщик",
+      "total_cases": 2519,
+      "total_cost": 23985324457.041668,
+      "avg_duration_days": 32.05
+    },
+    {
+      "category": "ЗИП (запчасти)",
+      "procurement_type": "Запрос котировок",
+      "total_cases": 2530,
+      "total_cost": 28737926917.416668,
+      "avg_duration_days": 37.33
+    },
+    {
+      "category": "ЗИП (запчасти)",
+      "procurement_type": "Рамочный договор",
+      "total_cases": 2539,
+      "total_cost": 28176268492.916668,
+      "avg_duration_days": 36.95
+    },
+    {
+      "category": "ЗИП (запчасти)",
+      "procurement_type": "Тендер",
+      "total_cases": 2468,
+      "total_cost": 27313371584.083332,
+      "avg_duration_days": 37.01
+    },
+    {
+      "category": "Обслуживание оборудования",
+      "procurement_type": "Единственный поставщик",
+      "total_cases": 2496,
+      "total_cost": 23837797327.458332,
+      "avg_duration_days": 32.12
+    },
+    {
+      "category": "Обслуживание оборудования",
+      "procurement_type": "Запрос котировок",
+      "total_cases": 2477,
+      "total_cost": 27124225069.541668,
+      "avg_duration_days": 37.11
+    },
+    {
+      "category": "Обслуживание оборудования",
+      "procurement_type": "Рамочный договор",
+      "total_cases": 2435,
+      "total_cost": 27433136351.041668,
+      "avg_duration_days": 37.32
+    },
+    {
+      "category": "Обслуживание оборудования",
+      "procurement_type": "Тендер",
+      "total_cases": 2564,
+      "total_cost": 28897480643.916668,
+      "avg_duration_days": 36.95
+    },
+    {
+      "category": "Подрядные работы",
+      "procurement_type": "Единственный поставщик",
+      "total_cases": 2426,
+      "total_cost": 23389781707.958332,
+      "avg_duration_days": 31.97
+    },
+    {
+      "category": "Подрядные работы",
+      "procurement_type": "Запрос котировок",
+      "total_cases": 2523,
+      "total_cost": 28460285994.166668,
+      "avg_duration_days": 36.93
+    },
+    {
+      "category": "Подрядные работы",
+      "procurement_type": "Рамочный договор",
+      "total_cases": 2535,
+      "total_cost": 27636402191.083332,
+      "avg_duration_days": 36.63
+    },
+    {
+      "category": "Подрядные работы",
+      "procurement_type": "Тендер",
+      "total_cases": 2566,
+      "total_cost": 28019680832.166668,
+      "avg_duration_days": 36.57
+    },
+    {
+      "category": "Спецтехника",
+      "procurement_type": "Единственный поставщик",
+      "total_cases": 2480,
+      "total_cost": 23537337260.208332,
+      "avg_duration_days": 31.7
+    },
+    {
+      "category": "Спецтехника",
+      "procurement_type": "Запрос котировок",
+      "total_cases": 2457,
+      "total_cost": 27183117072.625,
+      "avg_duration_days": 37.02
+    },
+    {
+      "category": "Спецтехника",
+      "procurement_type": "Рамочный договор",
+      "total_cases": 2529,
+      "total_cost": 27662111548.833332,
+      "avg_duration_days": 36.97
+    },
+    {
+      "category": "Спецтехника",
+      "procurement_type": "Тендер",
+      "total_cases": 2511,
+      "total_cost": 27306456210.375,
+      "avg_duration_days": 36.62
+    },
+    {
+      "category": "Химические реагенты",
+      "procurement_type": "Единственный поставщик",
+      "total_cases": 2451,
+      "total_cost": 23411872877.875,
+      "avg_duration_days": 31.9
+    },
+    {
+      "category": "Химические реагенты",
+      "procurement_type": "Запрос котировок",
+      "total_cases": 2530,
+      "total_cost": 27588704649.541668,
+      "avg_duration_days": 36.6
+    },
+    {
+      "category": "Химические реагенты",
+      "procurement_type": "Рамочный договор",
+      "total_cases": 2458,
+      "total_cost": 26812164851.666668,
+      "avg_duration_days": 36.46
+    },
+    {
+      "category": "Химические реагенты",
+      "procurement_type": "Тендер",
+      "total_cases": 2506,
+      "total_cost": 27879030238.416668,
+      "avg_duration_days": 37.07
+    }
+  ],
+  "by_region_type": [
+    {
+      "region": "Апатиты",
+      "procurement_type": "Единственный поставщик",
+      "total_cases": 3059,
+      "total_cost": 28712845301.041668,
+      "avg_duration_days": 31.68
+    },
+    {
+      "region": "Апатиты",
+      "procurement_type": "Запрос котировок",
+      "total_cases": 3187,
+      "total_cost": 35773845537.333336,
+      "avg_duration_days": 37.27
+    },
+    {
+      "region": "Апатиты",
+      "procurement_type": "Рамочный договор",
+      "total_cases": 3101,
+      "total_cost": 34183984217.166668,
+      "avg_duration_days": 36.84
+    },
+    {
+      "region": "Апатиты",
+      "procurement_type": "Тендер",
+      "total_cases": 3144,
+      "total_cost": 34354652259.708332,
+      "avg_duration_days": 36.42
+    },
+    {
+      "region": "Кировск",
+      "procurement_type": "Единственный поставщик",
+      "total_cases": 3205,
+      "total_cost": 31079597455.458332,
+      "avg_duration_days": 31.87
+    },
+    {
+      "region": "Кировск",
+      "procurement_type": "Запрос котировок",
+      "total_cases": 3098,
+      "total_cost": 34337224319.791668,
+      "avg_duration_days": 36.99
+    },
+    {
+      "region": "Кировск",
+      "procurement_type": "Рамочный договор",
+      "total_cases": 3092,
+      "total_cost": 34211364453.041668,
+      "avg_duration_days": 36.92
+    },
+    {
+      "region": "Кировск",
+      "procurement_type": "Тендер",
+      "total_cases": 3259,
+      "total_cost": 35820570220.791664,
+      "avg_duration_days": 36.78
+    },
+    {
+      "region": "Ковдор",
+      "procurement_type": "Единственный поставщик",
+      "total_cases": 3091,
+      "total_cost": 29638070926.541668,
+      "avg_duration_days": 32.07
+    },
+    {
+      "region": "Ковдор",
+      "procurement_type": "Запрос котировок",
+      "total_cases": 3129,
+      "total_cost": 34900524548.166664,
+      "avg_duration_days": 36.9
+    },
+    {
+      "region": "Ковдор",
+      "procurement_type": "Рамочный договор",
+      "total_cases": 3179,
+      "total_cost": 34901898845.25,
+      "avg_duration_days": 36.97
+    },
+    {
+      "region": "Ковдор",
+      "procurement_type": "Тендер",
+      "total_cases": 3114,
+      "total_cost": 34951601701.416664,
+      "avg_duration_days": 37.02
+    },
+    {
+      "region": "Мурманск",
+      "procurement_type": "Единственный поставщик",
+      "total_cases": 3017,
+      "total_cost": 28731599947.5,
+      "avg_duration_days": 32.17
+    },
+    {
+      "region": "Мурманск",
+      "procurement_type": "Запрос котировок",
+      "total_cases": 3103,
+      "total_cost": 34082665298.0,
+      "avg_duration_days": 36.82
+    },
+    {
+      "region": "Мурманск",
+      "procurement_type": "Рамочный договор",
+      "total_cases": 3124,
+      "total_cost": 34422835920.083336,
+      "avg_duration_days": 36.72
+    },
+    {
+      "region": "Мурманск",
+      "procurement_type": "Тендер",
+      "total_cases": 3098,
+      "total_cost": 34289195327.041668,
+      "avg_duration_days": 37.15
+    }
+  ],
+  "executive": {
+    "headline": "Средняя длительность 35.7 дн при 4.8% отмен и 14.8% возвратов",
+    "drivers": [
+      {
+        "key": "avg_duration_days",
+        "label": "Средняя длительность",
+        "value": 35.68,
+        "unit": "дн"
+      },
+      {
+        "key": "rejected_share",
+        "label": "Отменённые кейсы",
+        "value": 4.82,
+        "unit": "%"
+      },
+      {
+        "key": "returns_share",
+        "label": "Кейсы с возвратом",
+        "value": 14.82,
+        "unit": "%"
+      }
+    ],
+    "action": "Сфокусироваться на узких местах по времени ожидания и снизить долю возвратов"
+  }
+}
