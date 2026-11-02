@@ -490,6 +490,12 @@ main.container {
   color: var(--text-primary);
   font-variant-numeric: tabular-nums;
 }
+.kpi-note {
+  font-size: 9.5px;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-left: 4px;
+}
 .btn {
   border: 1px solid var(--border-color);
   background: var(--bg-surface);

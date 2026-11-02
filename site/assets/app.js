@@ -403,7 +403,8 @@
           '<h3>' + group.title + '</h3>' +
           '<div class="kpi-primary"><span class="kpi-value">' + metricValue(primary) + '</span>' +
           (primary.unit ? '<span class="unit">' + escapeHtml(primary.unit) + '</span>' : '') + '</div>' +
-          '<div class="kpi-primary-label">' + escapeHtml(primary.label) + '</div>' +
+          '<div class="kpi-primary-label">' + escapeHtml(group.key === 'time' ? 'Средняя длительность кейса' : primary.label) +
+          (group.key === 'volume' ? '<span class="kpi-note">(1 кейс = 1 заявка на закупку)</span>' : '') + '</div>' +
           trendHtml(monthTrend(group.trendField), group.invert) +
           sparkline(group.trendField) +
           '<div class="kpi-secondary">' + secondary + '</div></div>';
@@ -418,7 +419,7 @@
         },
         time: {
           value: row.avg_duration_days != null ? fmtDays(row.avg_duration_days) : '—', unit: 'дн',
-          label: 'Средняя длительность', secondary: [],
+          label: 'Средняя длительность кейса', secondary: [],
         },
         quality: {
           value: row.rejected_share != null ? fmtPct(row.rejected_share) : '—', unit: '%',
@@ -596,7 +597,7 @@
 
     table.innerHTML =
       '<thead><tr><th>Категория</th><th class="num">Кейсов</th>' +
-      '<th class="num">Ср. длит., дн</th><th class="num">Потери, ₽</th></tr></thead>' +
+      '<th class="num">Ср. длит., дн</th><th class="num">Потери от простоя (оценка), ₽</th></tr></thead>' +
       '<tbody>' + body + '</tbody>';
 
     table.querySelectorAll('tr[data-category]').forEach((tr) => {
@@ -3230,7 +3231,7 @@ pager.innerHTML = '<span>' + start + '–' + end + ' из ' + edges.length + '</
       return;
     }
 
-    el('header-subtitle').textContent = 'Синтетический лог · ' + fmtInt(data.overview.total_cases) +
+    el('header-subtitle').textContent = 'Демонстрационный MVP на синтетических данных · ' + fmtInt(data.overview.total_cases) +
       ' кейсов · ' + fmtInt(data.overview.total_events) + ' событий · ' + data.overview.monthly.length + ' месяцев';
     populateFilters();
     renderProcessCategories();
