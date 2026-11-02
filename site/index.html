@@ -27,7 +27,7 @@
         </span>
         <div class="brand-text">
           <h1>Process Mining</h1>
-          <p class="subtitle" id="header-subtitle">Закупки и контрактация</p>
+          <p class="subtitle" id="header-subtitle">Демо-MVP на синтетических данных</p>
         </div>
       </div>
       <nav class="tabs tabs--header" role="tablist" aria-label="Разделы отчёта">
@@ -101,7 +101,7 @@
 
         <div class="grid-col col-6">
           <div class="table-card">
-            <h3>По категориям <span class="info-badge">Длительность × стоимость простоя оборудования. Демо-расчёт</span></h3>
+            <h3>По категориям <span class="info-badge">(Потери = Длительность × стоимость простоя. Демо-расчёт)</span></h3>
             <div class="table-wrapper table-wrapper--fit"><table class="data-table data-table--compact" id="category-table"></table></div>
           </div>
         </div>
@@ -191,21 +191,17 @@
             </ul>
           </div>
 
-          <div class="table-container">
-            <div class="table-container-header">
-              <h3>Длительность переходов <span class="badge" id="edge-stats-badge">все переходы · 28</span></h3>
-              <div class="table-header-right">
-                <span>МЕТРИКА</span>
-                <select id="edge-stats-metric" class="select select--sm">
-                  <option value="avg_duration_days">Среднее</option>
-                  <option value="median_duration_days" selected>Медиана</option>
-                  <option value="p90_duration_days">P90</option>
-                </select>
-              </div>
+          <div class="chart-card">
+            <h3>Длительность переходов <span class="info-badge" id="edge-stats-badge">все переходы</span></h3>
+            <div class="toolbar-right toolbar-right--start">
+              <label for="edge-stats-metric">Метрика</label>
+              <select id="edge-stats-metric">
+                <option value="avg_duration_days">Среднее</option>
+                <option value="median_duration_days" selected>Медиана</option>
+                <option value="p90_duration_days">P90</option>
+              </select>
             </div>
-            <div class="table-wrapper table-wrapper--fit">
-              <table class="data-table data-table--compact" id="edge-stats-table"></table>
-            </div>
+            <div class="table-wrapper"><table class="data-table" id="edge-stats-table"></table></div>
             <div class="pagination" id="edge-stats-pager" hidden></div>
           </div>
         </div>

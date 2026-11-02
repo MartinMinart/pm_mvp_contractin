@@ -1,6 +1,13 @@
 # Process Mining MVP: закупки и контрактация (горнодобыча)
 
-**Демо-проект** для портфолио: как построить Process Mining-платформу **без закупки Celonis**, используя открытые библиотеки (pm4py, pandas, Plotly) и внутреннюю LLM как оркестратор.
+Этот документ — "Лицо" проекта. Он нужен для быстрого знакомства: что это за MVP, какие данные используются, как запустить проект локально и где смотреть демо.
+
+**Демо-проект**: как построить Process Mining-платформу **без закупки Celonis**, используя открытые библиотеки (pm4py, pandas, Plotly).
+
+## Демо
+
+- **GitHub Pages:** https://martinminart.github.io/pm_mvp_contractin/
+- Локальный запуск: `python -m http.server 8000` из корня репозитория, затем `http://localhost:8000/site/`.
 
 ## Контекст
 
@@ -15,17 +22,17 @@
 | `data/processed/events.csv` | Event log: **1 094 474 события, 50 000 кейсов, 25 активностей** |
 | `data/processed/cases.csv` | Атрибуты кейсов (категория, сумма, поставщик, регион) |
 | `notebooks/01_pm4py_analysis.ipynb` | DFG, Petri net, variant analysis, bottlenecks |
-| `site/index.html` | Интерактивный дашборд (3 вкладки: Overview, Process Map, Bottlenecks) |
+| `site/index.html` | Интерактивный дашборд (4 вкладки: Обзор (Overview), Карта процесса (Process Map), Узкие места (Bottlenecks), Варианты (Variants)) |
 | `spec/spec.md` | Спецификация платформы (гибрид TAD + шаблон ЕвроХима) |
 | `docs/c4.md` | C4-диаграммы (Context, Container) |
 
-## Ключевые цифры (актуально на 2026-10-29)
+## Ключевые цифры (актуально на 2026-11-02)
 
 - **50 000 кейсов**, **1 094 474 события**, **25 активностей**
 - Период: 2024-01 — 2024-12 (12 месяцев)
 - Средняя длительность кейса: **35.7 дней**, медианная: **33.3 дня**
 - Общая стоимость простоя: **534 млрд руб** (условные единицы, для демонстрации масштаба)
-- Топ-3 узких места: **Customs Clearance (10.6 дней)**, **Legal Review (4.1 дня)**, **Technical Review (4.1 дня)**
+- Топ-3 узких места: **Customs Clearance (10.6 дней)**, **Legal Review Started (4.1 дня)**, **Technical Review Completed (4.1 дня)**
 - Топ-категория: **ЗИП (запчасти)** — 10 056 кейсов (20%)
 
 
@@ -40,8 +47,8 @@
 
 ```bash
 # 1. Клонировать репозиторий
-git clone https://github.com/MartinMinart/pm_mvp_contracting.git
-cd pm_mvp_contracting
+git clone https://github.com/MartinMinart/pm_mvp_contractin.git
+cd pm_mvp_contractin
 
 # 2. Установить зависимости
 pip install -r requirements.txt
@@ -58,26 +65,10 @@ python tools/validate.py
 jupyter notebook notebooks/01_pm4py_analysis.ipynb
 
 # 6. Открыть сайт локально
-# (открыть site/index.html в браузере)
+# Запустить локальный сервер из корня репозитория (file:// не работает из-за fetch JSON)
+# python -m http.server 8000
+# Открыть http://localhost:8000/site/
 ```
-
-Что показывает проект
-Понимание домена: 25 активностей, 5 категорий закупок, специфика горнодобычи (инженерное согласование, таможня, HSE, логистика до карьера).
-
-Process Mining: discovery (DFG, Petri net), performance (узкие места), variant analysis (топ вариантов).
-
-Бизнес-эффект: расчёт стоимости простоя из-за задержек.
-
-Инфраструктура: воспроизводимая генерация, валидация, статический сайт.
-
-Что НЕ входит в MVP
-PostgreSQL / Neon (второй этап).
-
-n8n / AI-агент в рантайме (слой на будущее).
-
-Conformance checking (достаточно discovery + performance).
-
-Celonis / Disco / UiPath (только как эталон в спеке).
 
 Лицензия
 MIT. Данные — синтетические, сгенерированы скриптом.

@@ -404,7 +404,7 @@
           '<div class="kpi-primary"><span class="kpi-value">' + metricValue(primary) + '</span>' +
           (primary.unit ? '<span class="unit">' + escapeHtml(primary.unit) + '</span>' : '') + '</div>' +
           '<div class="kpi-primary-label">' + escapeHtml(group.key === 'time' ? 'Средняя длительность кейса' : primary.label) +
-          (group.key === 'volume' ? '<span class="kpi-note">(1 кейс = 1 заявка на закупку)</span>' : '') + '</div>' +
+          (group.key === 'volume' ? '<span class="kpi-note">Кейс = одна заявка на закупку</span>' : '') + '</div>' +
           trendHtml(monthTrend(group.trendField), group.invert) +
           sparkline(group.trendField) +
           '<div class="kpi-secondary">' + secondary + '</div></div>';
@@ -431,7 +431,8 @@
         '<h3>' + group.title + '</h3>' +
         '<div class="kpi-primary"><span class="kpi-value">' + def.value + '</span>' +
         (def.unit ? '<span class="unit">' + escapeHtml(def.unit) + '</span>' : '') + '</div>' +
-        '<div class="kpi-primary-label">' + escapeHtml(def.label) + '</div>' +
+        '<div class="kpi-primary-label">' + escapeHtml(def.label) +
+        (group.key === 'volume' ? '<span class="kpi-note">Кейс = одна заявка на закупку</span>' : '') + '</div>' +
         '<div class="kpi-secondary">' + def.secondary.map(([label, value]) => (
           '<div><span>' + escapeHtml(label) + '</span><b>' + value + '</b></div>'
         )).join('') + '</div></div>';
@@ -1091,8 +1092,7 @@
       '<div class="exec-top"><h2>Executive summary</h2>' +
       '<span class="exec-period">' + escapeHtml(period) + '</span></div>' +
       '<p class="exec-headline">' + escapeHtml(headline) + suffix + '</p>' +
-      '<div class="exec-drivers">' + driversHtml + '</div>' +
-      '<div class="exec-action"><b>Рекомендация:</b> ' + escapeHtml(ex.action) + '</div>';
+      '<div class="exec-drivers">' + driversHtml + '</div>';
   }
 
   /* ============ PROCESS MAP ============ */
@@ -1242,19 +1242,6 @@
     // apply step filter to DFG nodes/edges if positions indicate step order? use avg_position
     const sFrom = state.mapStepFrom != null ? state.mapStepFrom : 1;
     const sTo = state.mapStepTo != null ? state.mapStepTo : 22;
-    const allowedNodes = new Set();
-    Object.keys(meta).forEach((name) => {
-      if (!activeEdgeNodes.has(name)) return;
-      const pos = meta[name].avg_position;
-      if (pos == null) { allowedNodes.add(name); return; }
-      // map approx by position ranges? use position index 1-based
-      const p1 = Math.floor(pos) + 1;
-      if (p1 >= sFrom && p1 <= sTo) allowedNodes.add(name);
-      else {
-        // also check exact by scanning order? fallback allow if in range
-      }
-    });
-    // better: include node if any edge in range touches or if position in range
     // recompute allowed by scanning positions set intersection
     const allowedNodes2 = new Set();
     Object.keys(meta).forEach((name) => {
@@ -1284,8 +1271,8 @@
       const avgDays = edge.avg_duration_days != null ? edge.avg_duration_days
         : (edge.median_duration_days != null ? edge.median_duration_days : 0);
       let color = c.muted;
-      if (avgDays <= 0.5) color = c.success;
-      else if (avgDays <= 2) color = c.warning;
+      if (avgDays < 1) color = c.success;
+      else if (avgDays <= 4) color = c.warning;
       else color = c.danger;
       if (backward) color = c.danger;
       const uniqueCases = edge.unique_cases != null ? edge.unique_cases : 0;
@@ -2489,7 +2476,7 @@ pager.innerHTML = '<span>' + start + '–' + end + ' из ' + edges.length + '</
     const analyst = state.mode === 'analyst';
 
     const head = '<thead><tr><th>Активность</th><th class="num">Ср. ожидание, дн</th>' +
-      '<th class="num">Доля кейсов, %</th><th class="num">Потери, ₽</th></tr></thead>';
+      '<th class="num">Кратность (x/кейс)</th><th class="num">Потери, ₽</th></tr></thead>';
 
     const body = visible.map((row, index) => (
       '<tr>' +
@@ -3231,8 +3218,7 @@ pager.innerHTML = '<span>' + start + '–' + end + ' из ' + edges.length + '</
       return;
     }
 
-    el('header-subtitle').textContent = 'Демонстрационный MVP на синтетических данных · ' + fmtInt(data.overview.total_cases) +
-      ' кейсов · ' + fmtInt(data.overview.total_events) + ' событий · ' + data.overview.monthly.length + ' месяцев';
+    el('header-subtitle').textContent = 'Демо-MVP на синтетических данных';
     populateFilters();
     renderProcessCategories();
     populateVariantSelect();
@@ -3267,7 +3253,7 @@ pager.innerHTML = '<span>' + start + '–' + end + ' из ' + edges.length + '</
       const newWidth = e.clientX - containerRect.left;
       const percent = (newWidth / containerRect.width) * 100;
       if (percent > 20 && percent < 60) {
-        leftPanel.style.width = percent + '%';
+        leftPanel.style.flexBasis = percent + '%';
       }
     });
     document.addEventListener('mouseup', () => {

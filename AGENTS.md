@@ -1,35 +1,33 @@
 # AGENTS.md — Конституция проекта pm_mvp_contracting
 
+Этот документ — "Конституция" проекта. Он описывает стек, правила работы с кодом и данными, структуру папок и критерии готовности. Любой новый участник (человек или ИИ) должен прочитать его первым.
+
 ## 1. Что за проект
 
-**Process Mining MVP для закупок/контрактации в горнодобывающем холдинге (контекст ЕвроХим / Центр компетенций).**
+**Process Mining MVP для закупок/контрактации в горнодобывающем холдинге.**
 
 Задача: показать, что Process Mining можно строить **без закупки Celonis**, используя:
 - открытые библиотеки (pm4py, pandas, Plotly);
 - внутреннюю корпоративную LLM как оркестратор и генератор кода;
 - локальный DuckDB для аналитики и GitHub Pages для демо.
 
-Проект — **портфолио-демо** для собеседования в Центре компетенций (центр компетенций Process Mining). Он должен показать:
-1. Понимание процесса «закупка → контрактация» в горнодобыче.
-2. Умение строить event log и применять Process Mining (discovery, performance, bottlenecks).
-3. Навык разворачивать инфраструктуру (Docker, облако, MCP, LLM).
-4. Способность работать по методологии SDD (spec → plan → tasks → code).
+**Демо:** https://martinminart.github.io/pm_mvp_contractin/
 
 ## 2. Структура проекта
 pm_mvp_contracting/
 ├── spec/ # Спецификации и дизайн
-│ ├── spec.md # Главная спецификация (гибрид TAD + ЕвроХим)
+│ ├── spec.md # Главная спецификация
 │ ├── design.md # Дизайн-система (на основе index.html)
 │ ├── data_model.md # Модель данных event log
 │ ├── activity_dictionary.md
 │ └── prompt_for_new_chat.md
 ├── data/
-│ ├── raw/ # Сырые данные (не в Git)
-│ └── processed/ # events.csv, cases.csv (не в Git, генерируются локально)
+│ │── processed/ # events.csv, cases.csv (не в Git, генерируются локально)
 ├── tools/
 │ ├── generate_synthetic.py # Генератор синтетики
 │ ├── csv_to_json.py # CSV → JSON для GitHub Pages
-│ └── validate.py # Валидация лога (XES-совместимость)
+│ ├── validate.py # Валидация лога (XES-совместимость)
+│ └── harness/ # Скрипты Harness (генерация, валидация)
 ├── notebooks/
 │ └── 01_pm4py_analysis.ipynb # DFG, Petri net, variant analysis, bottlenecks
 ├── site/ # Статика для GitHub Pages
@@ -38,7 +36,6 @@ pm_mvp_contracting/
 │ │ ├── style.css
 │ │ └── app.js
 │ └── data/ # Агрегаты JSON (не сырые события)
-├── harness/ # Скрипты Harness (генерация, валидация)
 ├── docs/ # Документация (C4, ADR, decision-log)
 ├── logs/ # Логи (не в Git)
 ├── .gitignore
@@ -80,6 +77,9 @@ pm_mvp_contracting/
 - **Тесты:** pytest для генератора и валидатора; для сайта — ручная проверка в браузере.
 - **Коммиты:** `тип: область, описание` (например, `feat: generator, добавлен HSE review`).
 - **Вывод:** в CLI-инструментах (`validate.py`, `csv_to_json.py`) допустим `print()` для пользовательского вывода; в библиотечном коде — только `logging`. `validate.py` — CLI, `print` разрешён.
+- **Неиспользуемый код не удаляется, а переносится в `docs/ideas.md` с обоснованием.**
+
+«Для проверки Markdown используется .markdownlint.json»
 
 ## 6. Правила работы с внутренней LLM
 
@@ -102,7 +102,7 @@ pm_mvp_contracting/
 MVP считается готовым, когда:
 1. `events.csv` и `cases.csv` сгенерированы и проходят `validate.py`.
 2. Ноутбук `01_pm4py_analysis.ipynb` строит DFG, Petri net, variant analysis, bottlenecks.
-3. `site/index.html` показывает 3 вкладки: **Overview**, **Process Map**, **Bottlenecks**.
+3. `site/index.html` показывает 4 вкладки: Обзор (Overview), Карта процесса (Process Map), Узкие места (Bottlenecks), Варианты (Variants).
 4. `README.md` содержит: описание, скриншоты, ссылку на GitHub Pages, инструкцию запуска.
 5. `docs/c4.md` содержит C4-диаграммы (Context, Container).
 6. `spec/prompt_for_new_chat.md` готов для передачи в новый чат.

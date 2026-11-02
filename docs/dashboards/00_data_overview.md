@@ -1,5 +1,7 @@
 # Данные проекта: что есть, что можно строить
 
+Подробное описание полей и статистики см. в глобальной `docs/data_overview.md`.
+
 ## 1) Исходные данные (локальные)
 - `data/processed/cases.csv` (8 МБ) — атрибуты кейса: `case_id`, `category`, `procurement_type`, `region`, `department`, `supplier`, `currency`, `amount`, `downtime_cost_per_day`, `is_import`, `is_rejected`. Одно строка = один кейс (50 000).
 - `data/processed/events.csv` (~259 МБ) — события процесса: `case_id`, `activity`, `timestamp`, `category`, `region`, `procurement_type`, `supplier`, `is_import`, `is_rejected`, `downtime_cost_per_day`. Сортирован по кейсу/времени. 1 094 474 события.

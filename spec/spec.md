@@ -1,9 +1,11 @@
 # Спецификация: Process Mining MVP для закупок и контрактации
 
+Этот документ — главная спецификация платформы. Он описывает цели, аудиторию, пользовательские сценарии и критерии приемки (AC). Это "источник истины" для проверки того, что мы построили именно то, что планировали.
+
 **Версия:** 1.0
 **Дата:** 2026-10-29
 **Автор:** Аналитик
-**Контекст:** портфолио под вакансию в Центре компетенций (дочка ЕвроХим), центр компетенций Process Mining
+**Контекст:** портфолио под вакансию в Центре компетенций, центр компетенций Process Mining
 
 ---
 
@@ -26,7 +28,7 @@
 | Роль | Что хочет увидеть | Где в UI |
 |---|---|---|
 | **Руководитель закупок** | Где теряем время и деньги, топ-3 узких места | Overview (KPI: стоимость простоя, средняя длительность) |
-| **Специалист по закупкам** | Почему конкретная заявка «зависла», кто виноват | Process Map + drill-down к кейсу |
+| **Специалист по закупкам** | Почему конкретная заявка «зависла», кто виноват | Process Map + drill-down к переходу/активности |
 | **Технолог / главный механик** | Как долго идёт инженерное согласование для ЗИП | Bottlenecks (фильтр по категории) |
 | **Юрист** | Сколько кейсов прошло Legal Review, сколько раз возвращались | Bottlenecks + Variant Analysis |
 
@@ -46,7 +48,7 @@
 1. Пользователь открывает `site/index.html` (GitHub Pages).
 2. Видит **Overview**: KPI-карточки (общая стоимость простоя, средняя длительность, топ-категория).
 3. Переключается на **Process Map**: видит граф процесса (DFG), толщина рёбер = частота, цвет = длительность.
-4. Кликает на «красное» ребро (узкое место) → **drill-down** к списку кейсов, которые прошли через этот переход.
+4. Кликает на «красное» ребро (узкое место) → **drill-down** с агрегатами перехода: частота, уникальные кейсы, медиана/P90. Список конкретных кейсов — второй этап, в текущем JSON его нет.
 5. Переключается на **Bottlenecks**: таблица «этап → средняя длительность → вариативность → стоимость простоя», топ-3 этапа.
 6. Применяет фильтр по категории (например, «ЗИП») → видит, что для ЗИП главное узкое место — таможня (Customs Clearance).
 7. (Опционально) Открывает ноутбук `01_pm4py_analysis.ipynb` → видит Petri net, variant analysis, расчёт потерь.
@@ -63,8 +65,8 @@
 | **AC-4** | Given датасет загружен, When считается метрика «стоимость простоя», Then для каждого кейса: `duration_days × downtime_cost_per_day`, сумма по всем кейсам выводится в Overview. |
 | **AC-5** | Given датасет загружен, When строится variant analysis, Then выводится топ-10 вариантов процесса (уникальных последовательностей активностей), их частота и средняя длительность; самый частый вариант покрывает ≥ 25% кейсов (факт 25.62%, см. `docs/decision-log.md` AC-T4-01). |
 | **AC-6** | Given датасет загружен, When считается bottleneck-метрика, Then для каждой активности: средняя длительность (между входом и выходом), стандартное отклонение, доля кейсов с задержкой > P90. Топ-3 по вкладу в общую длительность выводятся в Bottlenecks. |
-| **AC-7** | Given пользователь выбрал фильтр `category = "ЗИП"`, When применяет, Then все виджеты (Overview, Process Map, Bottlenecks) пересчитываются только для этой категории. |
-| **AC-8** | Given пользователь кликнул на ребро в Process Map, When срабатывает drill-down, Then открывается таблица кейсов, которые прошли через этот переход, с колонками: `case_id, supplier, amount, duration_days, bottleneck_activity`. |
+| **AC-7** | Given пользователь выбрал фильтр `category = "ЗИП (запчасти)"` на вкладке **Обзор**, When применяет, Then виджеты Overview пересчитываются по этому срезу. На вкладке **Карта процесса** аналогичный фильтр выбирается собственными чипами категорий и перестраивает граф и таблицу переходов. |
+| **AC-8** | Given пользователь кликнул на ребро в Process Map, When срабатывает drill-down, Then открывается панель с агрегатами перехода: `activity`, `next_activity`, частота, уникальные кейсы, переходов на кейс, средняя/медиана/P90. Case-level таблица (`case_id`, `supplier`, `amount`, …) — второй этап. |
 | **AC-9** | Given ноутбук `01_pm4py_analysis.ipynb` открыт, When запускаются все ячейки, Then ноутбук выполняется без ошибок, строит Petri net (через Inductive Miner), variant analysis, bottleneck-таблицу, сохраняет 4 PNG в `docs/img/`. |
 | **AC-10** | Given сайт открыт на GitHub Pages, When пользователь переключает тему (светлая/тёмная), Then тема меняется и сохраняется в `localStorage`. |
 | **AC-11** | Given `README.md` открыт, When пользователь читает, Then он видит: описание, стек, инструкцию запуска, скриншоты, ссылку на демо. |
@@ -73,12 +75,14 @@
 
 ## 6. Структура UI (вкладки)
 
-| Вкладка | Что показывает | Источник данных |
-|---|---|---|
-| **Overview** | 4 KPI-карточки: общая стоимость простоя, средняя длительность кейса, кол-во кейсов, топ-категория. + линейный график «длительность по месяцам». Фильтры: категория, регион, тип закупки — берутся из срезов `by_category`, `by_region`, `by_procurement_type`. | `site/data/overview.json` |
-| **Process Map** | DFG-граф (узлы = активности, рёбра = переходы). Толщина = частота, цвет = длительность. **Общий, без фильтров в MVP.** | `site/data/process_map.json` |
-| **Bottlenecks** | Таблица: этап → средняя длительность → σ → стоимость простоя. Топ-3 этапа. Bar chart по длительности. **Общий, без фильтров в MVP.** | `site/data/bottlenecks.json` |
-| **Variants** (опционально) | Топ-10 вариантов процесса: последовательность → частота → средняя длительность. | `site/data/variants.json` |
+Реализовано **4 вкладки**.
+
+| Вкладка | Что показывает | Источник данных | Фильтры |
+|---|---|---|---|
+| **Overview (Обзор)** | KPI-группы (объём/сроки/качество), мини-KPI, executive summary, график «Длительность по месяцам старта», кольцевая диаграмма «Структура потерь», таблица «По категориям», стек «Кейсы по типам закупки». | `site/data/overview.json` | **Фильтры вкладки**: категория, регион, тип закупки, месяц. Работают по предагрегированным срезам (`by_category`, `by_region`, `by_procurement_type`, `by_category_region`, `by_category_type`, `by_region_type`, `monthly_by_*`). При сочетании >2 фильтров без предагрегации виджеты переходят в empty-state. |
+| **Process Map (Карта процесса)** | Две визуализации: DFG-панель на Cytoscape (зум, Fit, раскладка) и Plotly-карта «Карта процесса». Узлы = активности, рёбра = переходы. Толщина = частота, цвет = длительность перехода. Режимы: **DFG** (все переходы), **Один вариант** (по топ-варианту), **Диапазон** (топ-N по диапазону). Таблица «Длительность переходов» с метрикой (среднее/медиана/P90) и пагинацией. Панель деталей перехода/узла. | `site/data/process_map.json`, `site/data/variant_paths.json` | Фильтр по категории (чипы по категориям из `overview.by_category`) и кнопки «Таможня»/«Без таможни». Фильтр по количеству переходов (Топ-10/Все 28). Диапазон шагов 1…22. |
+| **Bottlenecks (Узкие места)** | Топ-3, bar-chart «Среднее ожидание по активностям», scatter «Ожидание vs. потери», таблица активностей с сортировкой (нормированный скор/сырой скор/среднее ожидание/стоимость потерь). В режиме Executive опция «сырой скор» скрыта. | `site/data/bottlenecks.json` | Нет фильтров по измерениям. Сортировка и режим «Топ-10/Все 24». |
+| **Variants (Варианты)** | Pareto «доля кейсов по вариантам» (топ-10 + «прочие»), «Идеальный маршрут» (топ-1 вариант), таблица топ-10 вариантов с разворачиваемым полным путём. | `site/data/variants.json`, `site/data/variant_paths.json` | Нет фильтров по измерениям. |
 
 ## 7. Edge Cases (Граничные случаи)
 
@@ -96,7 +100,7 @@
 
 | Категория | Требование |
 | --- | --- |
-| **Производительность** | Генерация 50 тыс. кейсов (1.1 млн событий) ≤ 60 сек на ноутбуке (i5-8250U, 8 ГБ RAM). |
+| **Производительность** | Генерация 50 тыс. кейсов (1.1 млн событий) ≤ 60 сек на ноутбуке. |
 | **Размер данных** | `events.csv` ≤ 270 МБ, **не коммитится** (генерируется локально, seed фиксирован). `site/data/*.json` ≤ 5 МБ (агрегаты, не сырые события). |
 | **Совместимость** | Chrome, Edge, Firefox (последние 2 версии). Мобильный — не приоритет (десктоп). |
 | **Доступность** | GitHub Pages, HTTPS, без бэкенда. |
@@ -113,22 +117,22 @@
 
 | Поле | Тип | Описание |
 |---|---|---|
-| `case_id` | string | Уникальный ID кейса (например, `CASE-000001`) |
-| `activity` | string | Название активности (например, `Requisition Created`) |
+| `case_id` | object | Уникальный ID кейса (например, `CASE-000001`) |
+| `activity` | object | Название активности (например, `Requisition Created`) |
 | `timestamp` | ISO 8601 | Время события |
-| `resource` | string | Роль исполнителя (например, `Специалист по закупкам`) |
-| `phase` | string | Фаза процесса (`sourcing`, `contracting`, `logistics`, `execution`) |
-| `source_system` | string | Система-источник (`SAP SRM`, `SAP ERP`) |
-| `document_type` | string | Тип документа (пока пусто) |
-| `document_status` | string | Статус документа (пока пусто) |
-| `category` | string | Категория закупки (ЗИП, расходники БВР, ...) |
-| `procurement_type` | string | Тип закупки |
-| `region` | string | Регион |
-| `department` | string | Подразделение |
-| `supplier` | string | Поставщик (`Поставщик_001`) |
-| `amount` | float | Сумма контракта, руб |
-| `is_import` | int | 0/1 |
-| `is_rejected` | int | 0/1 |
+| `resource` | object | Роль исполнителя (например, `Специалист по закупкам`) |
+| `phase` | object | Фаза процесса (`sourcing`, `contracting`, `logistics`, `execution`) |
+| `source_system` | object | Система-источник (`SAP SRM`, `SAP ERP`) |
+| `document_type` | object | Тип документа (пока пусто) |
+| `document_status` | object | Статус документа (пока пусто) |
+| `category` | object | Категория закупки (ЗИП, расходники БВР, ...) |
+| `procurement_type` | object | Тип закупки |
+| `region` | object | Регион |
+| `department` | object | Подразделение |
+| `supplier` | object | Поставщик (`Поставщик_001`) |
+| `amount` | float64 | Сумма контракта, руб |
+| `is_import` | int64 | 0/1 |
+| `is_rejected` | int64 | 0/1 |
 | `downtime_cost_per_day` | int | Стоимость простоя, руб/день |
 
 ### `cases.csv` (атрибуты кейса)
@@ -190,10 +194,11 @@
 
 | Файл | Структура |
 |---|---|
-| `overview.json` | `{ total_cases, total_events, total_cost, avg_duration_days, median_duration_days, p90_duration_days, kpi_groups {volume, time, quality}, monthly: [...], monthly_by_category: [...], best_month, worst_month, by_category, by_region, by_procurement_type }` |
-| `process_map.json` | `{ nodes: [...], nodes_metadata: {node: {type, cases, avg_days, avg_position}}, edges: [{activity, next_activity, frequency, avg_duration_days}], edges_by_category: {category: [...]}, frequency_by_category: {category: {node: cases}} }` |
-| `bottlenecks.json` | `{ bottlenecks: [{activity, avg_days, std_days, transitions, share_of_cases, bottleneck_score, bottleneck_score_normalized, cost_of_delay_rub}], top3: [...] }` |
-| `variants.json` | `{ total_variants, total_cases, top10_cases, top10_coverage_percent, variants: [...] }` — топ-10 с `share_percent` и `avg_duration_days` |
+| `overview.json` | `{ generated_at, period_start, period_end, source_version, total_cases, total_events, total_cost, cost_per_case, avg_duration_days, median_duration_days, p90_duration_days, top_category, top_category_count, rejected_share, returns_share, import_share, kpi_groups {volume, time, quality}, monthly, monthly_by_category, monthly_by_region, monthly_by_type, best_month, worst_month, by_category, by_region, by_procurement_type, by_category_region, by_category_type, by_region_type, executive }` |
+| `process_map.json` | `{ nodes: [...], nodes_metadata: {node: {type, cases, avg_days, bottleneck_score_normalized, avg_position}}, edges: [{activity, next_activity, frequency, avg_duration_days, median_duration_days, p90_duration_days, unique_cases}], edges_by_category: {category: [...]}, frequency_by_category: {category: {node: cases}}, edges_by_import: {import|no-import: [...]}, frequency_by_import: {import|no-import: {node: cases}} }` |
+| `bottlenecks.json` | `{ bottlenecks: [{activity, avg_hours, std_hours, avg_days, std_days, transitions, share_of_cases, bottleneck_score, bottleneck_score_normalized, cost_of_delay_rub}], top3: [...] }` |
+| `variants.json` | `{ total_variants, total_cases, top10_cases, top10_coverage_percent, variants: [...] }` — топ-10 с `variant`, `frequency`, `share_percent`, `avg_duration_days` |
+| `variant_paths.json` | `{ total_cases, total_variants, variants: [{rank, variant, frequency, share_percent, avg_duration_days, steps: [{position, activity, cases}]}] }` — 15 путей для режимов Process Map |
 
 **Генерация JSON:** `tools/csv_to_json.py` (читает `events.csv` + `cases.csv`, агрегирует, пишет JSON).
 
@@ -202,11 +207,6 @@
 | Параметр | Значение |
 |---|---|
 | ОС | Windows 11 |
-| ОЗУ | 8 ГБ (расширение невозможно) |
-| Python | 3.11+ |
-| DuckDB | 1.5+ |
-| pm4py | 2.7+ |
-| Plotly.js | 2.27+ |
 
 ## 14. Out of Scope (явно не входит)
 
@@ -228,7 +228,7 @@
 | 2 | Валидатор | `tools/validate.py` | AC-1 |
 | 3 | CSV → JSON | `tools/csv_to_json.py` | AC-3 |
 | 4 | Ноутбук pm4py | `notebooks/01_pm4py_analysis.ipynb` | AC-2, AC-5, AC-6, AC-9 |
-| 5 | Сайт (3 вкладки) | `site/index.html` + `app.js` + `style.css` | AC-3, AC-4, AC-7, AC-8, AC-10 |
+| 5 | Сайт (4 вкладки) | `site/index.html` + `app.js` + `style.css` | AC-3, AC-4, AC-7, AC-8, AC-10 |
 | 6 | C4-диаграммы | `docs/c4.md` | AC-12 |
 | 7 | README + скриншоты | `README.md` | AC-11 |
 
@@ -236,7 +236,7 @@
 
 | ID | Решение | Обоснование |
 |---|---|---|
-| **ADR-01** | DuckDB вместо PostgreSQL | 8 ГБ RAM, embedded, без сервера |
+| **ADR-01** | DuckDB вместо PostgreSQL | embedded, без сервера |
 | **ADR-02** | pm4py вместо Celonis | Открытый код, бесплатно, достаточно для MVP |
 | **ADR-03** | Plotly.js вместо React | Без Node-сборки, меньше зависимостей |
 | **ADR-04** | Статические JSON вместо API | GitHub Pages без бэкенда |
@@ -286,3 +286,4 @@ flowchart LR
 | Дата | Версия | Автор | Изменение |
 |---|---|---|---|
 | 2026-10-29 | 1.0 | Аналитик | Начальная версия |
+| 2026-11-02 | 1.1 | Аналитик | Актуализация под 4 вкладки, фильтры внутри вкладок, drill-down с агрегатами, 5 JSON-агрегатов |

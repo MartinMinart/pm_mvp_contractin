@@ -1478,6 +1478,8 @@ html[data-mode="analyst"] .executive-only { display: none !important; }
 /* ===== НОВЫЙ ЛЕЙАУТ КАРТЫ ПРОЦЕССА ===== */
 .process-map-layout { display:flex; flex:none; min-height:0; height:100%; gap:16px; padding:16px; overflow:hidden; }
 .dfg-left-panel { width:35%; height:100%; min-height:400px; overflow:hidden; border:1px solid var(--border-color); border-radius:12px; background:var(--bg-surface); display:flex; flex-direction:column; }
+.resizer { flex: 0 0 6px; width: 6px; cursor: col-resize; background: #e9ecef; }
+html[data-theme="dark"] .resizer { background: #343c4d; }
 .dfg-panel-title { font-size:12px; font-weight:700; color:var(--text-primary); padding:10px 12px 4px 12px; margin:0; }
 .dfg-left-panel .dfg-toolbar { flex-shrink:0; padding:10px 12px; border-bottom:1px solid var(--border-color); display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
 .dfg-left-panel .dfg-container { flex:none; height:calc(100% - 150px); min-height:400px; }

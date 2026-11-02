@@ -1,11 +1,16 @@
 # Данные
 data/raw/
 data/processed/*.duckdb
+.prompt2_*.js
 *.duckdb
 *.db
 *.sqlite
 _Reports/
 data/processed/*.csv
+
+# JSON-агрегаты публикуются вместе с сайтом.
+!site/data/
+!site/data/*.json
 
 # Python
 __pycache__/
